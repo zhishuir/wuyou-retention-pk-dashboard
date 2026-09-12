@@ -1,0 +1,1060 @@
+{
+  "updatedAt": "2026-09-12 22:29",
+  "days": [
+    {
+      "date": "2026-09-11",
+      "personal": [
+        {
+          "name": "张云飞",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "高庆羽",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "温婧",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "赵慧",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组2组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "张羽靖",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组2组",
+          "plus": 0,
+          "failure": 5,
+          "qc": 4,
+          "score": -9,
+          "matched": true
+        },
+        {
+          "name": "王芳",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组2组",
+          "plus": 1,
+          "failure": 0,
+          "qc": 0,
+          "score": 1,
+          "matched": true
+        },
+        {
+          "name": "张洁45",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组3组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 0,
+          "score": -1,
+          "matched": true
+        },
+        {
+          "name": "零英霞",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组3组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "郝英",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组3组",
+          "plus": 1,
+          "failure": 0,
+          "qc": 0,
+          "score": 1,
+          "matched": true
+        },
+        {
+          "name": "贾晓庆",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组3组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "田媛媛",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组1组",
+          "plus": 1,
+          "failure": 0,
+          "qc": 0,
+          "score": 1,
+          "matched": true
+        },
+        {
+          "name": "尚丹",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组1组",
+          "plus": 2,
+          "failure": 1,
+          "qc": 1,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "张乐",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组1组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 0,
+          "score": -1,
+          "matched": true
+        },
+        {
+          "name": "张海燕",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组1组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 1,
+          "score": -2,
+          "matched": true
+        },
+        {
+          "name": "王丹丹",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组2组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "敖珊珊",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组2组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 0,
+          "score": -1,
+          "matched": true
+        },
+        {
+          "name": "宋荣华",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组2组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "马超",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "尚晓霞",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组1组",
+          "plus": 2,
+          "failure": 1,
+          "qc": 1,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "孙佳敏",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "李海越",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组1组",
+          "plus": 1,
+          "failure": 0,
+          "qc": 0,
+          "score": 1,
+          "matched": true
+        },
+        {
+          "name": "张振楠",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组2组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 1,
+          "score": -2,
+          "matched": true
+        },
+        {
+          "name": "张文冰",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组2组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 1,
+          "score": -2,
+          "matched": true
+        },
+        {
+          "name": "李曾辉",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组2组",
+          "plus": 0,
+          "failure": 2,
+          "qc": 2,
+          "score": -4,
+          "matched": true
+        },
+        {
+          "name": "苏志婷",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组2组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 0,
+          "score": -1,
+          "matched": true
+        },
+        {
+          "name": "李慧敏",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组1组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 1,
+          "score": -2,
+          "matched": true
+        },
+        {
+          "name": "刘耀川",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "王娟",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组1组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 1,
+          "score": -2,
+          "matched": true
+        },
+        {
+          "name": "袁杰",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组2组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "白明宇",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组2组",
+          "plus": 0,
+          "failure": 2,
+          "qc": 0,
+          "score": -2,
+          "matched": true
+        },
+        {
+          "name": "白希婷",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组2组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "高雅罕",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组3组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 0,
+          "score": -1,
+          "matched": true
+        },
+        {
+          "name": "董鹏",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组3组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "高秀丽",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组3组",
+          "plus": 2,
+          "failure": 3,
+          "qc": 0,
+          "score": -1,
+          "matched": true
+        },
+        {
+          "name": "杨廷",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组1组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 0,
+          "score": -1,
+          "matched": true
+        },
+        {
+          "name": "张璇",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组1组",
+          "plus": 2,
+          "failure": 1,
+          "qc": 1,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "韩俊楠",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组1组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 1,
+          "score": -2,
+          "matched": true
+        },
+        {
+          "name": "张馨方",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组1组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 0,
+          "score": -1,
+          "matched": true
+        },
+        {
+          "name": "闫裕",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组2组",
+          "plus": 0,
+          "failure": 2,
+          "qc": 1,
+          "score": -3,
+          "matched": true
+        },
+        {
+          "name": "王鑫",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组2组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "黄晓叶",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组2组",
+          "plus": 2,
+          "failure": 1,
+          "qc": 0,
+          "score": 1,
+          "matched": true
+        },
+        {
+          "name": "乌兰",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组3组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 1,
+          "score": -2,
+          "matched": true
+        },
+        {
+          "name": "郭治宏",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组3组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 0,
+          "score": -1,
+          "matched": true
+        },
+        {
+          "name": "姚佳慧",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组3组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "孟宪彬",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "张燕飞",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "郭璇",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "红岩",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "郑倩倩",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组2组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "包萨如拉",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组2组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "高莉娜",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组2组",
+          "plus": 2,
+          "failure": 0,
+          "qc": 0,
+          "score": 2,
+          "matched": true
+        },
+        {
+          "name": "张丽云",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组2组",
+          "plus": 1,
+          "failure": 0,
+          "qc": 0,
+          "score": 1,
+          "matched": true
+        },
+        {
+          "name": "岑高霞",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组1组",
+          "plus": 0,
+          "failure": 2,
+          "qc": 2,
+          "score": -4,
+          "matched": true
+        },
+        {
+          "name": "杨洁",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组1组",
+          "plus": 1,
+          "failure": 0,
+          "qc": 0,
+          "score": 1,
+          "matched": true
+        },
+        {
+          "name": "苏丽娅",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "李婧",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组1组",
+          "plus": 1,
+          "failure": 0,
+          "qc": 0,
+          "score": 1,
+          "matched": true
+        },
+        {
+          "name": "李玥怡",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组2组",
+          "plus": 2,
+          "failure": 0,
+          "qc": 0,
+          "score": 2,
+          "matched": true
+        },
+        {
+          "name": "巴彦格格",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组2组",
+          "plus": 1,
+          "failure": 0,
+          "qc": 0,
+          "score": 1,
+          "matched": true
+        },
+        {
+          "name": "敖登格日勒",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组2组",
+          "plus": 0,
+          "failure": 2,
+          "qc": 0,
+          "score": -2,
+          "matched": true
+        },
+        {
+          "name": "杨楠",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组3组",
+          "plus": 2,
+          "failure": 0,
+          "qc": 0,
+          "score": 2,
+          "matched": true
+        },
+        {
+          "name": "赵阳",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组3组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 1,
+          "score": -2,
+          "matched": true
+        },
+        {
+          "name": "赵晶",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组3组",
+          "plus": 0,
+          "failure": 2,
+          "qc": 1,
+          "score": -3,
+          "matched": true
+        },
+        {
+          "name": "刘晓琼",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "索志娟",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "李瑞琴",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "李晨",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "要文燕",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组2组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "邢建美",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组2组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 0,
+          "score": -1,
+          "matched": true
+        },
+        {
+          "name": "赵龙",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组2组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "盛洁",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组1组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 1,
+          "score": -2,
+          "matched": true
+        },
+        {
+          "name": "冀芳均",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "秦帅",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "白书羽",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组1组",
+          "plus": 1,
+          "failure": 0,
+          "qc": 0,
+          "score": 1,
+          "matched": true
+        },
+        {
+          "name": "刘慧",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组2组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "王艳清",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组2组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 0,
+          "score": -1,
+          "matched": true
+        },
+        {
+          "name": "银芳芳",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组2组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "赵靖蓉",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组3组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "魏颖",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组3组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 1,
+          "score": -2,
+          "matched": true
+        },
+        {
+          "name": "哈布尔夫",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组3组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 1,
+          "score": -2,
+          "matched": true
+        },
+        {
+          "name": "岱钦",
+          "bigGroup": "专席组",
+          "smallGroup": "专席组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "马骄",
+          "bigGroup": "专席组",
+          "smallGroup": "专席组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "李晓宇",
+          "bigGroup": "专席组",
+          "smallGroup": "专席组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "张兰",
+          "bigGroup": "专席组",
+          "smallGroup": "专席组1组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "王乐",
+          "bigGroup": "专席组",
+          "smallGroup": "专席组2组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "赵文霞",
+          "bigGroup": "专席组",
+          "smallGroup": "专席组2组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "刘磊",
+          "bigGroup": "专席组",
+          "smallGroup": "专席组2组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "王燕荣",
+          "bigGroup": "专席组",
+          "smallGroup": "专席组2组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "索梦娜",
+          "bigGroup": "专席组",
+          "smallGroup": "专席组3组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "武晓静",
+          "bigGroup": "专席组",
+          "smallGroup": "专席组3组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "李丹妮",
+          "bigGroup": "专席组",
+          "smallGroup": "专席组3组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "范娟",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "plus": 0,
+          "failure": 2,
+          "qc": 0,
+          "score": -2,
+          "matched": false
+        },
+        {
+          "name": "高慧洁",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "plus": 1,
+          "failure": 1,
+          "qc": 1,
+          "score": -1,
+          "matched": false
+        },
+        {
+          "name": "高建萍",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "plus": 0,
+          "failure": 3,
+          "qc": 0,
+          "score": -3,
+          "matched": false
+        },
+        {
+          "name": "韩璐",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 0,
+          "score": -1,
+          "matched": false
+        },
+        {
+          "name": "刘海艳",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 0,
+          "score": -1,
+          "matched": false
+        },
+        {
+          "name": "刘海燕",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "plus": 3,
+          "failure": 3,
+          "qc": 0,
+          "score": 0,
+          "matched": false
+        },
+        {
+          "name": "刘绿叶",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 0,
+          "score": -1,
+          "matched": false
+        },
+        {
+          "name": "刘洋",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "plus": 1,
+          "failure": 0,
+          "qc": 0,
+          "score": 1,
+          "matched": false
+        },
+        {
+          "name": "王琪",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "plus": 1,
+          "failure": 0,
+          "qc": 0,
+          "score": 1,
+          "matched": false
+        },
+        {
+          "name": "吴单",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 0,
+          "score": -1,
+          "matched": false
+        },
+        {
+          "name": "闫红玉",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "plus": 1,
+          "failure": 0,
+          "qc": 0,
+          "score": 1,
+          "matched": false
+        },
+        {
+          "name": "杨莉",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "plus": 0,
+          "failure": 5,
+          "qc": 3,
+          "score": -8,
+          "matched": false
+        },
+        {
+          "name": "张洁",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "plus": 1,
+          "failure": 2,
+          "qc": 0,
+          "score": -1,
+          "matched": false
+        },
+        {
+          "name": "张津宇明",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "plus": 0,
+          "failure": 3,
+          "qc": 1,
+          "score": -4,
+          "matched": false
+        },
+        {
+          "name": "张一菲",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "plus": 0,
+          "failure": 1,
+          "qc": 1,
+          "score": -2,
+          "matched": false
+        }
+      ]
+    }
+  ]
+}
