@@ -1,11 +1,11 @@
 @echo off
 chcp 65001 >nul
 setlocal
-title 无忧卡挽留PK赛 - 日报更新
+title 降档低签挽留 - 日报更新
 cd /d "%~dp0"
 
 echo ==================================================
-echo   无忧卡挽留PK赛 - 日报更新与发布
+echo   降档低签挽留 - 日报更新与发布
 echo ==================================================
 echo.
 
@@ -39,31 +39,39 @@ if not defined HAS_REPORT (
   goto :failed
 )
 
-echo [1/3] 正在读取最新日报并更新网页数据...
+echo [1/4] 正在读取最新日报并更新网页数据...
 py -3 tools\update_from_workbook.py
 if errorlevel 1 goto :failed
 
-echo [2/3] 正在生成版本记录...
-git add dist\data\report-data.json
+echo [2/4] 正在生成微信日报图片...
+py -3 tools\generate_daily_image.py
+if errorlevel 1 goto :failed
+
+echo [3/4] 正在生成版本记录...
+git add dist\data\report-data.json dist\images\reports
 git diff --cached --quiet
 if not errorlevel 1 goto :nothing
 
 git commit -m "data: update daily ranking"
 if errorlevel 1 goto :failed
 
-echo [3/3] 正在发布到 GitHub...
+echo [4/4] 正在发布到 GitHub...
 git push
 if errorlevel 1 goto :failed
 
 echo.
 echo 日报已发布，网页将在数分钟内自动更新。
 echo 网址：https://zhishuir.github.io/wuyou-retention-pk-dashboard/
+echo 图片已保存在“通报图片”文件夹，可直接发送到微信群。
+start "" explorer.exe "%CD%\通报图片"
 pause
 goto :end
 
 :nothing
 echo.
 echo 没有新的日报数据需要发布。
+echo 图片已重新生成，可在“通报图片”文件夹中查看。
+start "" explorer.exe "%CD%\通报图片"
 pause
 goto :end
 

@@ -12,6 +12,7 @@ from openpyxl import load_workbook
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = ROOT / "dist" / "data" / "report-data.json"
+LAST_DATE_FILE = ROOT / ".last-report-date"
 INBOX = ROOT / "待发布日报"
 SUPPORTED_SUFFIXES = {".xlsx", ".xlsm"}
 
@@ -63,6 +64,14 @@ def parse_report_date(workbook_path: Path, override: str | None) -> str:
     if chinese_date:
         month, day = (int(part) for part in chinese_date.groups())
         return date(datetime.now().year, month, day).strftime("%Y-%m-%d")
+
+    day_only = re.search(r"(?<!\d)(\d{1,2})日(?!\d)", filename)
+    if day_only:
+        return date(
+            datetime.now().year,
+            datetime.now().month,
+            int(day_only.group(1)),
+        ).strftime("%Y-%m-%d")
 
     raise ValueError(
         "三列日报文件名中缺少日期。请命名为“2026-09-14三列日报.xlsx”，"
@@ -289,6 +298,8 @@ def update_data(
     }
     data_file.parent.mkdir(parents=True, exist_ok=True)
     data_file.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+    if data_file.resolve() == DATA_FILE.resolve():
+        LAST_DATE_FILE.write_text(day_data["date"], encoding="utf-8")
 
     people = day_data["personal"]
     return {

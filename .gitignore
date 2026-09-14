@@ -1,6 +1,8 @@
 .sites-runtime/
 private/
 待发布日报/
+通报图片/
+.last-report-date
 *.log
 __pycache__/
 *.pyc

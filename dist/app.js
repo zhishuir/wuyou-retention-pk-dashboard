@@ -133,7 +133,7 @@ function renderRankList(elementId, rows, kind, bottom = false) {
     const context = kind === "personal" ? `${row.bigGroup} · ${row.smallGroup}` : kind === "small" ? `${row.bigGroup} · ${row.headcount}人` : `${row.headcount}人`;
     const metric = kind === "personal" ? row.score : row.average;
     return `<li>
-      <span class="rank-number">${index + 1}</span>
+      <span class="rank-number">${row.rank}</span>
       <span class="rank-name">${escapeHtml(name)}</span>
       <span class="rank-context">${escapeHtml(context)}</span>
       <span class="rank-score ${scoreClass(metric)}">${formatNumber(metric, kind === "personal" ? 0 : 2)}</span>
@@ -189,7 +189,7 @@ function render() {
 
   const report = aggregateReport(days);
   state.personalRows = report.personal;
-  const labels = { day: "日报", week: "周报", month: "月报" };
+  const labels = { day: "降档低签挽留日报", week: "降档低签挽留周报", month: "降档低签挽留月报" };
   byId("scope-label").textContent = labels[state.scope];
   byId("report-title").textContent = `${periodLabel(state.scope, state.period)}考核排名通报`;
   byId("kpi-plus").textContent = report.plus;
@@ -197,6 +197,8 @@ function render() {
   byId("kpi-qc").textContent = report.qc;
   byId("kpi-total").textContent = report.total;
   byId("kpi-days").textContent = `统计天数 ${days.length}`;
+  byId("image-button").disabled = state.scope !== "day";
+  byId("image-button").title = state.scope === "day" ? "下载当前日期的PNG日报" : "日报图片仅按日生成";
 
   renderRankList("personal-top", report.personal, "personal");
   renderRankList("personal-bottom", report.personal, "personal", true);
@@ -223,6 +225,14 @@ function exportCsv() {
   anchor.download = `${state.period.replace("~", "_")}-${state.scope}-ranking.csv`;
   anchor.click();
   URL.revokeObjectURL(url);
+}
+
+function downloadDailyImage() {
+  if (state.scope !== "day" || !state.period) return;
+  const anchor = document.createElement("a");
+  anchor.href = `./images/reports/${state.period}.png`;
+  anchor.download = `${state.period}_降档低签挽留日报.png`;
+  anchor.click();
 }
 
 async function loadData() {
@@ -256,5 +266,6 @@ byId("period-picker").addEventListener("change", (event) => { state.period = eve
 byId("person-search").addEventListener("input", (event) => renderPersonalTable(state.personalRows, event.target.value));
 byId("print-button").addEventListener("click", () => window.print());
 byId("export-button").addEventListener("click", exportCsv);
+byId("image-button").addEventListener("click", downloadDailyImage);
 
 loadData();
