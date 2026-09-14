@@ -2,4 +2,6 @@
 private/
 待发布日报/
 *.log
+__pycache__/
+*.pyc
 .DS_Store

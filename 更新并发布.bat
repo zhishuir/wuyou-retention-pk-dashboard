@@ -30,10 +30,11 @@ if not exist ".git" (
 )
 
 if not exist "待发布日报" mkdir "待发布日报"
-dir /b "待发布日报\*.xlsx" >nul 2>nul
-if errorlevel 1 (
+for %%F in ("待发布日报\*.xlsx" "待发布日报\*.xlsm") do if exist "%%~fF" set HAS_REPORT=1
+if not defined HAS_REPORT (
   echo [提示] “待发布日报”文件夹中没有 Excel 日报。
   echo 请把日报 .xlsx 文件放入该文件夹后重新运行。
+  echo 文件名必须包含日期，例如：2026-09-14三列日报.xlsx
   start "" explorer.exe "%CD%\待发布日报"
   goto :failed
 )
@@ -56,6 +57,7 @@ if errorlevel 1 goto :failed
 
 echo.
 echo 日报已发布，网页将在数分钟内自动更新。
+echo 网址：https://zhishuir.github.io/wuyou-retention-pk-dashboard/
 pause
 goto :end
 
