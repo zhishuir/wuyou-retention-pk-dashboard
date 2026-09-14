@@ -1,5 +1,8 @@
 {
-  "updatedAt": "2026-09-14 09:09",
+  "updatedAt": "2026-09-14 09:37",
+  "excluded": [
+    "哈布尔夫"
+  ],
   "roster": [
     {
       "name": "张云飞",
@@ -388,11 +391,6 @@
     },
     {
       "name": "魏颖",
-      "bigGroup": "雄鹰组",
-      "smallGroup": "雄鹰组3组"
-    },
-    {
-      "name": "哈布尔夫",
       "bigGroup": "雄鹰组",
       "smallGroup": "雄鹰组3组"
     },
@@ -1228,16 +1226,6 @@
         },
         {
           "name": "魏颖",
-          "bigGroup": "雄鹰组",
-          "smallGroup": "雄鹰组3组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 1,
-          "score": -2,
-          "matched": true
-        },
-        {
-          "name": "哈布尔夫",
           "bigGroup": "雄鹰组",
           "smallGroup": "雄鹰组3组",
           "plus": 0,

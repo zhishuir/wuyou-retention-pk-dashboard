@@ -70,11 +70,16 @@ def parse_report_date(workbook_path: Path, override: str | None) -> str:
     )
 
 
+def excluded_names(payload: dict) -> set[str]:
+    return {text(name) for name in payload.get("excluded", []) if text(name)}
+
+
 def roster_from_payload(payload: dict) -> list[dict]:
+    excluded = excluded_names(payload)
     registry: dict[str, dict] = {}
     for person in payload.get("roster", []):
         name = text(person.get("name"))
-        if name:
+        if name and name not in excluded:
             registry[name] = {
                 "name": name,
                 "bigGroup": text(person.get("bigGroup")),
@@ -84,7 +89,12 @@ def roster_from_payload(payload: dict) -> list[dict]:
     for day_data in payload.get("days", []):
         for person in day_data.get("personal", []):
             name = text(person.get("name"))
-            if name and person.get("matched") and name not in registry:
+            if (
+                name
+                and name not in excluded
+                and person.get("matched")
+                and name not in registry
+            ):
                 registry[name] = {
                     "name": name,
                     "bigGroup": text(person.get("bigGroup")),
@@ -93,13 +103,13 @@ def roster_from_payload(payload: dict) -> list[dict]:
     return list(registry.values())
 
 
-def read_detailed_day(workbook, roster: list[dict]) -> dict:
+def read_detailed_day(workbook, roster: list[dict], excluded: set[str]) -> dict:
     sheet = workbook["计分明细"]
     imported: dict[str, dict] = {}
     report_date = ""
     for row in sheet.iter_rows(min_row=4, values_only=True):
         name = text(row[3])
-        if not name:
+        if not name or name in excluded:
             continue
         if not report_date:
             date_value = row[0]
@@ -167,6 +177,7 @@ def read_compact_day(
     workbook,
     workbook_path: Path,
     roster: list[dict],
+    excluded: set[str],
     report_date_override: str | None,
 ) -> dict:
     if not roster:
@@ -182,7 +193,7 @@ def read_compact_day(
         qc_names.update(names_in_cell(row[2]))
 
     roster_by_name = {person["name"]: person for person in roster}
-    event_names = set(plus_names) | set(failure_names) | set(qc_names)
+    event_names = (set(plus_names) | set(failure_names) | set(qc_names)) - excluded
     ordered_names = [person["name"] for person in roster]
     ordered_names.extend(sorted(event_names - set(ordered_names)))
 
@@ -227,9 +238,16 @@ def read_day(
 
     workbook = load_workbook(workbook_path, data_only=True, read_only=True)
     roster = roster_from_payload(payload)
+    excluded = excluded_names(payload)
     if "计分明细" in workbook.sheetnames:
-        return read_detailed_day(workbook, roster)
-    return read_compact_day(workbook, workbook_path, roster, report_date_override)
+        return read_detailed_day(workbook, roster, excluded)
+    return read_compact_day(
+        workbook,
+        workbook_path,
+        roster,
+        excluded,
+        report_date_override,
+    )
 
 
 def update_roster(payload: dict, day_data: dict) -> list[dict]:
@@ -265,6 +283,7 @@ def update_data(
     roster = update_roster(payload, day_data)
     result = {
         "updatedAt": datetime.now().strftime("%Y-%m-%d %H:%M"),
+        "excluded": sorted(excluded_names(payload)),
         "roster": roster,
         "days": days,
     }
