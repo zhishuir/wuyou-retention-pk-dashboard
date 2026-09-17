@@ -1,53 +1,53 @@
 @echo off
-chcp 65001 >nul
+chcp 936 >nul
 setlocal
-title é™æ¡£ä½ç­¾æŒ½ç•™ - æ—¥æŠ¥æ›´æ–°
+title ½µµµµÍÇ©ÍìÁô - ÈÕ±¨¸üĞÂ
 cd /d "%~dp0"
 
 echo ==================================================
-echo   é™æ¡£ä½ç­¾æŒ½ç•™ - æ—¥æŠ¥æ›´æ–°ä¸å‘å¸ƒ
+echo   ½µµµµÍÇ©ÍìÁô - ÈÕ±¨¸üĞÂÓë·¢²¼
 echo ==================================================
 echo.
 
 where py >nul 2>nul
 if errorlevel 1 (
-  echo [å¤±è´¥] æœªæ£€æµ‹åˆ° Python å¯åŠ¨å™¨ pyã€‚
-  echo è¯·å…ˆå®‰è£… Python 3ï¼Œå¹¶å‹¾é€‰â€œAdd Python to PATHâ€ã€‚
+  echo [Ê§°Ü] Î´¼ì²âµ½ Python Æô¶¯Æ÷ py¡£
+  echo ÇëÏÈ°²×° Python 3£¬²¢¹´Ñ¡¡°Add Python to PATH¡±¡£
   goto :failed
 )
 
 where git >nul 2>nul
 if errorlevel 1 (
-  echo [å¤±è´¥] æœªæ£€æµ‹åˆ° Gitã€‚
-  echo è¯·å…ˆå®‰è£… Git for Windowsã€‚
+  echo [Ê§°Ü] Î´¼ì²âµ½ Git¡£
+  echo ÇëÏÈ°²×° Git for Windows¡£
   goto :failed
 )
 
 if not exist ".git" (
-  echo [å¤±è´¥] å½“å‰ç›®å½•è¿˜æ²¡æœ‰å®Œæˆ GitHub åˆå§‹åŒ–ã€‚
-  echo è¯·å…ˆå®Œæˆé¦–æ¬¡éƒ¨ç½²ï¼Œå†ä½¿ç”¨æœ¬è„šæœ¬æ—¥æ›´ã€‚
+  echo [Ê§°Ü] µ±Ç°Ä¿Â¼»¹Ã»ÓĞÍê³É GitHub ³õÊ¼»¯¡£
+  echo ÇëÏÈÍê³ÉÊ×´Î²¿Êğ£¬ÔÙÊ¹ÓÃ±¾½Å±¾ÈÕ¸ü¡£
   goto :failed
 )
 
-if not exist "å¾…å‘å¸ƒæ—¥æŠ¥" mkdir "å¾…å‘å¸ƒæ—¥æŠ¥"
-for %%F in ("å¾…å‘å¸ƒæ—¥æŠ¥\*.xlsx" "å¾…å‘å¸ƒæ—¥æŠ¥\*.xlsm") do if exist "%%~fF" set HAS_REPORT=1
+if not exist "´ı·¢²¼ÈÕ±¨" mkdir "´ı·¢²¼ÈÕ±¨"
+for %%F in ("´ı·¢²¼ÈÕ±¨\*.xlsx" "´ı·¢²¼ÈÕ±¨\*.xlsm") do if exist "%%~fF" set HAS_REPORT=1
 if not defined HAS_REPORT (
-  echo [æç¤º] â€œå¾…å‘å¸ƒæ—¥æŠ¥â€æ–‡ä»¶å¤¹ä¸­æ²¡æœ‰ Excel æ—¥æŠ¥ã€‚
-  echo è¯·æŠŠæ—¥æŠ¥ .xlsx æ–‡ä»¶æ”¾å…¥è¯¥æ–‡ä»¶å¤¹åé‡æ–°è¿è¡Œã€‚
-  echo æ–‡ä»¶åå¿…é¡»åŒ…å«æ—¥æœŸï¼Œä¾‹å¦‚ï¼š2026-09-14ä¸‰åˆ—æ—¥æŠ¥.xlsx
-  start "" explorer.exe "%CD%\å¾…å‘å¸ƒæ—¥æŠ¥"
+  echo [ÌáÊ¾] ¡°´ı·¢²¼ÈÕ±¨¡±ÎÄ¼ş¼ĞÖĞÃ»ÓĞ Excel ÈÕ±¨¡£
+  echo Çë°ÑÈÕ±¨ .xlsx ÎÄ¼ş·ÅÈë¸ÃÎÄ¼ş¼ĞºóÖØĞÂÔËĞĞ¡£
+  echo ÎÄ¼şÃû±ØĞë°üº¬ÈÕÆÚ£¬ÀıÈç£º2026-09-14ÈıÁĞÈÕ±¨.xlsx
+  start "" explorer.exe "%CD%\´ı·¢²¼ÈÕ±¨"
   goto :failed
 )
 
-echo [1/4] æ­£åœ¨è¯»å–æœ€æ–°æ—¥æŠ¥å¹¶æ›´æ–°ç½‘é¡µæ•°æ®...
+echo [1/4] ÕıÔÚ¶ÁÈ¡×îĞÂÈÕ±¨²¢¸üĞÂÍøÒ³Êı¾İ...
 py -3 tools\update_from_workbook.py
 if errorlevel 1 goto :failed
 
-echo [2/4] æ­£åœ¨ç”Ÿæˆå¾®ä¿¡æ—¥æŠ¥å›¾ç‰‡...
+echo [2/4] ÕıÔÚÉú³ÉÎ¢ĞÅÈÕ±¨Í¼Æ¬...
 py -3 tools\generate_daily_image.py
 if errorlevel 1 goto :failed
 
-echo [3/4] æ­£åœ¨ç”Ÿæˆç‰ˆæœ¬è®°å½•...
+echo [3/4] ÕıÔÚÉú³É°æ±¾¼ÇÂ¼...
 git add dist\data\report-data.json dist\images\reports
 git diff --cached --quiet
 if not errorlevel 1 goto :nothing
@@ -55,29 +55,29 @@ if not errorlevel 1 goto :nothing
 git commit -m "data: update daily ranking"
 if errorlevel 1 goto :failed
 
-echo [4/4] æ­£åœ¨å‘å¸ƒåˆ° GitHub...
+echo [4/4] ÕıÔÚ·¢²¼µ½ GitHub...
 git push
 if errorlevel 1 goto :failed
 
 echo.
-echo æ—¥æŠ¥å·²å‘å¸ƒï¼Œç½‘é¡µå°†åœ¨æ•°åˆ†é’Ÿå†…è‡ªåŠ¨æ›´æ–°ã€‚
-echo ç½‘å€ï¼šhttps://zhishuir.github.io/wuyou-retention-pk-dashboard/
-echo å›¾ç‰‡å·²ä¿å­˜åœ¨â€œé€šæŠ¥å›¾ç‰‡â€æ–‡ä»¶å¤¹ï¼Œå¯ç›´æ¥å‘é€åˆ°å¾®ä¿¡ç¾¤ã€‚
-start "" explorer.exe "%CD%\é€šæŠ¥å›¾ç‰‡"
+echo ÈÕ±¨ÒÑ·¢²¼£¬ÍøÒ³½«ÔÚÊı·ÖÖÓÄÚ×Ô¶¯¸üĞÂ¡£
+echo ÍøÖ·£ºhttps://zhishuir.github.io/wuyou-retention-pk-dashboard/
+echo Í¼Æ¬ÒÑ±£´æÔÚ¡°Í¨±¨Í¼Æ¬¡±ÎÄ¼ş¼Ğ£¬¿ÉÖ±½Ó·¢ËÍµ½Î¢ĞÅÈº¡£
+start "" explorer.exe "%CD%\Í¨±¨Í¼Æ¬"
 pause
 goto :end
 
 :nothing
 echo.
-echo æ²¡æœ‰æ–°çš„æ—¥æŠ¥æ•°æ®éœ€è¦å‘å¸ƒã€‚
-echo å›¾ç‰‡å·²é‡æ–°ç”Ÿæˆï¼Œå¯åœ¨â€œé€šæŠ¥å›¾ç‰‡â€æ–‡ä»¶å¤¹ä¸­æŸ¥çœ‹ã€‚
-start "" explorer.exe "%CD%\é€šæŠ¥å›¾ç‰‡"
+echo Ã»ÓĞĞÂµÄÈÕ±¨Êı¾İĞèÒª·¢²¼¡£
+echo Í¼Æ¬ÒÑÖØĞÂÉú³É£¬¿ÉÔÚ¡°Í¨±¨Í¼Æ¬¡±ÎÄ¼ş¼ĞÖĞ²é¿´¡£
+start "" explorer.exe "%CD%\Í¨±¨Í¼Æ¬"
 pause
 goto :end
 
 :failed
 echo.
-echo æ“ä½œæœªå®Œæˆï¼Œè¯·æ£€æŸ¥ä¸Šæ–¹æç¤ºåé‡è¯•ã€‚
+echo ²Ù×÷Î´Íê³É£¬Çë¼ì²éÉÏ·½ÌáÊ¾ºóÖØÊÔ¡£
 pause
 
 :end
