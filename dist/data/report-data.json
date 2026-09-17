@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17 11:01",
+  "updatedAt": "2026-09-17 14:47",
   "excluded": [
     "哈布尔夫"
   ],
@@ -448,6 +448,101 @@
       "name": "李丹妮",
       "bigGroup": "专席组",
       "smallGroup": "专席组3组"
+    },
+    {
+      "name": "刘海燕",
+      "bigGroup": "晶晶组",
+      "smallGroup": "晶晶组在线组"
+    },
+    {
+      "name": "张津宇明",
+      "bigGroup": "晶晶组",
+      "smallGroup": "晶晶组在线组"
+    },
+    {
+      "name": "韩璐",
+      "bigGroup": "晶晶组",
+      "smallGroup": "晶晶组在线组"
+    },
+    {
+      "name": "刘绿叶",
+      "bigGroup": "晶晶组",
+      "smallGroup": "晶晶组在线组"
+    },
+    {
+      "name": "高冬雪",
+      "bigGroup": "左娜组",
+      "smallGroup": "左娜在线组"
+    },
+    {
+      "name": "张洁",
+      "bigGroup": "左娜组",
+      "smallGroup": "左娜在线组"
+    },
+    {
+      "name": "刘洋",
+      "bigGroup": "左娜组",
+      "smallGroup": "左娜在线组"
+    },
+    {
+      "name": "张晓丽",
+      "bigGroup": "左娜组",
+      "smallGroup": "左娜在线组"
+    },
+    {
+      "name": "冯艳丽",
+      "bigGroup": "晶晶组",
+      "smallGroup": "晶晶组远柜组"
+    },
+    {
+      "name": "刘海艳",
+      "bigGroup": "晶晶组",
+      "smallGroup": "晶晶组远柜组"
+    },
+    {
+      "name": "高建萍",
+      "bigGroup": "晶晶组",
+      "smallGroup": "晶晶组远柜组"
+    },
+    {
+      "name": "张鑫",
+      "bigGroup": "晶晶组",
+      "smallGroup": "晶晶组远柜组"
+    },
+    {
+      "name": "张一菲",
+      "bigGroup": "晶晶组",
+      "smallGroup": "晶晶组远柜组"
+    },
+    {
+      "name": "冯鹰",
+      "bigGroup": "左娜组",
+      "smallGroup": "左娜组远柜组"
+    },
+    {
+      "name": "王琪",
+      "bigGroup": "左娜组",
+      "smallGroup": "左娜组远柜组"
+    },
+    {
+      "name": "高慧洁",
+      "bigGroup": "左娜组",
+      "smallGroup": "左娜组远柜组"
+    },
+    {
+      "name": "范娟",
+      "bigGroup": "左娜组",
+      "smallGroup": "左娜组远柜组"
+    },
+    {
+      "name": "杨莉",
+      "bigGroup": "左娜组",
+      "smallGroup": "左娜组远柜组"
+    },
+    {
+      "name": "高璇",
+      "bigGroup": "左娜组",
+      "smallGroup": "左娜组远柜组"
     }
   ],
   "days": [
@@ -1346,93 +1441,93 @@
         },
         {
           "name": "范娟",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
           "plus": 0,
           "failure": 2,
           "qc": 0,
           "score": -2,
-          "matched": false
+          "matched": true
         },
         {
           "name": "高慧洁",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
           "plus": 1,
           "failure": 1,
           "qc": 1,
           "score": -1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "高建萍",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
           "plus": 0,
           "failure": 3,
           "qc": 0,
           "score": -3,
-          "matched": false
+          "matched": true
         },
         {
           "name": "韩璐",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组在线组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
           "score": -1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "刘海艳",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
           "score": -1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "刘海燕",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组在线组",
           "plus": 3,
           "failure": 3,
           "qc": 0,
           "score": 0,
-          "matched": false
+          "matched": true
         },
         {
           "name": "刘绿叶",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组在线组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
           "score": -1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "刘洋",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜在线组",
           "plus": 1,
           "failure": 0,
           "qc": 0,
           "score": 1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "王琪",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
           "plus": 1,
           "failure": 0,
           "qc": 0,
           "score": 1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "吴单",
@@ -1456,43 +1551,103 @@
         },
         {
           "name": "杨莉",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
           "plus": 0,
           "failure": 5,
           "qc": 3,
           "score": -8,
-          "matched": false
+          "matched": true
         },
         {
           "name": "张洁",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜在线组",
           "plus": 1,
           "failure": 2,
           "qc": 0,
           "score": -1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "张津宇明",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组在线组",
           "plus": 0,
           "failure": 3,
           "qc": 1,
           "score": -4,
-          "matched": false
+          "matched": true
         },
         {
           "name": "张一菲",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
           "plus": 0,
           "failure": 1,
           "qc": 1,
           "score": -2,
-          "matched": false
+          "matched": true
+        },
+        {
+          "name": "高冬雪",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜在线组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "张晓丽",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜在线组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "冯艳丽",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "张鑫",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "冯鹰",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "高璇",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
         }
       ]
     },
@@ -2391,43 +2546,43 @@
         },
         {
           "name": "冯艳丽",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
           "plus": 1,
           "failure": 1,
           "qc": 0,
           "score": 0,
-          "matched": false
+          "matched": true
         },
         {
           "name": "冯鹰",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
           "score": -1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "刘洋",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜在线组",
           "plus": 0,
           "failure": 3,
           "qc": 0,
           "score": -3,
-          "matched": false
+          "matched": true
         },
         {
           "name": "刘海燕",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组在线组",
           "plus": 1,
           "failure": 3,
           "qc": 0,
           "score": -2,
-          "matched": false
+          "matched": true
         },
         {
           "name": "刘雪娟",
@@ -2441,43 +2596,43 @@
         },
         {
           "name": "张一菲",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
           "plus": 0,
           "failure": 3,
           "qc": 0,
           "score": -3,
-          "matched": false
+          "matched": true
         },
         {
           "name": "张洁",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜在线组",
           "plus": 1,
           "failure": 1,
           "qc": 0,
           "score": 0,
-          "matched": false
+          "matched": true
         },
         {
           "name": "张津宇明",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组在线组",
           "plus": 0,
           "failure": 4,
           "qc": 0,
           "score": -4,
-          "matched": false
+          "matched": true
         },
         {
           "name": "张鑫",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
           "score": -1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "温姝然",
@@ -2491,13 +2646,13 @@
         },
         {
           "name": "范娟",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
           "plus": 0,
           "failure": 2,
           "qc": 0,
           "score": -2,
-          "matched": false
+          "matched": true
         },
         {
           "name": "金鑫",
@@ -2521,13 +2676,103 @@
         },
         {
           "name": "韩璐",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组在线组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
           "score": -1,
-          "matched": false
+          "matched": true
+        },
+        {
+          "name": "刘绿叶",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组在线组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "高冬雪",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜在线组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "张晓丽",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜在线组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "刘海艳",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "高建萍",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "王琪",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "高慧洁",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "杨莉",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "高璇",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
         }
       ]
     },
@@ -3426,23 +3671,23 @@
         },
         {
           "name": "冯艳丽",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
           "plus": 0,
           "failure": 2,
           "qc": 0,
           "score": -2,
-          "matched": false
+          "matched": true
         },
         {
           "name": "冯鹰",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
           "plus": 0,
           "failure": 3,
           "qc": 0,
           "score": -3,
-          "matched": false
+          "matched": true
         },
         {
           "name": "刘宇",
@@ -3456,43 +3701,43 @@
         },
         {
           "name": "刘洋",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜在线组",
           "plus": 1,
           "failure": 0,
           "qc": 0,
           "score": 1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "刘海艳",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
           "plus": 1,
           "failure": 2,
           "qc": 0,
           "score": -1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "张洁",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜在线组",
           "plus": 1,
           "failure": 4,
           "qc": 0,
           "score": -3,
-          "matched": false
+          "matched": true
         },
         {
           "name": "杨莉",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
           "plus": 0,
           "failure": 2,
           "qc": 0,
           "score": -2,
-          "matched": false
+          "matched": true
         },
         {
           "name": "杨阳",
@@ -3506,33 +3751,133 @@
         },
         {
           "name": "王琪",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
           "score": -1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "韩璐",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组在线组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
           "score": -1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "高冬雪",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜在线组",
           "plus": 0,
           "failure": 3,
           "qc": 0,
           "score": -3,
-          "matched": false
+          "matched": true
+        },
+        {
+          "name": "刘海燕",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组在线组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "张津宇明",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组在线组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "刘绿叶",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组在线组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "张晓丽",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜在线组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "高建萍",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "张鑫",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "张一菲",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "高慧洁",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "范娟",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "高璇",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
         }
       ]
     },
@@ -4431,43 +4776,43 @@
         },
         {
           "name": "冯艳丽",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
           "plus": 1,
           "failure": 1,
           "qc": 0,
           "score": 0,
-          "matched": false
+          "matched": true
         },
         {
           "name": "冯鹰",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
           "plus": 2,
           "failure": 0,
           "qc": 0,
           "score": 2,
-          "matched": false
+          "matched": true
         },
         {
           "name": "刘洋",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜在线组",
           "plus": 2,
           "failure": 1,
           "qc": 0,
           "score": 1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "刘海艳",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
           "plus": 0,
           "failure": 2,
           "qc": 0,
           "score": -2,
-          "matched": false
+          "matched": true
         },
         {
           "name": "张心",
@@ -4481,23 +4826,23 @@
         },
         {
           "name": "张晓丽",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜在线组",
           "plus": 0,
           "failure": 3,
           "qc": 0,
           "score": -3,
-          "matched": false
+          "matched": true
         },
         {
           "name": "张津宇明",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组在线组",
           "plus": 1,
           "failure": 2,
           "qc": 0,
           "score": -1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "温姝然",
@@ -4511,53 +4856,133 @@
         },
         {
           "name": "王琪",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
           "score": -1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "范娟",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
           "score": -1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "高冬雪",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜在线组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
           "score": -1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "高建萍",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
           "score": -1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "高慧洁",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
           "plus": 1,
           "failure": 2,
           "qc": 0,
           "score": -1,
-          "matched": false
+          "matched": true
+        },
+        {
+          "name": "刘海燕",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组在线组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "韩璐",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组在线组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "刘绿叶",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组在线组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "张洁",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜在线组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "张鑫",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "张一菲",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "杨莉",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "高璇",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
         }
       ]
     },
@@ -5456,83 +5881,193 @@
         },
         {
           "name": "冯艳丽",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
           "plus": 0,
           "failure": 2,
           "qc": 0,
           "score": -2,
-          "matched": false
+          "matched": true
         },
         {
           "name": "刘洋",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜在线组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
           "score": -1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "刘海燕",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组在线组",
           "plus": 1,
           "failure": 0,
           "qc": 0,
           "score": 1,
-          "matched": false
+          "matched": true
         },
         {
           "name": "刘海艳",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
           "plus": 1,
           "failure": 1,
           "qc": 0,
           "score": 0,
-          "matched": false
+          "matched": true
         },
         {
           "name": "张洁",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜在线组",
           "plus": 0,
           "failure": 2,
           "qc": 0,
           "score": -2,
-          "matched": false
+          "matched": true
         },
         {
           "name": "张津宇明",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组在线组",
           "plus": 0,
           "failure": 2,
           "qc": 0,
           "score": -2,
-          "matched": false
+          "matched": true
         },
         {
           "name": "杨莉",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
           "plus": 0,
           "failure": 2,
           "qc": 0,
           "score": -2,
-          "matched": false
+          "matched": true
         },
         {
           "name": "高慧洁",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
           "plus": 1,
           "failure": 3,
           "qc": 0,
           "score": -2,
-          "matched": false
+          "matched": true
+        },
+        {
+          "name": "韩璐",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组在线组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "刘绿叶",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组在线组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "高冬雪",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜在线组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "张晓丽",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜在线组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "高建萍",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "张鑫",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "张一菲",
+          "bigGroup": "晶晶组",
+          "smallGroup": "晶晶组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "冯鹰",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "王琪",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "范娟",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
+        },
+        {
+          "name": "高璇",
+          "bigGroup": "左娜组",
+          "smallGroup": "左娜组远柜组",
+          "plus": 0,
+          "failure": 0,
+          "qc": 0,
+          "score": 0,
+          "matched": true
         }
       ]
     }
