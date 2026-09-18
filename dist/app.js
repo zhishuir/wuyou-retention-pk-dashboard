@@ -197,8 +197,9 @@ function render() {
   byId("kpi-qc").textContent = report.qc;
   byId("kpi-total").textContent = report.total;
   byId("kpi-days").textContent = `统计天数 ${days.length}`;
-  byId("image-button").disabled = state.scope !== "day";
-  byId("image-button").title = state.scope === "day" ? "下载当前日期的PNG日报" : "日报图片仅按日生成";
+  byId("image-button").disabled = !["day", "week"].includes(state.scope);
+  byId("image-button").textContent = state.scope === "week" ? "下载周报图片" : "下载日报图片";
+  byId("image-button").title = state.scope === "day" ? "下载当前日期的PNG日报" : state.scope === "week" ? "下载本周PNG周报" : "月报暂无图片";
 
   renderRankList("personal-top", report.personal, "personal");
   renderRankList("personal-bottom", report.personal, "personal", true);
@@ -227,11 +228,12 @@ function exportCsv() {
   URL.revokeObjectURL(url);
 }
 
-function downloadDailyImage() {
-  if (state.scope !== "day" || !state.period) return;
+function downloadImage() {
+  if (!["day", "week"].includes(state.scope) || !state.period) return;
+  const label = state.scope === "week" ? "周报" : "日报";
   const anchor = document.createElement("a");
   anchor.href = `./images/reports/${state.period}.png`;
-  anchor.download = `${state.period}_降档低签挽留日报.png`;
+  anchor.download = `${state.period}_降档低签挽留${label}.png`;
   anchor.click();
 }
 
@@ -266,6 +268,6 @@ byId("period-picker").addEventListener("change", (event) => { state.period = eve
 byId("person-search").addEventListener("input", (event) => renderPersonalTable(state.personalRows, event.target.value));
 byId("print-button").addEventListener("click", () => window.print());
 byId("export-button").addEventListener("click", exportCsv);
-byId("image-button").addEventListener("click", downloadDailyImage);
+byId("image-button").addEventListener("click", downloadImage);
 
 loadData();

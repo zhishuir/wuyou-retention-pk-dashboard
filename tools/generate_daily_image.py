@@ -149,15 +149,23 @@ def draw_rank_section(draw: ImageDraw.ImageDraw, y: int, title: str, rows: list[
             draw.text((x2, row_y + 10), metric_text(value, kind), font=font(27, True), fill=color, anchor="ra")
 
 
-def generate(report: dict) -> Image.Image:
+def generate(
+    report: dict,
+    *,
+    title: str = "降档低签挽留日报",
+    date_text: str | None = None,
+    total_unit: str = "当日",
+) -> Image.Image:
     image = Image.new("RGB", (1242, 2000), COLORS["canvas"])
     draw = ImageDraw.Draw(image)
     draw.rectangle((0, 0, 1242, 278), fill=COLORS["navy"])
     draw.rectangle((0, 270, 1242, 278), fill=COLORS["teal"])
     draw.text((56, 42), "中台报表平台", font=font(20), fill="#b9c8d8")
-    draw.text((56, 80), "降档低签挽留日报", font=font(50, True), fill="#ffffff")
-    year, month, day = report["date"].split("-")
-    draw.text((1186, 96), f"{year}年{int(month)}月{int(day)}日", font=font(26, True), fill="#ffffff", anchor="ra")
+    draw.text((56, 80), title, font=font(50, True), fill="#ffffff")
+    if date_text is None:
+        year, month, day = report["date"].split("-")
+        date_text = f"{year}年{int(month)}月{int(day)}日"
+    draw.text((1186, 96), date_text, font=font(26, True), fill="#ffffff", anchor="ra")
     draw.text((1186, 140), "个人、小组及大组积分排名", font=font(19), fill="#b9c8d8", anchor="ra")
 
     kpis = [
@@ -174,7 +182,7 @@ def generate(report: dict) -> Image.Image:
         draw.text((x + 24, y + 20), label, font=font(19, True), fill=COLORS["muted"])
         value_color = COLORS["teal"] if label == "成功加分" else COLORS["red"] if value < 0 or "扣分" in label else COLORS["ink"]
         draw.text((x + 24, y + 55), str(value), font=font(45, True), fill=value_color)
-        draw.text((x + 24, y + 119), "次数" if label != "合计积分" else "当日", font=font(15), fill=COLORS["muted"])
+        draw.text((x + 24, y + 119), "次数" if label != "合计积分" else total_unit, font=font(15), fill=COLORS["muted"])
 
     draw.text((56, 396), "计分口径：成功 1次 +1分；失败 1次 −1分；质检不足 1次 −1分。", font=font(18), fill=COLORS["muted"])
     draw_rank_section(draw, 452, "个人积分排名", report["personal"], "personal")

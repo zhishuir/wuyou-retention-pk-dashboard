@@ -47,6 +47,14 @@ echo [2/4] 正在生成微信日报图片...
 py -3 tools\generate_daily_image.py
 if errorlevel 1 goto :failed
 
+set "DOW="
+for /f "delims=" %%d in ('powershell -NoProfile -Command "[int](Get-Date).DayOfWeek"') do set "DOW=%%d"
+if "%DOW%"=="0" (
+  echo [2b/4] 今天是周日，正在生成本周周报...
+  py -3 tools\generate_weekly_image.py
+  if errorlevel 1 goto :failed
+)
+
 echo [3/4] 正在生成版本记录...
 git add dist\data\report-data.json dist\images\reports
 git diff --cached --quiet
