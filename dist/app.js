@@ -228,11 +228,19 @@ function exportCsv() {
   URL.revokeObjectURL(url);
 }
 
-function downloadImage() {
+async function downloadImage() {
   if (!["day", "week"].includes(state.scope) || !state.period) return;
   const label = state.scope === "week" ? "周报" : "日报";
+  const url = `./images/reports/${state.period}.png`;
+  try {
+    const response = await fetch(url, { method: "HEAD", cache: "no-store" });
+    if (!response.ok) throw new Error("missing");
+  } catch {
+    alert(`该${label}图片尚未生成，暂时无法下载。`);
+    return;
+  }
   const anchor = document.createElement("a");
-  anchor.href = `./images/reports/${state.period}.png`;
+  anchor.href = url;
   anchor.download = `${state.period}_降档低签挽留${label}.png`;
   anchor.click();
 }
