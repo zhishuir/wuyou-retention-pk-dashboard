@@ -38,9 +38,9 @@ const RETENTION_THEADS = {
 };
 
 const PK_THEADS = {
-  personal: `<tr><th>位次</th><th>姓名</th><th>大组</th><th>小组</th><th>加分次数</th><th>总积分</th></tr>`,
-  small: `<tr><th>位次</th><th>大组</th><th>小组</th><th>人数</th><th>加分次数</th><th>总积分</th><th>人均积分</th></tr>`,
-  big: `<tr><th>位次</th><th>大组</th><th>人数</th><th>加分次数</th><th>总积分</th><th>人均积分</th></tr>`,
+  personal: `<tr><th>位次</th><th>姓名</th><th>大组</th><th>小组</th><th>总积分</th></tr>`,
+  small: `<tr><th>位次</th><th>大组</th><th>小组</th><th>人数</th><th>总积分</th><th>人均积分</th></tr>`,
+  big: `<tr><th>位次</th><th>大组</th><th>人数</th><th>总积分</th><th>人均积分</th></tr>`,
 };
 
 function dateParts(dateString) {
@@ -162,11 +162,10 @@ function aggregatePkGroups(rows, field) {
   for (const row of matched) {
     const name = row[field];
     if (!groups.has(name)) {
-      groups.set(name, { name, bigGroup: row.bigGroup, members: new Set(), occurrences: 0, score: 0 });
+      groups.set(name, { name, bigGroup: row.bigGroup, members: new Set(), score: 0 });
     }
     const target = groups.get(name);
     target.members.add(row.name);
-    target.occurrences += Number(row.occurrences || 0);
     target.score += Number(row.score || 0);
   }
   return [...groups.values()]
@@ -221,7 +220,6 @@ function renderPkPersonalTable(rows, query = "") {
       <td>${row.rank}</td><td><strong>${escapeHtml(row.name)}</strong></td>
       <td>${row.matched ? escapeHtml(row.bigGroup) : '<span class="pending-label">待确认</span>'}</td>
       <td>${row.matched ? escapeHtml(row.smallGroup) : '<span class="pending-label">待确认</span>'}</td>
-      <td class="numeric">${row.occurrences || 0}</td>
       <td class="numeric"><span class="score-pill ${scoreClass(row.score)}">${row.score}</span></td>
     </tr>`;
   }).join("");
@@ -240,7 +238,7 @@ function renderPkGroupTable(elementId, rows, kind) {
   byId(elementId).innerHTML = rows.map((row, index) => `<tr class="${rowClass(index, rows.length)}">
     <td>${row.rank}</td>
     ${kind === "small" ? `<td>${escapeHtml(row.bigGroup)}</td><td><strong>${escapeHtml(row.name)}</strong></td>` : `<td><strong>${escapeHtml(row.name)}</strong></td>`}
-    <td class="numeric">${row.headcount}</td><td class="numeric">${row.occurrences}</td><td class="numeric">${row.score}</td>
+    <td class="numeric">${row.headcount}</td><td class="numeric">${row.score}</td>
     <td class="numeric"><span class="score-pill ${scoreClass(row.average)}">${formatNumber(row.average, 2)}</span></td>
   </tr>`).join("");
 }
@@ -339,7 +337,8 @@ function renderPk() {
   byId("data-status").innerHTML = "<i></i>已更新";
   byId("updated-at").textContent = state.pk.updatedAt ? `更新时间 ${state.pk.updatedAt}` : "";
   byId("scope-label").textContent = "营销PK赛";
-  byId("report-title").textContent = "赛季累计排名通报";
+  const pkDate = state.pk && state.pk.date ? state.pk.date : "";
+  byId("report-title").textContent = pkDate ? `${pkDate}营销PK赛排名通报` : "营销PK赛排名通报";
 
   const total = personal.reduce((sum, row) => sum + Number(row.score || 0), 0);
   const projects = state.pk.projectScores ? state.pk.projectScores.length : 0;
@@ -366,7 +365,7 @@ function renderPk() {
   byId("unmatched-count").textContent = `${unmatched.length}人`;
   byId("unmatched-names").textContent = unmatched.map((row) => row.name).join("、");
 
-  byId("pk-legend-grid").innerHTML = (state.pk.projectScores || []).map((project) => `<span class="legend-item"><strong>${escapeHtml(project.name)}</strong><em>+${Number(project.score)}</em></span>`).join("");
+  byId("pk-legend-grid").innerHTML = (state.pk.projectScores || []).map((project) => `<span class="legend-item"><strong>${escapeHtml(project.name)}</strong><em>累计 ${Number(project.score)} 分</em></span>`).join("");
 }
 
 function render() {
@@ -378,10 +377,10 @@ function exportCsv() {
   if (!state.personalRows.length) return;
   const isPk = state.mode === "pk";
   const rows = [isPk
-    ? ["位次", "姓名", "大组", "小组", "加分次数", "总积分"]
+    ? ["位次", "姓名", "大组", "小组", "总积分"]
     : ["位次", "姓名", "大组", "小组", "成功", "失败", "质检", "积分"],
   ...state.personalRows.map((row) => isPk
-    ? [row.rank, row.name, row.bigGroup, row.smallGroup, row.occurrences || 0, row.score]
+    ? [row.rank, row.name, row.bigGroup, row.smallGroup, row.score]
     : [row.rank, row.name, row.bigGroup, row.smallGroup, row.plus, row.failure, row.qc, row.score])];
   const csv = `\uFEFF${rows.map((row) => row.map((cell) => `"${String(cell).replaceAll('"', '""')}"`).join(",")).join("\r\n")}`;
   const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));

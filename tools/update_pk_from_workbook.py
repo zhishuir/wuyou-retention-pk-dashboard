@@ -2,8 +2,9 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from collections import defaultdict
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 
 from openpyxl import load_workbook
@@ -13,6 +14,10 @@ PK_DATA_FILE = ROOT / "dist" / "data" / "pk-data.json"
 RETENTION_DATA_FILE = ROOT / "dist" / "data" / "report-data.json"
 INBOX = ROOT / "待发布PK"
 SUPPORTED_SUFFIXES = {".xlsx", ".xlsm"}
+
+NAME_HEADERS = ("姓名", "人名")
+PROJECT_HEADERS = ("项目", "项目名称")
+SCORE_HEADERS = ("分值", "分数", "分值/分")
 
 
 def text(value: object) -> str:
@@ -34,48 +39,54 @@ def newest_workbook() -> Path:
     return candidates[0]
 
 
-def read_project_scores(workbook) -> list[dict]:
-    if "项目分值" not in workbook.sheetnames:
-        raise ValueError("模板中缺少「项目分值」工作表。")
-    sheet = workbook["项目分值"]
-    scores: list[dict] = []
-    seen: set[str] = set()
-    for row in sheet.iter_rows(min_row=2, max_col=2, values_only=True):
-        name = text(row[0])
-        if not name:
-            continue
-        try:
-            score = int(float(row[1]))
-        except (TypeError, ValueError):
-            raise ValueError(f"「项目分值」表中项目“{name}”的分值不是数字。") from None
-        if score <= 0:
-            raise ValueError(f"「项目分值」表中项目“{name}”的分值必须大于 0。")
-        if name in seen:
-            raise ValueError(f"「项目分值」表中项目“{name}”重复。")
-        seen.add(name)
-        scores.append({"name": name, "score": score})
-    if not scores:
-        raise ValueError("「项目分值」表为空，请先填写项目和分值。")
-    return scores
+def parse_date_from_filename(path: Path) -> str:
+    patterns = (
+        r"(?<!\d)(20\d{2})[年._-](\d{1,2})[月._-](\d{1,2})日?(?!\d)",
+        r"(?<!\d)(20\d{2})(\d{2})(\d{2})(?!\d)",
+    )
+    for pattern in patterns:
+        match = re.search(pattern, path.stem)
+        if match:
+            year, month, day = (int(part) for part in match.groups())
+            return date(year, month, day).isoformat()
+    return ""
 
 
-def read_records(workbook, project_scores: list[dict]) -> tuple[dict[str, dict[str, int]], set[str]]:
+def normalize_score(value: object) -> int:
+    if value in (None, ""):
+        return 0
+    return int(float(value))
+
+
+def read_records(workbook) -> dict:
     if "加分记录" not in workbook.sheetnames:
         raise ValueError("模板中缺少「加分记录」工作表。")
     sheet = workbook["加分记录"]
-    score_map = {item["name"]: item["score"] for item in project_scores}
+
+    header_row = next(sheet.iter_rows(min_row=1, max_row=1, max_col=3, values_only=True), None)
+    headers = [text(cell) for cell in (header_row or [])]
+    index = {"name": -1, "project": -1, "score": -1}
+    for position, header in enumerate(headers):
+        if header in NAME_HEADERS and index["name"] == -1:
+            index["name"] = position
+        elif header in PROJECT_HEADERS and index["project"] == -1:
+            index["project"] = position
+        elif header in SCORE_HEADERS and index["score"] == -1:
+            index["score"] = position
+    if -1 in index.values():
+        raise ValueError("表头需包含「姓名」「项目」「分值」三列。")
+
     counts: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
-    unknown_projects: set[str] = set()
     for row in sheet.iter_rows(min_row=2, max_col=3, values_only=True):
-        name = text(row[1])
-        project = text(row[2])
-        if not name or not project:
+        name = text(row[index["name"]])
+        project = text(row[index["project"]])
+        score = normalize_score(row[index["score"]])
+        if not name:
             continue
-        if project not in score_map:
-            unknown_projects.add(project)
+        if not project:
             continue
-        counts[name][project] += 1
-    return dict(counts), unknown_projects
+        counts[name][project] += score
+    return dict(counts)
 
 
 def roster_from_retention() -> dict[str, dict]:
@@ -93,11 +104,10 @@ def roster_from_retention() -> dict[str, dict]:
     return roster
 
 
-def build_personal(counts: dict, project_scores: list[dict], roster: dict) -> list[dict]:
-    score_map = {item["name"]: item["score"] for item in project_scores}
+def build_personal(counts: dict, roster: dict) -> list[dict]:
     people: list[dict] = []
     for name, detail in counts.items():
-        total = sum(count * score_map[project] for project, count in detail.items())
+        total = sum(detail.values())
         membership = roster.get(name)
         people.append(
             {
@@ -105,35 +115,42 @@ def build_personal(counts: dict, project_scores: list[dict], roster: dict) -> li
                 "bigGroup": membership["bigGroup"] if membership else "待确认班组",
                 "smallGroup": membership["smallGroup"] if membership else "待确认小组",
                 "matched": membership is not None,
-                "occurrences": sum(detail.values()),
                 "score": total,
                 "detail": dict(sorted(detail.items())),
             }
         )
-    people.sort(key=lambda person: (-person["score"], -person["occurrences"], person["name"]))
+    people.sort(key=lambda person: (-person["score"], person["name"]))
     for index, person in enumerate(people):
         person["rank"] = index + 1
     return people
 
 
+def build_project_legend(counts: dict) -> list[dict]:
+    scores: dict[str, int] = defaultdict(int)
+    for detail in counts.values():
+        for project, score in detail.items():
+            scores[project] += score
+    return [{"name": name, "score": score} for name, score in sorted(scores.items(), key=lambda item: -item[1])]
+
+
 def update_data(workbook_path: Path, data_file: Path = PK_DATA_FILE) -> dict:
     workbook = load_workbook(workbook_path, data_only=True, read_only=True)
-    project_scores = read_project_scores(workbook)
-    counts, unknown_projects = read_records(workbook, project_scores)
-    if unknown_projects:
-        print("警告：以下项目不在「项目分值」表中，已忽略：" + "、".join(sorted(unknown_projects)))
+    counts = read_records(workbook)
     roster = roster_from_retention()
-    personal = build_personal(counts, project_scores, roster)
+    if not counts:
+        raise ValueError("「加分记录」表中没有数据。")
+    personal = build_personal(counts, roster)
     payload = {
         "updatedAt": datetime.now().strftime("%Y-%m-%d %H:%M"),
-        "projectScores": project_scores,
+        "date": parse_date_from_filename(workbook_path),
+        "projectScores": build_project_legend(counts),
         "personal": personal,
     }
     data_file.parent.mkdir(parents=True, exist_ok=True)
     data_file.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     unmatched = [person["name"] for person in personal if not person["matched"]]
     return {
-        "projects": len(project_scores),
+        "date": payload["date"],
         "people": len(personal),
         "total": sum(person["score"] for person in personal),
         "unmatched": unmatched,
@@ -141,7 +158,7 @@ def update_data(workbook_path: Path, data_file: Path = PK_DATA_FILE) -> dict:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="把营销PK赛模板更新到网页数据文件。")
+    parser = argparse.ArgumentParser(description="把营销PK赛模板(三列)更新到网页数据文件。")
     parser.add_argument(
         "workbook",
         nargs="?",
@@ -153,9 +170,9 @@ def main() -> int:
     try:
         workbook_path = args.workbook.resolve() if args.workbook else newest_workbook()
         summary = update_data(workbook_path, args.data_file.resolve())
+        day_text = f"（{summary['date']}）" if summary["date"] else ""
         print(
-            f"已更新营销PK赛：{summary['projects']} 个项目，"
-            f"{summary['people']} 人参赛，累计加分 {summary['total']} 分。"
+            f"已更新营销PK赛{day_text}：{summary['people']} 人参赛，累计加分 {summary['total']} 分。"
         )
         if summary["unmatched"]:
             print("待确认名单：" + "、".join(summary["unmatched"]))
