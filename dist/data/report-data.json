@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21 14:35",
+  "updatedAt": "2026-09-21 17:24",
   "excluded": [
     "哈布尔夫"
   ],
@@ -10688,10 +10688,10 @@
           "name": "张乐",
           "bigGroup": "天籁组",
           "smallGroup": "天籁组1组",
-          "plus": 3,
+          "plus": 2,
           "failure": 1,
           "qc": 0,
-          "score": 2,
+          "score": 1,
           "matched": true
         },
         {
@@ -11190,8 +11190,8 @@
           "smallGroup": "虎翼组1组",
           "plus": 0,
           "failure": 2,
-          "qc": 0,
-          "score": -2,
+          "qc": 1,
+          "score": -3,
           "matched": true
         },
         {
@@ -11290,8 +11290,8 @@
           "smallGroup": "雄鹰组1组",
           "plus": 0,
           "failure": 2,
-          "qc": 0,
-          "score": -2,
+          "qc": 1,
+          "score": -3,
           "matched": true
         },
         {
@@ -11310,8 +11310,8 @@
           "smallGroup": "雄鹰组2组",
           "plus": 1,
           "failure": 1,
-          "qc": 0,
-          "score": 0,
+          "qc": 1,
+          "score": -1,
           "matched": true
         },
         {
