@@ -26,13 +26,18 @@
   </header>
 
   <main class="page-shell">
+    <section class="mode-tabs" role="tablist" aria-label="报表类型">
+      <button class="mode-tab is-active" type="button" data-mode="retention" role="tab" aria-selected="true">挽留考核</button>
+      <button class="mode-tab" type="button" data-mode="pk" role="tab" aria-selected="false">营销PK赛</button>
+    </section>
+
     <section class="control-bar" aria-label="报表周期选择">
-      <div class="scope-tabs" role="tablist" aria-label="统计周期">
+      <div class="scope-tabs" id="scope-tabs" role="tablist" aria-label="统计周期">
         <button class="scope-tab is-active" type="button" data-scope="day" role="tab" aria-selected="true">日报</button>
         <button class="scope-tab" type="button" data-scope="week" role="tab" aria-selected="false">周报</button>
         <button class="scope-tab" type="button" data-scope="month" role="tab" aria-selected="false">月报</button>
       </div>
-      <label class="period-select">
+      <label class="period-select" id="period-select">
         <span>统计周期</span>
         <select id="period-picker" aria-label="选择统计周期"></select>
       </label>
@@ -48,7 +53,7 @@
         <p id="scope-label">降档低签挽留日报</p>
         <h2 id="report-title">考核排名通报</h2>
       </div>
-      <div class="method-note">
+      <div class="method-note" id="method-note">
         <span>计分口径</span>
         <strong>挽留成功 +1</strong>
         <strong>挽留失败 −1</strong>
@@ -56,7 +61,7 @@
       </div>
     </section>
 
-    <section class="kpi-grid" aria-label="积分统计">
+    <section class="kpi-grid" id="kpi-grid" aria-label="积分统计">
       <article class="kpi-card positive"><span>挽留成功加分</span><strong id="kpi-plus">—</strong><small>累计次数</small></article>
       <article class="kpi-card negative"><span>挽留失败扣分</span><strong id="kpi-failure">—</strong><small>累计次数</small></article>
       <article class="kpi-card warning"><span>质检考核扣分</span><strong id="kpi-qc">—</strong><small>累计次数</small></article>
@@ -66,7 +71,7 @@
     <section class="rank-section">
       <div class="section-heading">
         <div><span>01</span><h3>个人积分排名</h3></div>
-        <p>按个人累计积分排序</p>
+        <p id="personal-desc">按个人累计积分排序</p>
       </div>
       <div class="podium-layout">
         <article class="rank-panel top-panel">
@@ -85,7 +90,7 @@
         </div>
         <div class="table-scroll">
           <table>
-            <thead><tr><th>位次</th><th>姓名</th><th>大组</th><th>小组</th><th>成功</th><th>失败</th><th>质检</th><th>积分</th></tr></thead>
+            <thead id="personal-thead"><tr><th>位次</th><th>姓名</th><th>大组</th><th>小组</th><th>成功</th><th>失败</th><th>质检</th><th>积分</th></tr></thead>
             <tbody id="personal-table"></tbody>
           </table>
         </div>
@@ -95,7 +100,7 @@
     <section class="rank-section">
       <div class="section-heading">
         <div><span>02</span><h3>小组人均排名</h3></div>
-        <p>小组累计积分 ÷ 名单人数</p>
+        <p id="small-desc">小组累计积分 ÷ 名单人数</p>
       </div>
       <div class="podium-layout">
         <article class="rank-panel top-panel"><header><span>TOP 3</span><strong>领先小组</strong></header><ol id="small-top" class="rank-list"></ol></article>
@@ -105,7 +110,7 @@
         <div class="table-toolbar"><strong>小组完整排名</strong><small>人均分保留两位小数</small></div>
         <div class="table-scroll">
           <table>
-            <thead><tr><th>位次</th><th>大组</th><th>小组</th><th>人数</th><th>成功</th><th>失败</th><th>质检</th><th>总分</th><th>人均分</th></tr></thead>
+            <thead id="small-thead"><tr><th>位次</th><th>大组</th><th>小组</th><th>人数</th><th>成功</th><th>失败</th><th>质检</th><th>总分</th><th>人均分</th></tr></thead>
             <tbody id="small-table"></tbody>
           </table>
         </div>
@@ -115,7 +120,7 @@
     <section class="rank-section">
       <div class="section-heading">
         <div><span>03</span><h3>大组人均排名</h3></div>
-        <p>大组累计积分 ÷ 名单人数</p>
+        <p id="big-desc">大组累计积分 ÷ 名单人数</p>
       </div>
       <div class="podium-layout">
         <article class="rank-panel top-panel"><header><span>TOP 3</span><strong>领先大组</strong></header><ol id="big-top" class="rank-list"></ol></article>
@@ -125,11 +130,19 @@
         <div class="table-toolbar"><strong>大组完整排名</strong><small>待确认人员不计入班组平均分</small></div>
         <div class="table-scroll">
           <table>
-            <thead><tr><th>位次</th><th>大组</th><th>人数</th><th>成功</th><th>失败</th><th>质检</th><th>总分</th><th>人均分</th></tr></thead>
+            <thead id="big-thead"><tr><th>位次</th><th>大组</th><th>人数</th><th>成功</th><th>失败</th><th>质检</th><th>总分</th><th>人均分</th></tr></thead>
             <tbody id="big-table"></tbody>
           </table>
         </div>
       </div>
+    </section>
+
+    <section id="pk-legend" class="pk-legend" hidden>
+      <div class="section-heading">
+        <div><span>04</span><h3>项目分值表</h3></div>
+        <p>不同项目加分不同，只加分不扣分</p>
+      </div>
+      <div class="legend-grid" id="pk-legend-grid"></div>
     </section>
 
     <section id="unmatched-panel" class="attention-panel" hidden>
@@ -145,7 +158,7 @@
 
   <footer>
     <span>降档低签挽留考核排名通报</span>
-    <span>数据按日更新</span>
+    <span>挽留考核按日更新 · 营销PK赛赛季累计</span>
   </footer>
 
   <script src="./app.js" defer></script>

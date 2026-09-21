@@ -1,6 +1,7 @@
 .sites-runtime/
 private/
 待发布日报/
+待发布PK/
 通报图片/
 .last-report-date
 *.log
