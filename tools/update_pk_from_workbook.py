@@ -17,7 +17,16 @@ SUPPORTED_SUFFIXES = {".xlsx", ".xlsm"}
 
 NAME_HEADERS = ("姓名", "人名")
 PROJECT_HEADERS = ("项目", "项目名称")
-SCORE_HEADERS = ("分值", "分数", "分值/分")
+
+# 项目分值固定表：只加分不扣分，不同项目分值不同。
+# 新增/调整项目时，在这里修改即可，模板里不需要再填分值。
+PROJECT_SCORES: dict[str, int] = {
+    "20元20G-7天提速流量包": 1,
+    "30元30G-7天提速流量包": 1,
+    "9.9元权益包": 1,
+    "35元20G连续包月流量包（首月19.9元）": 2,
+    "15元10G包月流量包": 2,
+}
 
 
 def text(value: object) -> str:
@@ -52,41 +61,36 @@ def parse_date_from_filename(path: Path) -> str:
     return ""
 
 
-def normalize_score(value: object) -> int:
-    if value in (None, ""):
-        return 0
-    return int(float(value))
-
-
-def read_records(workbook) -> dict:
+def read_records(workbook) -> tuple[dict, set[str]]:
     if "加分记录" not in workbook.sheetnames:
         raise ValueError("模板中缺少「加分记录」工作表。")
     sheet = workbook["加分记录"]
 
     header_row = next(sheet.iter_rows(min_row=1, max_row=1, max_col=3, values_only=True), None)
     headers = [text(cell) for cell in (header_row or [])]
-    index = {"name": -1, "project": -1, "score": -1}
+    index = {"name": -1, "project": -1}
     for position, header in enumerate(headers):
         if header in NAME_HEADERS and index["name"] == -1:
             index["name"] = position
         elif header in PROJECT_HEADERS and index["project"] == -1:
             index["project"] = position
-        elif header in SCORE_HEADERS and index["score"] == -1:
-            index["score"] = position
     if -1 in index.values():
-        raise ValueError("表头需包含「姓名」「项目」「分值」三列。")
+        raise ValueError("表头需包含「姓名」和「项目」两列。")
 
     counts: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
-    for row in sheet.iter_rows(min_row=2, max_col=3, values_only=True):
+    unknown_projects: set[str] = set()
+    for row in sheet.iter_rows(min_row=2, max_col=max(index.values()) + 1, values_only=True):
         name = text(row[index["name"]])
         project = text(row[index["project"]])
-        score = normalize_score(row[index["score"]])
         if not name:
             continue
         if not project:
             continue
-        counts[name][project] += score
-    return dict(counts)
+        if project not in PROJECT_SCORES:
+            unknown_projects.add(project)
+            continue
+        counts[name][project] += 1
+    return dict(counts), unknown_projects
 
 
 def roster_from_retention() -> dict[str, dict]:
@@ -107,7 +111,7 @@ def roster_from_retention() -> dict[str, dict]:
 def build_personal(counts: dict, roster: dict) -> list[dict]:
     people: list[dict] = []
     for name, detail in counts.items():
-        total = sum(detail.values())
+        total = sum(count * PROJECT_SCORES[project] for project, count in detail.items())
         membership = roster.get(name)
         people.append(
             {
@@ -125,25 +129,26 @@ def build_personal(counts: dict, roster: dict) -> list[dict]:
     return people
 
 
-def build_project_legend(counts: dict) -> list[dict]:
-    scores: dict[str, int] = defaultdict(int)
-    for detail in counts.values():
-        for project, score in detail.items():
-            scores[project] += score
-    return [{"name": name, "score": score} for name, score in sorted(scores.items(), key=lambda item: -item[1])]
+def build_project_scores() -> list[dict]:
+    return [
+        {"name": name, "score": score}
+        for name, score in sorted(PROJECT_SCORES.items(), key=lambda item: (-item[1], item[0]))
+    ]
 
 
 def update_data(workbook_path: Path, data_file: Path = PK_DATA_FILE) -> dict:
     workbook = load_workbook(workbook_path, data_only=True, read_only=True)
-    counts = read_records(workbook)
+    counts, unknown_projects = read_records(workbook)
+    if unknown_projects:
+        print("警告：以下项目不在固定分值表中，已忽略：" + "、".join(sorted(unknown_projects)))
     roster = roster_from_retention()
     if not counts:
-        raise ValueError("「加分记录」表中没有数据。")
+        raise ValueError("「加分记录」表中没有有效数据。")
     personal = build_personal(counts, roster)
     payload = {
         "updatedAt": datetime.now().strftime("%Y-%m-%d %H:%M"),
         "date": parse_date_from_filename(workbook_path),
-        "projectScores": build_project_legend(counts),
+        "projectScores": build_project_scores(),
         "personal": personal,
     }
     data_file.parent.mkdir(parents=True, exist_ok=True)
@@ -158,7 +163,7 @@ def update_data(workbook_path: Path, data_file: Path = PK_DATA_FILE) -> dict:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="把营销PK赛模板(三列)更新到网页数据文件。")
+    parser = argparse.ArgumentParser(description="把营销PK赛模板(姓名+项目)更新到网页数据文件。")
     parser.add_argument(
         "workbook",
         nargs="?",

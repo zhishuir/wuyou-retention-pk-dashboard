@@ -341,10 +341,11 @@ function renderPk() {
   byId("report-title").textContent = pkDate ? `${pkDate}营销PK赛排名通报` : "营销PK赛排名通报";
 
   const total = personal.reduce((sum, row) => sum + Number(row.score || 0), 0);
-  const projects = state.pk.projectScores ? state.pk.projectScores.length : 0;
+  const activeProjects = new Set();
+  personal.forEach((row) => Object.keys(row.detail || {}).forEach((project) => activeProjects.add(project)));
   byId("pk-kpi-plus").textContent = total;
   byId("pk-kpi-people").textContent = personal.length;
-  byId("pk-kpi-projects").textContent = projects;
+  byId("pk-kpi-projects").textContent = activeProjects.size;
   byId("pk-kpi-top").textContent = personal[0] ? personal[0].score : 0;
 
   const smallGroups = aggregatePkGroups(personal, "smallGroup");
@@ -365,7 +366,7 @@ function renderPk() {
   byId("unmatched-count").textContent = `${unmatched.length}人`;
   byId("unmatched-names").textContent = unmatched.map((row) => row.name).join("、");
 
-  byId("pk-legend-grid").innerHTML = (state.pk.projectScores || []).map((project) => `<span class="legend-item"><strong>${escapeHtml(project.name)}</strong><em>累计 ${Number(project.score)} 分</em></span>`).join("");
+  byId("pk-legend-grid").innerHTML = (state.pk.projectScores || []).map((project) => `<span class="legend-item"><strong>${escapeHtml(project.name)}</strong><em>+${Number(project.score)}分</em></span>`).join("");
 }
 
 function render() {

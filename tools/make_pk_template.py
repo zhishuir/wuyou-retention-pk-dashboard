@@ -24,14 +24,14 @@ def main() -> int:
     wb = Workbook()
     ws = wb.active
     ws.title = "加分记录"
-    ws.append(["姓名", "项目", "分值"])
+    ws.append(["姓名", "项目"])
     ws["A1"].comment = Comment("必填，员工姓名，须与挽留考核名单中的姓名一致。", "模板说明")
-    ws["B1"].comment = Comment("必填，加分项目名称，例如：首投成功。", "模板说明")
-    ws["C1"].comment = Comment("必填，本次加多少分，例如：5。可以是任意数字（可为 0）。", "模板说明")
+    ws["B1"].comment = Comment(
+        "必填，项目名称，须为固定项目之一（分值由程序自动判定）。", "模板说明"
+    )
     ws.column_dimensions["A"].width = 14
-    ws.column_dimensions["B"].width = 24
-    ws.column_dimensions["C"].width = 10
-    style_header(ws["A1"], ws["B1"], ws["C1"])
+    ws.column_dimensions["B"].width = 36
+    style_header(ws["A1"], ws["B1"])
 
     wb.save(OUTPUT)
     print(f"已生成模板：{OUTPUT}")
