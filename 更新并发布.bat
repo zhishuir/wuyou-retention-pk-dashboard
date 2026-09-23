@@ -66,6 +66,9 @@ if defined HAS_PK (
   echo [PK] 正在读取营销PK赛模板并更新排名...
   py -3 tools\update_pk_from_workbook.py
   if errorlevel 1 goto :failed
+  echo [PK] 正在生成营销PK赛日报图片...
+  py -3 tools\generate_pk_image.py
+  if errorlevel 1 goto :failed
   if not exist "待发布PK\已发布" mkdir "待发布PK\已发布"
   move /y "待发布PK\*.xlsx" "待发布PK\已发布\" >nul 2>nul
   move /y "待发布PK\*.xlsm" "待发布PK\已发布\" >nul 2>nul

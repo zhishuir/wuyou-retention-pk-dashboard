@@ -43,11 +43,11 @@ def font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
 
 def score_key(row: dict, metric: str) -> tuple:
     return (
-        -float(row[metric]),
-        -int(row["plus"]),
-        int(row["failure"]),
-        int(row["qc"]),
-        str(row["name"]),
+        -float(row.get(metric, 0)),
+        -int(row.get("plus", 0)),
+        int(row.get("failure", 0)),
+        int(row.get("qc", 0)),
+        str(row.get("name", "")),
     )
 
 

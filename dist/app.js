@@ -339,6 +339,10 @@ function renderPk() {
   byId("scope-label").textContent = "营销PK赛";
   const pkDate = state.pk && state.pk.date ? state.pk.date : "";
   byId("report-title").textContent = pkDate ? `${pkDate}营销PK赛排名通报` : "营销PK赛排名通报";
+  byId("image-button").hidden = false;
+  byId("image-button").textContent = "下载PK日报图片";
+  byId("image-button").disabled = !pkDate;
+  byId("image-button").title = pkDate ? `下载${pkDate}的营销PK赛PNG图片` : "暂无PK日报图片";
 
   const total = personal.reduce((sum, row) => sum + Number(row.score || 0), 0);
   const activeProjects = new Set();
@@ -393,6 +397,23 @@ function exportCsv() {
 }
 
 async function downloadImage() {
+  if (state.mode === "pk") {
+    const pkDate = state.pk && state.pk.date ? state.pk.date : "";
+    if (!pkDate) return;
+    const url = `./images/reports/pk-${pkDate}.png`;
+    try {
+      const response = await fetch(url, { method: "HEAD", cache: "no-store" });
+      if (!response.ok) throw new Error("missing");
+    } catch {
+      alert("该营销PK日报图片尚未生成，暂时无法下载。");
+      return;
+    }
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = `${pkDate}_营销PK赛.png`;
+    anchor.click();
+    return;
+  }
   if (!["day", "week"].includes(state.scope) || !state.period) return;
   const label = state.scope === "week" ? "周报" : "日报";
   const url = `./images/reports/${state.period}.png`;
