@@ -17,6 +17,16 @@ from generate_daily_image import (
     rounded,
 )
 
+# 营销PK赛专用配色（区别于挽留考核的蓝绿主题）
+COLORS.update(
+    {
+        "navy": "#005BAC",  # 中国电信蓝
+        "navy2": "#003E7E",
+        "teal": "#E8840C",  # 橙色主强调
+        "teal_soft": "#FFF0DC",
+    }
+)
+
 DATA_FILE = ROOT / "dist" / "data" / "pk-data.json"
 WEB_OUTPUT = ROOT / "dist" / "images" / "reports"
 
@@ -70,7 +80,7 @@ def generate(report: dict, report_date: str) -> Image.Image:
     draw = ImageDraw.Draw(image)
     draw.rectangle((0, 0, 1242, 278), fill=COLORS["navy"])
     draw.rectangle((0, 270, 1242, 278), fill=COLORS["teal"])
-    draw.text((56, 42), "中台报表平台", font=font(20), fill="#b9c8d8")
+    draw.text((56, 42), "中国电信", font=font(20), fill="#b9c8d8")
     draw.text((56, 80), "营销PK赛日报", font=font(50, True), fill="#ffffff")
     year, month, day = report_date.split("-")
     draw.text((1186, 96), f"{year}年{int(month)}月{int(day)}日", font=font(26, True), fill="#ffffff", anchor="ra")

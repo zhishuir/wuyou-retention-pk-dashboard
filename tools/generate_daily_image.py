@@ -160,7 +160,7 @@ def generate(
     draw = ImageDraw.Draw(image)
     draw.rectangle((0, 0, 1242, 278), fill=COLORS["navy"])
     draw.rectangle((0, 270, 1242, 278), fill=COLORS["teal"])
-    draw.text((56, 42), "中台报表平台", font=font(20), fill="#b9c8d8")
+    draw.text((56, 42), "中国电信", font=font(20), fill="#b9c8d8")
     draw.text((56, 80), title, font=font(50, True), fill="#ffffff")
     if date_text is None:
         year, month, day = report["date"].split("-")

@@ -50,18 +50,29 @@ button, select { cursor: pointer; }
 .brand-block h1 { font-size: 24px; line-height: 1.25; letter-spacing: 0.02em; }
 
 .brand-mark {
-  width: 42px;
-  height: 42px;
+  width: 46px;
+  height: 46px;
   display: grid;
-  align-content: center;
-  gap: 5px;
-  padding: 9px;
-  border: 1px solid rgba(255,255,255,.35);
-  border-radius: 9px;
+  place-items: center;
+  position: relative;
+  color: #fff;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: -1px;
+  background: #005BAC;
+  border-radius: 10px;
 }
-.brand-mark i { display: block; height: 3px; background: #fff; border-radius: 4px; }
-.brand-mark i:nth-child(2) { width: 72%; }
-.brand-mark i:nth-child(3) { width: 44%; background: #4fd1bd; }
+.brand-mark::after {
+  content: "";
+  position: absolute;
+  right: -4px;
+  top: -4px;
+  width: 13px;
+  height: 13px;
+  background: #E60012;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
 
 .update-meta { display: grid; grid-template-columns: auto auto; gap: 0 12px; text-align: right; }
 .update-meta > span { grid-column: 1; color: #aabbd0; font-size: 12px; }
