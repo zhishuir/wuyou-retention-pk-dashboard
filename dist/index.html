@@ -29,6 +29,7 @@
     <section class="mode-tabs" role="tablist" aria-label="报表类型">
       <button class="mode-tab is-active" type="button" data-mode="retention" role="tab" aria-selected="true">挽留考核</button>
       <button class="mode-tab" type="button" data-mode="pk" role="tab" aria-selected="false">营销PK赛</button>
+      <button class="mode-tab" type="button" data-mode="vs" role="tab" aria-selected="false">左娜PK晶晶</button>
     </section>
 
     <section class="control-bar" aria-label="报表周期选择">
@@ -48,7 +49,7 @@
       </div>
     </section>
 
-    <section class="report-heading">
+    <section class="report-heading" id="report-heading">
       <div>
         <p id="scope-label">降档低签挽留日报</p>
         <h2 id="report-title">考核排名通报</h2>
@@ -61,6 +62,26 @@
       </div>
     </section>
 
+    <section id="vs-headtohead" class="vs-headtohead" hidden>
+      <div class="section-heading">
+        <div><span>VS</span><h3>大组PK</h3></div>
+        <p>按人均积分比较，高者获胜</p>
+      </div>
+      <div class="vs-grid">
+        <article class="vs-card" id="vs-card-1">
+          <header id="vs-group1-name">左娜组</header>
+          <strong id="vs-group1-avg">—</strong>
+          <small>人均积分 · <span id="vs-group1-count">—</span>人</small>
+        </article>
+        <div class="vs-divider">VS</div>
+        <article class="vs-card" id="vs-card-2">
+          <header id="vs-group2-name">晶晶组</header>
+          <strong id="vs-group2-avg">—</strong>
+          <small>人均积分 · <span id="vs-group2-count">—</span>人</small>
+        </article>
+      </div>
+    </section>
+
     <section class="kpi-grid" id="kpi-grid" aria-label="积分统计">
       <article class="kpi-card positive"><span>挽留成功加分</span><strong id="kpi-plus">—</strong><small>累计次数</small></article>
       <article class="kpi-card negative"><span>挽留失败扣分</span><strong id="kpi-failure">—</strong><small>累计次数</small></article>
@@ -68,7 +89,7 @@
       <article class="kpi-card total"><span>合计积分</span><strong id="kpi-total">—</strong><small id="kpi-days">统计天数 —</small></article>
     </section>
 
-    <section class="rank-section">
+    <section class="rank-section" id="personal-section">
       <div class="section-heading">
         <div><span>01</span><h3>个人积分排名</h3></div>
         <p id="personal-desc">按个人累计积分排序</p>
@@ -97,7 +118,7 @@
       </div>
     </section>
 
-    <section class="rank-section">
+    <section class="rank-section" id="small-section">
       <div class="section-heading">
         <div><span>02</span><h3>小组人均排名</h3></div>
         <p id="small-desc">小组累计积分 ÷ 名单人数</p>
@@ -117,7 +138,7 @@
       </div>
     </section>
 
-    <section class="rank-section">
+    <section class="rank-section" id="big-section">
       <div class="section-heading">
         <div><span>03</span><h3>大组人均排名</h3></div>
         <p id="big-desc">大组累计积分 ÷ 名单人数</p>

@@ -53,6 +53,9 @@ if defined HAS_REPORT (
   py -3 tools\generate_daily_image.py
   if errorlevel 1 goto :failed
 
+  echo [2c/4] 正在生成左娜PK晶晶日报图片...
+  py -3 tools\generate_vs_image.py
+
   set "DOW="
   for /f "delims=" %%d in ('powershell -NoProfile -Command "[int](Get-Date).DayOfWeek"') do set "DOW=%%d"
   if "!DOW!"=="0" (

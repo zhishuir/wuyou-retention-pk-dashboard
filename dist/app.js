@@ -11,6 +11,8 @@ const state = {
   personalRows: [],
 };
 
+const VS_GROUPS = ["左娜组", "晶晶组"];
+
 const byId = (id) => document.getElementById(id);
 const formatNumber = (value, digits = 0) => Number(value || 0).toFixed(digits);
 const scoreClass = (value) => value > 0 ? "positive" : value < 0 ? "negative" : "";
@@ -256,6 +258,7 @@ function renderRetention() {
   byId("period-select").hidden = false;
   byId("image-button").hidden = false;
   byId("pk-legend").hidden = true;
+  byId("vs-headtohead").hidden = true;
   byId("kpi-grid").innerHTML = RETENTION_KPI_HTML;
   byId("method-note").innerHTML = RETENTION_METHOD_HTML;
   byId("personal-thead").innerHTML = RETENTION_THEADS.personal;
@@ -311,6 +314,7 @@ function renderPk() {
   byId("scope-tabs").hidden = true;
   byId("period-select").hidden = true;
   byId("image-button").hidden = true;
+  byId("vs-headtohead").hidden = true;
   byId("kpi-grid").innerHTML = PK_KPI_HTML;
   byId("method-note").innerHTML = PK_METHOD_HTML;
   byId("personal-thead").innerHTML = PK_THEADS.personal;
@@ -373,30 +377,123 @@ function renderPk() {
   byId("pk-legend-grid").innerHTML = (state.pk.projectScores || []).map((project) => `<span class="legend-item"><strong>${escapeHtml(project.name)}</strong><em>+${Number(project.score)}分</em></span>`).join("");
 }
 
+function renderVs() {
+  byId("scope-tabs").hidden = true;
+  byId("period-select").hidden = false;
+  byId("pk-legend").hidden = true;
+  byId("kpi-grid").hidden = true;
+  byId("small-section").hidden = true;
+  byId("big-section").hidden = true;
+  byId("method-note").innerHTML = RETENTION_METHOD_HTML;
+  byId("personal-thead").innerHTML = RETENTION_THEADS.personal;
+  byId("personal-desc").textContent = "按个人累计积分排序";
+  byId("data-status").innerHTML = state.days.length ? "<i></i>已更新" : "<i></i>暂无数据";
+  byId("updated-at").textContent = state.retentionUpdatedAt ? `更新时间 ${state.retentionUpdatedAt}` : "";
+
+  const periods = [...new Set(state.days.map((item) => item.date))].sort().reverse();
+  const picker = byId("period-picker");
+  if (!periods.includes(state.period)) state.period = periods[0] || "";
+  picker.innerHTML = periods.map((period) => `<option value="${escapeHtml(period)}" ${period === state.period ? "selected" : ""}>${escapeHtml(periodLabel("day", period))}</option>`).join("");
+  picker.disabled = periods.length === 0;
+
+  const day = state.days.find((item) => item.date === state.period);
+  const hasData = !!day;
+  byId("empty-state").hidden = hasData;
+  byId("report-heading").hidden = !hasData;
+  byId("vs-headtohead").hidden = !hasData;
+  byId("personal-section").hidden = !hasData;
+  byId("unmatched-panel").hidden = true;
+  byId("image-button").hidden = !hasData;
+  if (!hasData) {
+    byId("empty-state").innerHTML = "<strong>暂无可展示的PK数据</strong><p>请先更新挽留考核日报数据。</p>";
+    return;
+  }
+
+  const people = (day.personal || [])
+    .filter((row) => VS_GROUPS.includes(row.bigGroup))
+    .slice()
+    .sort(compareRows)
+    .map((row, index) => ({ ...row, rank: index + 1 }));
+  state.personalRows = people;
+
+  byId("scope-label").textContent = "左娜PK晶晶";
+  byId("report-title").textContent = `${periodLabel("day", state.period)}PK日报`;
+
+  const groupStat = (name) => {
+    const members = people.filter((row) => row.bigGroup === name);
+    const total = members.reduce((sum, row) => sum + Number(row.score || 0), 0);
+    return { count: members.length, avg: members.length ? total / members.length : 0 };
+  };
+  const g1 = groupStat(VS_GROUPS[0]);
+  const g2 = groupStat(VS_GROUPS[1]);
+  byId("vs-group1-name").textContent = VS_GROUPS[0];
+  byId("vs-group1-avg").textContent = formatNumber(g1.avg, 2);
+  byId("vs-group1-count").textContent = g1.count;
+  byId("vs-group2-name").textContent = VS_GROUPS[1];
+  byId("vs-group2-avg").textContent = formatNumber(g2.avg, 2);
+  byId("vs-group2-count").textContent = g2.count;
+  byId("vs-card-1").classList.toggle("is-winner", g1.avg >= g2.avg);
+  byId("vs-card-2").classList.toggle("is-winner", g2.avg >= g1.avg);
+
+  renderRankList("personal-top", people, "personal");
+  renderRankList("personal-bottom", people, "personal", true);
+  renderPersonalTable(people, byId("person-search").value);
+
+  byId("image-button").textContent = "下载PK图片";
+  byId("image-button").disabled = false;
+  byId("image-button").title = `下载${state.period}的左娜PK晶晶图片`;
+}
+
 function render() {
   if (state.mode === "pk") renderPk();
+  else if (state.mode === "vs") renderVs();
   else renderRetention();
 }
 
 function exportCsv() {
   if (!state.personalRows.length) return;
-  const isPk = state.mode === "pk";
-  const rows = [isPk
-    ? ["位次", "姓名", "大组", "小组", "总积分"]
-    : ["位次", "姓名", "大组", "小组", "成功", "失败", "质检", "积分"],
-  ...state.personalRows.map((row) => isPk
-    ? [row.rank, row.name, row.bigGroup, row.smallGroup, row.score]
-    : [row.rank, row.name, row.bigGroup, row.smallGroup, row.plus, row.failure, row.qc, row.score])];
+  const mode = state.mode;
+  let header, body, filename;
+  if (mode === "pk") {
+    header = ["位次", "姓名", "大组", "小组", "总积分"];
+    body = state.personalRows.map((row) => [row.rank, row.name, row.bigGroup, row.smallGroup, row.score]);
+    filename = "营销PK赛-赛季排名.csv";
+  } else if (mode === "vs") {
+    header = ["位次", "姓名", "大组", "小组", "成功", "失败", "质检", "积分"];
+    body = state.personalRows.map((row) => [row.rank, row.name, row.bigGroup, row.smallGroup, row.plus, row.failure, row.qc, row.score]);
+    filename = `${state.period}-左娜PK晶晶.csv`;
+  } else {
+    header = ["位次", "姓名", "大组", "小组", "成功", "失败", "质检", "积分"];
+    body = state.personalRows.map((row) => [row.rank, row.name, row.bigGroup, row.smallGroup, row.plus, row.failure, row.qc, row.score]);
+    filename = `${state.period.replace("~", "_")}-${state.scope}-ranking.csv`;
+  }
+  const rows = [header, ...body];
   const csv = `\uFEFF${rows.map((row) => row.map((cell) => `"${String(cell).replaceAll('"', '""')}"`).join(",")).join("\r\n")}`;
   const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
   const anchor = document.createElement("a");
   anchor.href = url;
-  anchor.download = isPk ? "营销PK赛-赛季排名.csv" : `${state.period.replace("~", "_")}-${state.scope}-ranking.csv`;
+  anchor.download = filename;
   anchor.click();
   URL.revokeObjectURL(url);
 }
 
 async function downloadImage() {
+  if (state.mode === "vs") {
+    if (!state.period) return;
+    const url = `./images/reports/vs-${state.period}.png`;
+    try {
+      const response = await fetch(url, { method: "HEAD", cache: "no-store" });
+      if (!response.ok) throw new Error("missing");
+    } catch {
+      alert("该左娜PK晶晶图片尚未生成，暂时无法下载。");
+      return;
+    }
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = `${state.period}_左娜PK晶晶.png`;
+    anchor.click();
+    return;
+  }
   if (state.mode === "pk") {
     const pkDate = state.pk && state.pk.date ? state.pk.date : "";
     if (!pkDate) return;
