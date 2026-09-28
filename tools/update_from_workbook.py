@@ -13,23 +13,23 @@ from openpyxl import load_workbook
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = ROOT / "dist" / "data" / "report-data.json"
 LAST_DATE_FILE = ROOT / ".last-report-date"
+LAST_FILES_FILE = ROOT / ".last-report-files.json"
 INBOX = ROOT / "待发布日报"
 SUPPORTED_SUFFIXES = {".xlsx", ".xlsm"}
 
 
-def newest_workbook() -> Path:
-    candidates = (
-        sorted(
-            (path for path in INBOX.iterdir() if path.suffix.lower() in SUPPORTED_SUFFIXES),
-            key=lambda path: path.stat().st_mtime,
-            reverse=True,
-        )
-        if INBOX.exists()
-        else []
-    )
+def inbox_workbooks() -> list[Path]:
+    candidates = [
+        path
+        for path in INBOX.iterdir()
+        if path.is_file() and path.suffix.lower() in SUPPORTED_SUFFIXES
+    ] if INBOX.exists() else []
     if not candidates:
         raise FileNotFoundError(f"请先把日报Excel放入：{INBOX}")
-    return candidates[0]
+    return sorted(
+        candidates,
+        key=lambda path: (parse_report_date(path, None), path.stat().st_mtime, path.name),
+    )
 
 
 def text(value: object) -> str:
@@ -298,9 +298,6 @@ def update_data(
     }
     data_file.parent.mkdir(parents=True, exist_ok=True)
     data_file.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
-    if data_file.resolve() == DATA_FILE.resolve():
-        LAST_DATE_FILE.write_text(day_data["date"], encoding="utf-8")
-
     people = day_data["personal"]
     return {
         "date": day_data["date"],
@@ -320,7 +317,7 @@ def main() -> int:
         "workbook",
         nargs="?",
         type=Path,
-        help="日报 Excel 路径；省略时读取“待发布日报”目录中最新的文件。",
+        help="日报 Excel 路径；省略时按日期读取“待发布日报”目录中的全部文件。",
     )
     parser.add_argument(
         "--date",
@@ -334,15 +331,56 @@ def main() -> int:
     )
     args = parser.parse_args()
     try:
-        workbook_path = args.workbook.resolve() if args.workbook else newest_workbook()
-        summary = update_data(workbook_path, args.date, args.data_file.resolve())
+        if args.workbook:
+            workbook_paths = [args.workbook.resolve()]
+        else:
+            if args.date:
+                raise ValueError("批量导入时日期从文件名识别，不能同时使用 --date。")
+            workbook_paths = inbox_workbooks()
+
+        summaries = []
+        processed_paths = []
+        failures = []
+        data_file = args.data_file.resolve()
+        for workbook_path in workbook_paths:
+            try:
+                summary = update_data(workbook_path, args.date, data_file)
+            except Exception as exc:
+                if args.workbook:
+                    raise
+                failures.append((workbook_path, str(exc)))
+                print(f"[跳过] {workbook_path.name}：{exc}")
+                continue
+            summaries.append(summary)
+            processed_paths.append(workbook_path)
+            print(
+                f"已更新 {summary['date']} 日报：成功加分 {summary['plus']} 次，"
+                f"失败扣分 {summary['failure']} 次，质检扣分 {summary['qc']} 次，"
+                f"名单共 {summary['people']} 人。"
+            )
+            if summary["unmatched"]:
+                print("待确认名单：" + "、".join(summary["unmatched"]))
+
+        if not summaries:
+            raise ValueError("没有成功导入任何日报文件，请检查上方错误提示。")
+
+        if data_file == DATA_FILE.resolve():
+            report_dates = list(dict.fromkeys(summary["date"] for summary in summaries))
+            LAST_DATE_FILE.write_text("\n".join(report_dates), encoding="utf-8")
+            LAST_FILES_FILE.write_text(
+                json.dumps(
+                    [str(path.resolve()) for path in processed_paths],
+                    ensure_ascii=False,
+                    indent=2,
+                ),
+                encoding="utf-8",
+            )
         print(
-            f"已更新 {summary['date']} 日报：成功加分 {summary['plus']} 次，"
-            f"失败扣分 {summary['failure']} 次，质检扣分 {summary['qc']} 次，"
-            f"名单共 {summary['people']} 人。"
+            f"批量导入完成：成功 {len(summaries)} 个，"
+            f"跳过 {len(failures)} 个。"
         )
-        if summary["unmatched"]:
-            print("待确认名单：" + "、".join(summary["unmatched"]))
+        if failures:
+            print("未处理文件会保留在“待发布日报”文件夹，请修复后再次运行。")
         return 0
     except Exception as exc:
         print(f"更新失败：{exc}")

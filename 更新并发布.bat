@@ -89,6 +89,9 @@ echo [4/4] 正在发布到 GitHub...
 git push
 if errorlevel 1 goto :failed
 
+py -3 tools\archive_processed_reports.py
+if errorlevel 1 goto :failed
+
 echo.
 echo 数据已发布，网页将在数分钟内自动更新。
 echo 网址：https://zhishuir.github.io/wuyou-retention-pk-dashboard/
@@ -98,6 +101,9 @@ pause
 goto :end
 
 :nothing
+py -3 tools\archive_processed_reports.py
+if errorlevel 1 goto :failed
+
 echo.
 echo 没有新的数据需要发布。
 echo 图片已重新生成，可在“通报图片”文件夹中查看。

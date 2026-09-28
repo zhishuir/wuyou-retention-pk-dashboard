@@ -204,19 +204,30 @@ def main() -> int:
     parser.add_argument("--date", help="日报日期，格式为 YYYY-MM-DD；默认读取刚导入的日期。")
     args = parser.parse_args()
     try:
-        report_date = args.date or (LAST_DATE_FILE.read_text(encoding="utf-8").strip() if LAST_DATE_FILE.exists() else "")
-        if not report_date:
+        if args.date:
+            report_dates = [args.date]
+        elif LAST_DATE_FILE.exists():
+            report_dates = [
+                value.strip()
+                for value in LAST_DATE_FILE.read_text(encoding="utf-8").splitlines()
+                if value.strip()
+            ]
+        else:
+            report_dates = []
+        if not report_dates:
             raise ValueError("没有找到刚导入的日报日期。")
         payload = json.loads(DATA_FILE.read_text(encoding="utf-8"))
-        report = build_report(payload, report_date)
-        image = generate(report)
         LOCAL_OUTPUT.mkdir(parents=True, exist_ok=True)
         WEB_OUTPUT.mkdir(parents=True, exist_ok=True)
-        local_path = LOCAL_OUTPUT / f"{report_date}_降档低签挽留日报.png"
-        web_path = WEB_OUTPUT / f"{report_date}.png"
-        image.save(local_path, format="PNG", optimize=True)
-        image.save(web_path, format="PNG", optimize=True)
-        print(f"已生成图片：{local_path}")
+        for report_date in dict.fromkeys(report_dates):
+            report = build_report(payload, report_date)
+            image = generate(report)
+            local_path = LOCAL_OUTPUT / f"{report_date}_降档低签挽留日报.png"
+            web_path = WEB_OUTPUT / f"{report_date}.png"
+            image.save(local_path, format="PNG", optimize=True)
+            image.save(web_path, format="PNG", optimize=True)
+            print(f"已生成图片：{local_path}")
+        print(f"日报图片生成完成：共 {len(list(dict.fromkeys(report_dates)))} 张。")
         return 0
     except Exception as exc:
         print(f"图片生成失败：{exc}")
