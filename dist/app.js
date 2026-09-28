@@ -450,11 +450,11 @@ function aggregateRetentionGroups(rows, field) {
   const groups = new Map();
   for (const row of rows) {
     if (row.bigGroup === "待确认班组") continue;
-    const name = row[field];
-    if (!groups.has(name)) {
-      groups.set(name, { name, bigGroup: row.bigGroup, members: new Set(), plus: 0, failure: 0, qc: 0, score: 0 });
+    const key = row.bigGroup + "|" + row[field];
+    if (!groups.has(key)) {
+      groups.set(key, { name: row[field], bigGroup: row.bigGroup, members: new Set(), plus: 0, failure: 0, qc: 0, score: 0 });
     }
-    const target = groups.get(name);
+    const target = groups.get(key);
     target.members.add(row.name);
     target.plus += Number(row.plus || 0);
     target.failure += Number(row.failure || 0);
