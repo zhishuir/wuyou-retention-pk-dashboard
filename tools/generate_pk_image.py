@@ -29,6 +29,7 @@ COLORS.update(
 
 DATA_FILE = ROOT / "dist" / "data" / "pk-data.json"
 WEB_OUTPUT = ROOT / "dist" / "images" / "reports"
+LAST_DATE_FILE = ROOT / ".last-pk-date"
 
 
 def group_rows(matched: list[dict], field: str) -> list[dict]:
@@ -58,8 +59,18 @@ def group_rows(matched: list[dict], field: str) -> list[dict]:
     return rank_rows(result, "average")
 
 
-def build_report(payload: dict) -> dict:
-    personal = rank_rows(list(payload.get("personal", [])), "score")
+def build_report(payload: dict, report_date: str) -> dict:
+    day = next(
+        (item for item in payload.get("days", []) if item.get("date") == report_date),
+        None,
+    )
+    if day is None:
+        if payload.get("date") != report_date:
+            raise ValueError(f"营销PK数据中找不到 {report_date} 日报。")
+        personal_source = payload.get("personal", [])
+    else:
+        personal_source = day.get("personal", [])
+    personal = rank_rows(list(personal_source), "score")
     matched = [row for row in personal if row.get("matched") and row.get("bigGroup") != "待确认班组"]
     projects: set[str] = set()
     for row in personal:
@@ -87,7 +98,7 @@ def generate(report: dict, report_date: str) -> Image.Image:
     draw.text((1186, 140), "个人、小组及大组积分排名", font=font(19), fill="#b9c8d8", anchor="ra")
 
     kpis = [
-        ("累计总加分", report["total"], COLORS["teal"], "分"),
+        ("当日总加分", report["total"], COLORS["teal"], "分"),
         ("参赛人数", report["people"], COLORS["navy2"], "人"),
         ("加分项目", report["projects"], COLORS["amber"], "个"),
         ("最高个人积分", report["top"], COLORS["navy2"], "分"),
@@ -118,22 +129,36 @@ def generate(report: dict, report_date: str) -> Image.Image:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="生成营销PK赛日报PNG图片。")
-    parser.add_argument("--date", help="日报日期，格式 YYYY-MM-DD；默认读取刚导入的日期。")
+    parser.add_argument(
+        "--date",
+        action="append",
+        help="日报日期，格式 YYYY-MM-DD；可重复填写。默认生成本次导入的全部日期。",
+    )
     args = parser.parse_args()
     try:
         payload = json.loads(DATA_FILE.read_text(encoding="utf-8"))
-        report_date = args.date or (payload.get("date") or "")
-        if not report_date:
+        if args.date:
+            report_dates = args.date
+        else:
+            report_dates = [item.get("date") for item in payload.get("days", [])]
+            if not report_dates and payload.get("date"):
+                report_dates = [payload.get("date")]
+        report_dates = list(dict.fromkeys(report_dates))
+        if not report_dates:
             raise ValueError("没有找到日报日期。")
-        report = build_report(payload)
-        image = generate(report, report_date)
         LOCAL_OUTPUT.mkdir(parents=True, exist_ok=True)
         WEB_OUTPUT.mkdir(parents=True, exist_ok=True)
-        local_path = LOCAL_OUTPUT / f"{report_date}_营销PK赛.png"
-        web_path = WEB_OUTPUT / f"pk-{report_date}.png"
-        image.save(local_path, format="PNG", optimize=True)
-        image.save(web_path, format="PNG", optimize=True)
-        print(f"已生成营销PK赛图片：{local_path}")
+        generated = 0
+        for report_date in report_dates:
+            report = build_report(payload, report_date)
+            image = generate(report, report_date)
+            local_path = LOCAL_OUTPUT / f"{report_date}_营销PK赛.png"
+            web_path = WEB_OUTPUT / f"pk-{report_date}.png"
+            image.save(local_path, format="PNG", optimize=True)
+            image.save(web_path, format="PNG", optimize=True)
+            generated += 1
+            print(f"已生成营销PK赛图片：{local_path}")
+        print(f"营销PK赛日报图片生成完成，共 {generated} 张。")
         return 0
     except Exception as exc:
         print(f"PK赛图片生成失败：{exc}")

@@ -13,6 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 PK_DATA_FILE = ROOT / "dist" / "data" / "pk-data.json"
 RETENTION_DATA_FILE = ROOT / "dist" / "data" / "report-data.json"
 INBOX = ROOT / "待发布PK"
+LAST_DATE_FILE = ROOT / ".last-pk-date"
+LAST_FILES_FILE = ROOT / ".last-pk-files.json"
 SUPPORTED_SUFFIXES = {".xlsx", ".xlsm"}
 
 NAME_HEADERS = ("姓名", "人名")
@@ -33,19 +35,18 @@ def text(value: object) -> str:
     return "" if value is None else str(value).strip()
 
 
-def newest_workbook() -> Path:
-    candidates = (
-        sorted(
-            (path for path in INBOX.iterdir() if path.suffix.lower() in SUPPORTED_SUFFIXES),
-            key=lambda path: path.stat().st_mtime,
-            reverse=True,
-        )
-        if INBOX.exists()
-        else []
-    )
+def inbox_workbooks() -> list[Path]:
+    candidates = [
+        path
+        for path in INBOX.iterdir()
+        if path.is_file() and path.suffix.lower() in SUPPORTED_SUFFIXES
+    ] if INBOX.exists() else []
     if not candidates:
         raise FileNotFoundError(f"请先把营销PK赛模板放入：{INBOX}")
-    return candidates[0]
+    return sorted(
+        candidates,
+        key=lambda path: (parse_date_from_filename(path), path.stat().st_mtime, path.name),
+    )
 
 
 def parse_date_from_filename(path: Path) -> str:
@@ -58,7 +59,9 @@ def parse_date_from_filename(path: Path) -> str:
         if match:
             year, month, day = (int(part) for part in match.groups())
             return date(year, month, day).isoformat()
-    return ""
+    raise ValueError(
+        "营销日报文件名中缺少日期。请命名为“2026-09-22营销日报.xlsx”。"
+    )
 
 
 def read_records(workbook) -> tuple[dict, set[str]]:
@@ -136,51 +139,117 @@ def build_project_scores() -> list[dict]:
     ]
 
 
+def aggregate_personal(days: list[dict], roster: dict[str, dict]) -> list[dict]:
+    counts: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+    for day in days:
+        for person in day.get("personal", []):
+            name = text(person.get("name"))
+            if not name:
+                continue
+            for project, count in (person.get("detail") or {}).items():
+                if project in PROJECT_SCORES:
+                    counts[name][project] += int(count)
+    return build_personal(dict(counts), roster)
+
+
 def update_data(workbook_path: Path, data_file: Path = PK_DATA_FILE) -> dict:
     workbook = load_workbook(workbook_path, data_only=True, read_only=True)
     counts, unknown_projects = read_records(workbook)
-    if unknown_projects:
-        print("警告：以下项目不在固定分值表中，已忽略：" + "、".join(sorted(unknown_projects)))
     roster = roster_from_retention()
     if not counts:
         raise ValueError("「加分记录」表中没有有效数据。")
-    personal = build_personal(counts, roster)
+    report_date = parse_date_from_filename(workbook_path)
+    day_personal = build_personal(counts, roster)
+    if data_file.exists():
+        existing = json.loads(data_file.read_text(encoding="utf-8"))
+    else:
+        existing = {}
+    days = [item for item in existing.get("days", []) if item.get("date") != report_date]
+    days.append({"date": report_date, "personal": day_personal})
+    days.sort(key=lambda item: item["date"])
+    personal = aggregate_personal(days, roster)
     payload = {
         "updatedAt": datetime.now().strftime("%Y-%m-%d %H:%M"),
-        "date": parse_date_from_filename(workbook_path),
+        "date": days[-1]["date"],
         "projectScores": build_project_scores(),
+        "days": days,
         "personal": personal,
     }
     data_file.parent.mkdir(parents=True, exist_ok=True)
     data_file.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    unmatched = [person["name"] for person in personal if not person["matched"]]
+    unmatched = [person["name"] for person in day_personal if not person["matched"]]
     return {
-        "date": payload["date"],
-        "people": len(personal),
-        "total": sum(person["score"] for person in personal),
+        "date": report_date,
+        "people": len(day_personal),
+        "total": sum(person["score"] for person in day_personal),
         "unmatched": unmatched,
+        "unknown_projects": sorted(unknown_projects),
     }
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="把营销PK赛模板(姓名+项目)更新到网页数据文件。")
     parser.add_argument(
-        "workbook",
-        nargs="?",
+        "workbooks",
+        nargs="*",
         type=Path,
-        help="模板 Excel 路径；省略时读取“待发布PK”目录中最新的文件。",
+        help="模板 Excel 路径；省略时按日期读取“待发布PK”目录中的全部文件。",
     )
     parser.add_argument("--data-file", type=Path, default=PK_DATA_FILE, help=argparse.SUPPRESS)
     args = parser.parse_args()
     try:
-        workbook_path = args.workbook.resolve() if args.workbook else newest_workbook()
-        summary = update_data(workbook_path, args.data_file.resolve())
-        day_text = f"（{summary['date']}）" if summary["date"] else ""
-        print(
-            f"已更新营销PK赛{day_text}：{summary['people']} 人参赛，累计加分 {summary['total']} 分。"
+        workbook_paths = (
+            [path.resolve() for path in args.workbooks]
+            if args.workbooks
+            else inbox_workbooks()
         )
-        if summary["unmatched"]:
-            print("待确认名单：" + "、".join(summary["unmatched"]))
+        workbook_paths.sort(key=lambda path: (parse_date_from_filename(path), path.name))
+        summaries = []
+        processed_paths = []
+        failures = []
+        data_file = args.data_file.resolve()
+        for workbook_path in workbook_paths:
+            try:
+                summary = update_data(workbook_path, data_file)
+            except Exception as exc:
+                if args.workbooks:
+                    raise
+                failures.append((workbook_path, str(exc)))
+                print(f"[跳过] {workbook_path.name}：{exc}")
+                continue
+            summaries.append(summary)
+            processed_paths.append(workbook_path)
+            print(
+                f"已更新营销PK赛（{summary['date']}）：{summary['people']} 人参赛，"
+                f"当日加分 {summary['total']} 分。"
+            )
+            if summary["unknown_projects"]:
+                print(
+                    "警告：以下项目不在固定分值表中，已忽略："
+                    + "、".join(summary["unknown_projects"])
+                )
+            if summary["unmatched"]:
+                print("待确认名单：" + "、".join(summary["unmatched"]))
+
+        if not summaries:
+            raise ValueError("没有成功导入任何营销日报文件，请检查上方错误提示。")
+        if data_file == PK_DATA_FILE.resolve():
+            report_dates = list(dict.fromkeys(summary["date"] for summary in summaries))
+            LAST_DATE_FILE.write_text("\n".join(report_dates), encoding="utf-8")
+            LAST_FILES_FILE.write_text(
+                json.dumps(
+                    [str(path.resolve()) for path in processed_paths],
+                    ensure_ascii=False,
+                    indent=2,
+                ),
+                encoding="utf-8",
+            )
+        print(
+            f"营销日报批量导入完成：成功 {len(summaries)} 个，"
+            f"跳过 {len(failures)} 个。"
+        )
+        if failures:
+            print("未处理文件会保留在“待发布PK”文件夹，请修复后再次运行。")
         return 0
     except Exception as exc:
         print(f"PK赛更新失败：{exc}")

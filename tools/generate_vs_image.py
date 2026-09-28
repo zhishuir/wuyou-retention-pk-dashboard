@@ -19,6 +19,7 @@ from generate_daily_image import (
 
 DATA_FILE = ROOT / "dist" / "data" / "report-data.json"
 WEB_OUTPUT = ROOT / "dist" / "images" / "reports"
+LAST_DATE_FILE = ROOT / ".last-report-date"
 VS_GROUPS = ["左娜组", "晶晶组"]
 
 
@@ -81,25 +82,37 @@ def generate(report: dict, report_date: str) -> Image.Image:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="生成左娜组 vs 晶晶组 PK日报图片。")
-    parser.add_argument("--date", help="日报日期，格式 YYYY-MM-DD；默认取最新一天。")
+    parser.add_argument(
+        "--date",
+        action="append",
+        help="日报日期，格式 YYYY-MM-DD；可重复填写。默认生成本次导入的全部日期。",
+    )
     args = parser.parse_args()
     try:
         payload = json.loads(DATA_FILE.read_text(encoding="utf-8"))
         dates = [item.get("date") for item in payload.get("days", [])]
-        report_date = args.date or (sorted(dates)[-1] if dates else "")
-        if not report_date:
+        if args.date:
+            report_dates = args.date
+        else:
+            report_dates = dates
+        report_dates = list(dict.fromkeys(report_dates))
+        if not report_dates:
             raise ValueError("没有可用的日报日期。")
-        report = build_report(payload, report_date)
-        if not report["people"]:
-            raise ValueError("该日期没有左娜组或晶晶组的人员数据。")
-        image = generate(report, report_date)
         LOCAL_OUTPUT.mkdir(parents=True, exist_ok=True)
         WEB_OUTPUT.mkdir(parents=True, exist_ok=True)
-        local_path = LOCAL_OUTPUT / f"{report_date}_左娜PK晶晶.png"
-        web_path = WEB_OUTPUT / f"vs-{report_date}.png"
-        image.save(local_path, format="PNG", optimize=True)
-        image.save(web_path, format="PNG", optimize=True)
-        print(f"已生成左娜PK晶晶图片：{local_path}")
+        generated = 0
+        for report_date in report_dates:
+            report = build_report(payload, report_date)
+            if not report["people"]:
+                raise ValueError(f"{report_date} 没有左娜组或晶晶组的人员数据。")
+            image = generate(report, report_date)
+            local_path = LOCAL_OUTPUT / f"{report_date}_左娜PK晶晶.png"
+            web_path = WEB_OUTPUT / f"vs-{report_date}.png"
+            image.save(local_path, format="PNG", optimize=True)
+            image.save(web_path, format="PNG", optimize=True)
+            generated += 1
+            print(f"已生成左娜PK晶晶图片：{local_path}")
+        print(f"左娜PK晶晶日报图片生成完成，共 {generated} 张。")
         return 0
     except Exception as exc:
         print(f"左娜PK晶晶图片生成失败：{exc}")

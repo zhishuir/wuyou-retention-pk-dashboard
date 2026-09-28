@@ -5,6 +5,8 @@ private/
 通报图片/
 .last-report-date
 .last-report-files.json
+.last-pk-date
+.last-pk-files.json
 *.log
 __pycache__/
 *.pyc
