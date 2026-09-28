@@ -1,7 +1,45 @@
 {
   "updatedAt": "2026-09-28 15:32",
   "excluded": [
+    "关艾",
+    "刘宇",
+    "刘文杰",
+    "刘艳华",
+    "刘雪娟",
+    "吴单",
+    "吴志美",
     "哈布尔夫",
+    "孙冬雪",
+    "张引弟",
+    "张心",
+    "张立东",
+    "张超",
+    "律青竹",
+    "李巧玲",
+    "李敏",
+    "李波",
+    "李萍",
+    "杜长鸿",
+    "杨小红",
+    "杨帆",
+    "杨慧荷",
+    "杨阳",
+    "温姝然",
+    "王婷婷",
+    "王慧",
+    "王潇絮",
+    "翁靖",
+    "胡光辉",
+    "谢可芯",
+    "谢琴",
+    "赵彩凤",
+    "邢乐",
+    "郝伟",
+    "金鑫",
+    "闫红玉",
+    "靳艳华",
+    "颜鸣",
+    "马志宏",
     "高璇"
   ],
   "roster": [
@@ -1536,26 +1574,6 @@
           "matched": true
         },
         {
-          "name": "吴单",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "闫红玉",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 1,
-          "failure": 0,
-          "qc": 0,
-          "score": 1,
-          "matched": false
-        },
-        {
           "name": "杨莉",
           "bigGroup": "左娜组",
           "smallGroup": "启航组",
@@ -2601,16 +2619,6 @@
           "matched": true
         },
         {
-          "name": "刘雪娟",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
           "name": "张一菲",
           "bigGroup": "晶晶组",
           "smallGroup": "同心组",
@@ -2651,16 +2659,6 @@
           "matched": true
         },
         {
-          "name": "温姝然",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
           "name": "范娟",
           "bigGroup": "左娜组",
           "smallGroup": "启航组",
@@ -2669,26 +2667,6 @@
           "qc": 0,
           "score": -2,
           "matched": true
-        },
-        {
-          "name": "金鑫",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 2,
-          "qc": 0,
-          "score": -2,
-          "matched": false
-        },
-        {
-          "name": "闫红玉",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 1,
-          "failure": 1,
-          "qc": 0,
-          "score": 0,
-          "matched": false
         },
         {
           "name": "韩璐",
@@ -3876,26 +3854,6 @@
           "matched": true
         },
         {
-          "name": "刘宇",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 1,
-          "failure": 0,
-          "qc": 0,
-          "score": 1,
-          "matched": false
-        },
-        {
-          "name": "杨阳",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 2,
-          "failure": 0,
-          "qc": 0,
-          "score": 2,
-          "matched": false
-        },
-        {
           "name": "韩晶晶",
           "bigGroup": "晶晶组",
           "smallGroup": "同心组",
@@ -4989,26 +4947,6 @@
           "qc": 0,
           "score": 0,
           "matched": true
-        },
-        {
-          "name": "张心",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 1,
-          "failure": 0,
-          "qc": 0,
-          "score": 1,
-          "matched": false
-        },
-        {
-          "name": "温姝然",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
         },
         {
           "name": "韩晶晶",
@@ -7201,36 +7139,6 @@
           "matched": true
         },
         {
-          "name": "刘文杰",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "杨慧荷",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "王潇絮",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
           "name": "韩晶晶",
           "bigGroup": "晶晶组",
           "smallGroup": "同心组",
@@ -8324,36 +8232,6 @@
           "qc": 0,
           "score": -1,
           "matched": true
-        },
-        {
-          "name": "刘宇",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 2,
-          "qc": 0,
-          "score": -2,
-          "matched": false
-        },
-        {
-          "name": "谢可芯",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "谢琴",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
         },
         {
           "name": "韩晶晶",
@@ -9451,46 +9329,6 @@
           "matched": true
         },
         {
-          "name": "吴单",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "杨小红",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "邢乐",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "郝伟",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
           "name": "韩晶晶",
           "bigGroup": "晶晶组",
           "smallGroup": "同心组",
@@ -10584,56 +10422,6 @@
           "qc": 0,
           "score": 1,
           "matched": true
-        },
-        {
-          "name": "吴单",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "律青竹",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "李巧玲",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "杜长鸿",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "杨帆",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 2,
-          "qc": 0,
-          "score": -2,
-          "matched": false
         },
         {
           "name": "韩晶晶",
@@ -11731,56 +11519,6 @@
           "matched": true
         },
         {
-          "name": "张心",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 1,
-          "failure": 0,
-          "qc": 0,
-          "score": 1,
-          "matched": false
-        },
-        {
-          "name": "杜长鸿",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 1,
-          "failure": 0,
-          "qc": 0,
-          "score": 1,
-          "matched": false
-        },
-        {
-          "name": "温姝然",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "王慧",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "闫红玉",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 1,
-          "failure": 0,
-          "qc": 0,
-          "score": 1,
-          "matched": false
-        },
-        {
           "name": "韩晶晶",
           "bigGroup": "晶晶组",
           "smallGroup": "同心组",
@@ -12874,46 +12612,6 @@
           "qc": 0,
           "score": -1,
           "matched": true
-        },
-        {
-          "name": "关艾",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "刘宇",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "律青竹",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 1,
-          "failure": 1,
-          "qc": 1,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "谢可芯",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
         },
         {
           "name": "韩晶晶",
@@ -14011,26 +13709,6 @@
           "matched": true
         },
         {
-          "name": "吴单",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "郝伟",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 1,
-          "failure": 0,
-          "qc": 0,
-          "score": 1,
-          "matched": false
-        },
-        {
           "name": "韩晶晶",
           "bigGroup": "晶晶组",
           "smallGroup": "同心组",
@@ -15124,56 +14802,6 @@
           "qc": 0,
           "score": 0,
           "matched": true
-        },
-        {
-          "name": "张超",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 1,
-          "failure": 0,
-          "qc": 0,
-          "score": 1,
-          "matched": false
-        },
-        {
-          "name": "李波",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 3,
-          "qc": 0,
-          "score": -3,
-          "matched": false
-        },
-        {
-          "name": "杜长鸿",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "杨阳",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 1,
-          "failure": 0,
-          "qc": 0,
-          "score": 1,
-          "matched": false
-        },
-        {
-          "name": "温姝然",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
         },
         {
           "name": "韩晶晶",
@@ -16271,56 +15899,6 @@
           "matched": true
         },
         {
-          "name": "关艾",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 1,
-          "score": -2,
-          "matched": false
-        },
-        {
-          "name": "张心",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 2,
-          "qc": 0,
-          "score": -2,
-          "matched": false
-        },
-        {
-          "name": "律青竹",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "李波",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "颜鸣",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
           "name": "韩晶晶",
           "bigGroup": "晶晶组",
           "smallGroup": "同心组",
@@ -17414,46 +16992,6 @@
           "qc": 0,
           "score": -2,
           "matched": true
-        },
-        {
-          "name": "李波",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 2,
-          "qc": 2,
-          "score": -4,
-          "matched": false
-        },
-        {
-          "name": "杜长鸿",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 2,
-          "qc": 0,
-          "score": -2,
-          "matched": false
-        },
-        {
-          "name": "王潇絮",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "郝伟",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 3,
-          "qc": 0,
-          "score": -3,
-          "matched": false
         },
         {
           "name": "韩晶晶",
@@ -18551,46 +18089,6 @@
           "matched": true
         },
         {
-          "name": "刘宇",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "张心",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "张超",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "杨帆",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
           "name": "韩晶晶",
           "bigGroup": "晶晶组",
           "smallGroup": "同心组",
@@ -19684,56 +19182,6 @@
           "qc": 0,
           "score": -1,
           "matched": true
-        },
-        {
-          "name": "张心",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 2,
-          "qc": 0,
-          "score": -2,
-          "matched": false
-        },
-        {
-          "name": "律青竹",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 1,
-          "failure": 0,
-          "qc": 0,
-          "score": 1,
-          "matched": false
-        },
-        {
-          "name": "李波",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "杜长鸿",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
-        },
-        {
-          "name": "郝伟",
-          "bigGroup": "待确认班组",
-          "smallGroup": "待确认小组",
-          "plus": 0,
-          "failure": 1,
-          "qc": 0,
-          "score": -1,
-          "matched": false
         },
         {
           "name": "韩晶晶",

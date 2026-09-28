@@ -119,6 +119,11 @@ def roster_from_retention() -> dict[str, dict]:
     return roster
 
 
+def excluded_names() -> set[str]:
+    payload = json.loads(RETENTION_DATA_FILE.read_text(encoding="utf-8"))
+    return {text(name) for name in payload.get("excluded", []) if text(name)}
+
+
 def build_personal(counts: dict, roster: dict) -> list[dict]:
     people: list[dict] = []
     for name, detail in counts.items():
@@ -164,6 +169,8 @@ def update_data(workbook_path: Path, data_file: Path = PK_DATA_FILE) -> dict:
     workbook = load_workbook(workbook_path, data_only=True, read_only=True)
     counts, unknown_projects = read_records(workbook)
     roster = roster_from_retention()
+    excluded = excluded_names()
+    counts = {name: detail for name, detail in counts.items() if name not in excluded}
     if not counts:
         raise ValueError("「加分记录」表中没有有效数据。")
     report_date = parse_date_from_filename(workbook_path)
