@@ -11,7 +11,6 @@ from generate_daily_image import (
     ROOT,
     LOCAL_OUTPUT,
     SITE_URL,
-    draw_rank_section,
     font,
     rank_rows,
     rounded,
@@ -19,44 +18,10 @@ from generate_daily_image import (
 
 DATA_FILE = ROOT / "dist" / "data" / "report-data.json"
 WEB_OUTPUT = ROOT / "dist" / "images" / "reports"
-LAST_DATE_FILE = ROOT / ".last-report-date"
 VS_GROUPS = ["左娜组", "晶晶组"]
 
 
-def group_rows(matched: list[dict], field: str) -> list[dict]:
-    groups: dict[str, dict] = {}
-    for row in matched:
-        name = row[field]
-        if name not in groups:
-            groups[name] = {
-                "name": name,
-                "bigGroup": row.get("bigGroup", ""),
-                "members": set(),
-                "plus": 0,
-                "failure": 0,
-                "qc": 0,
-                "score": 0,
-            }
-        group = groups[name]
-        group["members"].add(row["name"])
-        group["plus"] += int(row.get("plus", 0))
-        group["failure"] += int(row.get("failure", 0))
-        group["qc"] += int(row.get("qc", 0))
-        group["score"] += int(row.get("score", 0))
-    result = []
-    for group in groups.values():
-        headcount = len(group.pop("members"))
-        result.append(
-            {
-                **group,
-                "headcount": headcount,
-                "average": group["score"] / headcount if headcount else 0,
-            }
-        )
-    return rank_rows(result, "average")
-
-
-def build_report(payload: dict, report_date: str) -> dict:
+def build_report(payload: dict, report_date: str) -> list[dict]:
     day = next((item for item in payload.get("days", []) if item.get("date") == report_date), None)
     if day is None:
         raise ValueError(f"网页数据中找不到 {report_date} 日报。")
@@ -69,24 +34,34 @@ def build_report(payload: dict, report_date: str) -> dict:
         groups.append(
             {
                 "name": name,
+                "members": members,
                 "count": len(members),
                 "avg": total / len(members) if members else 0,
             }
         )
-    return {"people": people, "groups": groups, "small": group_rows(people, "smallGroup")}
+    return groups
 
 
-def draw_group_card(draw: ImageDraw.ImageDraw, box: tuple, name: str, avg: float, count: int, winner: bool) -> None:
-    x, y, w, h = box
-    rounded(draw, (x, y, x + w, y + h), COLORS["paper"], 16, COLORS["teal"] if winner else None)
-    draw.text((x + 24, y + 22), name, font=font(22, True), fill=COLORS["ink"])
-    color = COLORS["teal"] if winner else COLORS["navy2"]
-    draw.text((x + 24, y + 62), f"{avg:.2f}", font=font(56, True), fill=color)
-    draw.text((x + 24, y + 136), f"人均积分 · {count}人", font=font(17), fill=COLORS["muted"])
+def draw_member_list(draw: ImageDraw.ImageDraw, x: int, y: int, w: int, group: dict) -> None:
+    rounded(draw, (x, y, x + w, y + 86), COLORS["paper"], 14, COLORS["line"])
+    draw.text((x + 22, y + 18), group["name"], font=font(24, True), fill=COLORS["ink"])
+    draw.text((x + w - 22, y + 20), f"人均 {group['avg']:.2f}", font=font(22, True), fill=COLORS["teal"], anchor="ra")
+    draw.text((x + 22, y + 54), f"{group['count']}人", font=font(15), fill=COLORS["muted"])
+
+    row_y = y + 98
+    for i, member in enumerate(group["members"]):
+        ry = row_y + i * 48
+        if i % 2 == 0:
+            rounded(draw, (x, ry, x + w, ry + 40), COLORS["paper"], 8)
+        draw.text((x + 16, ry + 8), str(i + 1), font=font(18, True), fill=COLORS["muted"])
+        draw.text((x + 52, ry + 8), member["name"], font=font(20, True), fill=COLORS["ink"])
+        score = member["score"]
+        color = COLORS["teal"] if score > 0 else COLORS["red"] if score < 0 else COLORS["muted"]
+        draw.text((x + w - 18, ry + 8), str(score), font=font(20, True), fill=color, anchor="ra")
 
 
-def generate(report: dict, report_date: str) -> Image.Image:
-    image = Image.new("RGB", (1242, 1500), COLORS["canvas"])
+def generate(groups: list[dict], report_date: str) -> Image.Image:
+    image = Image.new("RGB", (1242, 1020), COLORS["canvas"])
     draw = ImageDraw.Draw(image)
     draw.rectangle((0, 0, 1242, 278), fill=COLORS["navy"])
     draw.rectangle((0, 270, 1242, 278), fill=COLORS["teal"])
@@ -94,23 +69,16 @@ def generate(report: dict, report_date: str) -> Image.Image:
     draw.text((56, 80), "左娜组 vs 晶晶组 PK日报", font=font(44, True), fill="#ffffff")
     year, month, day = report_date.split("-")
     draw.text((1186, 96), f"{year}年{int(month)}月{int(day)}日", font=font(26, True), fill="#ffffff", anchor="ra")
-    draw.text((1186, 140), "大组人均积分PK · 小组及个人积分排名", font=font(19), fill="#b9c8d8", anchor="ra")
+    draw.text((1186, 140), "两组成员积分排名", font=font(19), fill="#b9c8d8", anchor="ra")
 
-    g1, g2 = report["groups"]
-    winner1 = g1["avg"] >= g2["avg"]
-    winner2 = g2["avg"] >= g1["avg"]
-    card_w, card_h, y = 470, 200, 300
-    draw_group_card(draw, (56, y, card_w, card_h), g1["name"], g1["avg"], g1["count"], winner1)
-    draw.text((621, y + card_h // 2), "VS", font=font(40, True), fill=COLORS["muted"], anchor="mm")
-    draw_group_card(draw, (716, y, card_w, card_h), g2["name"], g2["avg"], g2["count"], winner2)
+    col_w = 550
+    y = 310
+    draw_member_list(draw, 56, y, col_w, groups[0])
+    draw_member_list(draw, 56 + col_w + 30, y, col_w, groups[1])
 
-    draw.text((56, 536), "计分口径：挽留成功 +1；失败 −1；质检 −1；人均分 = 累计积分 ÷ 人数。", font=font(18), fill=COLORS["muted"])
-    draw_rank_section(draw, 576, "小组人均积分排名", report["small"], "small")
-    draw_rank_section(draw, 984, "个人积分排名", report["people"], "personal")
-
-    rounded(draw, (56, 1394, 1186, 1460), COLORS["navy"], 14)
-    draw.text((82, 1412), "左娜组 vs 晶晶组 PK通报", font=font(20, True), fill="#ffffff")
-    draw.text((1160, 1412), SITE_URL, font=font(16), fill="#c9d6e2", anchor="ra")
+    rounded(draw, (56, 910, 1186, 976), COLORS["navy"], 14)
+    draw.text((82, 928), "左娜组 vs 晶晶组 PK通报", font=font(20, True), fill="#ffffff")
+    draw.text((1160, 928), SITE_URL, font=font(16), fill="#c9d6e2", anchor="ra")
     return image
 
 
@@ -136,10 +104,10 @@ def main() -> int:
         WEB_OUTPUT.mkdir(parents=True, exist_ok=True)
         generated = 0
         for report_date in report_dates:
-            report = build_report(payload, report_date)
-            if not report["people"]:
+            groups = build_report(payload, report_date)
+            if not groups or not groups[0]["members"]:
                 raise ValueError(f"{report_date} 没有左娜组或晶晶组的人员数据。")
-            image = generate(report, report_date)
+            image = generate(groups, report_date)
             local_path = LOCAL_OUTPUT / f"{report_date}_左娜PK晶晶.png"
             web_path = WEB_OUTPUT / f"vs-{report_date}.png"
             image.save(local_path, format="PNG", optimize=True)
