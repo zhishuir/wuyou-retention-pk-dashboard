@@ -446,6 +446,27 @@ function renderPk() {
   byId("pk-legend-grid").innerHTML = (state.pk.projectScores || []).map((project) => `<span class="legend-item"><strong>${escapeHtml(project.name)}</strong><em>+${Number(project.score)}分</em></span>`).join("");
 }
 
+function aggregateRetentionGroups(rows, field) {
+  const groups = new Map();
+  for (const row of rows) {
+    if (row.bigGroup === "待确认班组") continue;
+    const name = row[field];
+    if (!groups.has(name)) {
+      groups.set(name, { name, bigGroup: row.bigGroup, members: new Set(), plus: 0, failure: 0, qc: 0, score: 0 });
+    }
+    const target = groups.get(name);
+    target.members.add(row.name);
+    target.plus += Number(row.plus || 0);
+    target.failure += Number(row.failure || 0);
+    target.qc += Number(row.qc || 0);
+    target.score += Number(row.score || 0);
+  }
+  return [...groups.values()]
+    .map((row) => ({ ...row, headcount: row.members.size, average: row.members.size ? row.score / row.members.size : 0 }))
+    .sort((a, b) => compareRows(a, b, "average"))
+    .map((row, index) => ({ ...row, rank: index + 1 }));
+}
+
 function renderVs() {
   byId("scope-tabs").hidden = true;
   byId("period-select").hidden = false;
@@ -455,7 +476,9 @@ function renderVs() {
   byId("big-section").hidden = true;
   byId("method-note").innerHTML = RETENTION_METHOD_HTML;
   byId("personal-thead").innerHTML = RETENTION_THEADS.personal;
+  byId("small-thead").innerHTML = RETENTION_THEADS.small;
   byId("personal-desc").textContent = "按个人累计积分排序";
+  byId("small-desc").textContent = "小组累计积分 ÷ 人数";
   byId("data-status").innerHTML = state.days.length ? "<i></i>已更新" : "<i></i>暂无数据";
   byId("updated-at").textContent = state.retentionUpdatedAt ? `更新时间 ${state.retentionUpdatedAt}` : "";
 
@@ -471,6 +494,7 @@ function renderVs() {
   byId("report-heading").hidden = !hasData;
   byId("vs-headtohead").hidden = !hasData;
   byId("personal-section").hidden = !hasData;
+  byId("small-section").hidden = !hasData;
   byId("unmatched-panel").hidden = true;
   byId("image-button").hidden = !hasData;
   if (!hasData) {
@@ -503,6 +527,11 @@ function renderVs() {
   byId("vs-group2-count").textContent = g2.count;
   byId("vs-card-1").classList.toggle("is-winner", g1.avg >= g2.avg);
   byId("vs-card-2").classList.toggle("is-winner", g2.avg >= g1.avg);
+
+  const smallGroups = aggregateRetentionGroups(people, "smallGroup");
+  renderRankList("small-top", smallGroups, "small");
+  renderRankList("small-bottom", smallGroups, "small", true);
+  renderGroupTable("small-table", smallGroups, "small");
 
   renderRankList("personal-top", people, "personal");
   renderRankList("personal-bottom", people, "personal", true);
