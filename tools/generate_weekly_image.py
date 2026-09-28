@@ -39,6 +39,8 @@ def aggregate_week(payload: dict, start: date, end: date) -> dict:
     registry: dict[str, dict] = {}
     for day in days:
         for row in day.get("personal", []):
+            if row.get("bigGroup") in {"左娜组", "晶晶组"}:
+                continue
             name = (row.get("name") or "").strip()
             if not name:
                 continue

@@ -61,7 +61,11 @@ def build_report(payload: dict, report_date: str) -> dict:
     if day is None:
         raise ValueError(f"网页数据中找不到 {report_date} 日报。")
 
-    personal = rank_rows(list(day.get("personal", [])), "score")
+    excluded = {"左娜组", "晶晶组"}
+    personal = rank_rows(
+        [row for row in day.get("personal", []) if row.get("bigGroup") not in excluded],
+        "score",
+    )
     matched = [row for row in personal if row.get("matched", True) and row.get("bigGroup") != "待确认班组"]
 
     def group_rows(field: str) -> list[dict]:

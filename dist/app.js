@@ -100,6 +100,7 @@ function aggregateReport(days) {
   const people = new Map();
   for (const day of days) {
     for (const row of day.personal || []) {
+      if (VS_GROUPS.includes(row.bigGroup)) continue;
       if (!people.has(row.name)) {
         people.set(row.name, {
           name: row.name,

@@ -28,6 +28,13 @@ PROJECT_SCORES: dict[str, int] = {
     "9.9元权益包": 1,
     "35元20G连续包月流量包（首月19.9元）": 2,
     "15元10G包月流量包": 2,
+    "套餐高迁": 4,
+    "天翼智铃基础版": 1,
+}
+
+# 项目别名：业务上同义的项目名，统一归并到主项目计分。
+PROJECT_ALIASES: dict[str, str] = {
+    "高改套餐": "套餐高迁",
 }
 
 
@@ -89,6 +96,7 @@ def read_records(workbook) -> tuple[dict, set[str]]:
             continue
         if not project:
             continue
+        project = PROJECT_ALIASES.get(project, project)
         if project not in PROJECT_SCORES:
             unknown_projects.add(project)
             continue
