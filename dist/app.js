@@ -260,6 +260,8 @@ function renderRetention() {
   byId("image-button").hidden = false;
   byId("pk-legend").hidden = true;
   byId("vs-headtohead").hidden = true;
+  byId("scope-tab-all").hidden = true;
+  if (state.scope === "all") state.scope = "day";
   byId("kpi-grid").innerHTML = RETENTION_KPI_HTML;
   byId("method-note").innerHTML = RETENTION_METHOD_HTML;
   byId("personal-thead").innerHTML = RETENTION_THEADS.personal;
@@ -311,21 +313,84 @@ function renderRetention() {
   byId("unmatched-names").textContent = report.unmatched.map((row) => row.name).join("、");
 }
 
+function pkAvailablePeriods(scope) {
+  const days = state.pk && Array.isArray(state.pk.days) ? state.pk.days : [];
+  const values = days.map((item) => scope === "day" ? item.date : scope === "week" ? weekKey(item.date) : monthKey(item.date));
+  return [...new Set(values)].sort().reverse();
+}
+
+function pkAggregatePersonal(days) {
+  const people = new Map();
+  for (const day of days) {
+    for (const row of day.personal || []) {
+      if (!people.has(row.name)) {
+        people.set(row.name, {
+          name: row.name,
+          bigGroup: row.bigGroup || "待确认班组",
+          smallGroup: row.smallGroup || "待确认小组",
+          matched: row.matched !== false && (row.bigGroup || "待确认班组") !== "待确认班组",
+          score: 0,
+          detail: {},
+        });
+      }
+      const target = people.get(row.name);
+      target.bigGroup = row.bigGroup || target.bigGroup;
+      target.smallGroup = row.smallGroup || target.smallGroup;
+      target.matched = row.matched !== false && target.bigGroup !== "待确认班组";
+      target.score += Number(row.score || 0);
+      for (const [project, count] of Object.entries(row.detail || {})) {
+        target.detail[project] = (target.detail[project] || 0) + Number(count || 0);
+      }
+    }
+  }
+  return [...people.values()].sort(compareRows).map((row, index) => ({ ...row, rank: index + 1 }));
+}
+
 function renderPk() {
-  byId("scope-tabs").hidden = true;
-  byId("period-select").hidden = true;
-  byId("image-button").hidden = true;
+  byId("scope-tabs").hidden = false;
+  byId("period-select").hidden = false;
   byId("vs-headtohead").hidden = true;
   byId("kpi-grid").innerHTML = PK_KPI_HTML;
   byId("method-note").innerHTML = PK_METHOD_HTML;
   byId("personal-thead").innerHTML = PK_THEADS.personal;
   byId("small-thead").innerHTML = PK_THEADS.small;
   byId("big-thead").innerHTML = PK_THEADS.big;
-  byId("personal-desc").textContent = "按赛季累计积分排序";
+  byId("personal-desc").textContent = "按累计积分排序";
   byId("small-desc").textContent = "小组累计积分 ÷ 参赛人数";
   byId("big-desc").textContent = "大组累计积分 ÷ 参赛人数";
 
-  const personal = (state.pk && Array.isArray(state.pk.personal) ? state.pk.personal : []).map((row, index) => ({ ...row, rank: index + 1 }));
+  byId("scope-tab-all").hidden = false;
+  if (!["day", "week", "month", "all"].includes(state.scope)) state.scope = "all";
+  document.querySelectorAll(".scope-tab").forEach((item) => {
+    item.classList.toggle("is-active", item.dataset.scope === state.scope);
+    item.setAttribute("aria-selected", String(item.dataset.scope === state.scope));
+  });
+
+  const days = state.pk && Array.isArray(state.pk.days) ? state.pk.days : [];
+  let personal;
+  if (state.scope === "all") {
+    personal = (state.pk && Array.isArray(state.pk.personal) ? state.pk.personal : []).map((row, index) => ({ ...row, rank: index + 1 }));
+  } else {
+    const periods = pkAvailablePeriods(state.scope);
+    if (!periods.includes(state.period)) state.period = periods[0] || "";
+    const matching = days.filter((day) => {
+      if (state.scope === "day") return day.date === state.period;
+      if (state.scope === "week") return weekKey(day.date) === state.period;
+      return monthKey(day.date) === state.period;
+    });
+    personal = pkAggregatePersonal(matching);
+  }
+
+  const picker = byId("period-picker");
+  if (state.scope === "all") {
+    picker.disabled = true;
+    picker.innerHTML = `<option value="all">全部累计</option>`;
+  } else {
+    const periods = pkAvailablePeriods(state.scope);
+    picker.disabled = periods.length === 0;
+    picker.innerHTML = periods.map((period) => `<option value="${escapeHtml(period)}" ${period === state.period ? "selected" : ""}>${escapeHtml(periodLabel(state.scope, period))}</option>`).join("");
+  }
+
   const hasData = personal.length > 0;
   document.querySelectorAll(".rank-section, .kpi-grid, .report-heading").forEach((element) => { element.hidden = !hasData; });
   byId("pk-legend").hidden = !hasData;
@@ -342,12 +407,15 @@ function renderPk() {
   byId("data-status").innerHTML = "<i></i>已更新";
   byId("updated-at").textContent = state.pk.updatedAt ? `更新时间 ${state.pk.updatedAt}` : "";
   byId("scope-label").textContent = "营销PK赛";
-  const pkDate = state.pk && state.pk.date ? state.pk.date : "";
-  byId("report-title").textContent = pkDate ? `${pkDate}营销PK赛排名通报` : "营销PK赛排名通报";
+  byId("report-title").textContent = state.scope === "all"
+    ? "营销PK赛赛季累计排名通报"
+    : `${periodLabel(state.scope, state.period)}营销PK赛排名通报`;
+
+  const canDownload = state.scope === "day" && !!state.period;
   byId("image-button").hidden = false;
   byId("image-button").textContent = "下载PK日报图片";
-  byId("image-button").disabled = !pkDate;
-  byId("image-button").title = pkDate ? `下载${pkDate}的营销PK赛PNG图片` : "暂无PK日报图片";
+  byId("image-button").disabled = !canDownload;
+  byId("image-button").title = canDownload ? `下载${state.period}的营销PK赛PNG图片` : "仅日报可下载PNG图片";
 
   const total = personal.reduce((sum, row) => sum + Number(row.score || 0), 0);
   const activeProjects = new Set();
@@ -496,7 +564,7 @@ async function downloadImage() {
     return;
   }
   if (state.mode === "pk") {
-    const pkDate = state.pk && state.pk.date ? state.pk.date : "";
+    const pkDate = state.scope === "day" && state.period ? state.period : (state.pk && state.pk.date ? state.pk.date : "");
     if (!pkDate) return;
     const url = `./images/reports/pk-${pkDate}.png`;
     try {
