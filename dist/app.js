@@ -12,6 +12,7 @@ const state = {
 };
 
 const VS_GROUPS = ["左娜组", "晶晶组"];
+const VS_GROUP_LABELS = { "左娜组": "左娜组", "晶晶组": "韩晶晶组" };
 
 const byId = (id) => document.getElementById(id);
 const formatNumber = (value, digits = 0) => Number(value || 0).toFixed(digits);
@@ -467,8 +468,33 @@ function aggregateRetentionGroups(rows, field) {
     .map((row, index) => ({ ...row, rank: index + 1 }));
 }
 
+function vsAvailablePeriods(scope) {
+  const values = state.days.map((item) => scope === "day" ? item.date : scope === "week" ? weekKey(item.date) : monthKey(item.date));
+  return [...new Set(values)].sort().reverse();
+}
+
+function aggregateVsPersonal(days) {
+  const people = new Map();
+  for (const day of days) {
+    for (const row of day.personal || []) {
+      if (!VS_GROUPS.includes(row.bigGroup)) continue;
+      if (!people.has(row.name)) {
+        people.set(row.name, { name: row.name, bigGroup: row.bigGroup, smallGroup: row.smallGroup, matched: true, plus: 0, failure: 0, qc: 0, score: 0 });
+      }
+      const target = people.get(row.name);
+      target.bigGroup = row.bigGroup || target.bigGroup;
+      target.smallGroup = row.smallGroup || target.smallGroup;
+      target.plus += Number(row.plus || 0);
+      target.failure += Number(row.failure || 0);
+      target.qc += Number(row.qc || 0);
+      target.score += Number(row.score || 0);
+    }
+  }
+  return [...people.values()].sort(compareRows).map((row, index) => ({ ...row, rank: index + 1 }));
+}
+
 function renderVs() {
-  byId("scope-tabs").hidden = true;
+  byId("scope-tabs").hidden = false;
   byId("period-select").hidden = false;
   byId("pk-legend").hidden = true;
   byId("kpi-grid").hidden = true;
@@ -477,19 +503,38 @@ function renderVs() {
   byId("method-note").innerHTML = RETENTION_METHOD_HTML;
   byId("personal-thead").innerHTML = RETENTION_THEADS.personal;
   byId("small-thead").innerHTML = RETENTION_THEADS.small;
-  byId("personal-desc").textContent = "按个人累计积分排序";
-  byId("small-desc").textContent = "小组累计积分 ÷ 人数";
   byId("data-status").innerHTML = state.days.length ? "<i></i>已更新" : "<i></i>暂无数据";
   byId("updated-at").textContent = state.retentionUpdatedAt ? `更新时间 ${state.retentionUpdatedAt}` : "";
 
-  const periods = [...new Set(state.days.map((item) => item.date))].sort().reverse();
+  byId("scope-tab-all").hidden = true;
+  if (!["day", "week", "month"].includes(state.scope)) state.scope = "day";
+  const periodWord = state.scope === "day" ? "当日" : "周期累计";
+  byId("personal-desc").textContent = `按${periodWord}积分排序`;
+  byId("small-desc").textContent = `小组${periodWord}积分 ÷ 人数`;
+  document.querySelectorAll(".scope-tab").forEach((item) => {
+    item.classList.toggle("is-active", item.dataset.scope === state.scope);
+    item.setAttribute("aria-selected", String(item.dataset.scope === state.scope));
+  });
+
+  const periods = vsAvailablePeriods(state.scope);
   const picker = byId("period-picker");
   if (!periods.includes(state.period)) state.period = periods[0] || "";
-  picker.innerHTML = periods.map((period) => `<option value="${escapeHtml(period)}" ${period === state.period ? "selected" : ""}>${escapeHtml(periodLabel("day", period))}</option>`).join("");
+  picker.innerHTML = periods.map((period) => `<option value="${escapeHtml(period)}" ${period === state.period ? "selected" : ""}>${escapeHtml(periodLabel(state.scope, period))}</option>`).join("");
   picker.disabled = periods.length === 0;
 
-  const day = state.days.find((item) => item.date === state.period);
-  const hasData = !!day;
+  let people;
+  if (state.scope === "day") {
+    const day = state.days.find((item) => item.date === state.period);
+    people = day ? (day.personal || []).filter((row) => VS_GROUPS.includes(row.bigGroup)).slice().sort(compareRows).map((row, index) => ({ ...row, rank: index + 1 })) : [];
+  } else {
+    const days = state.days.filter((item) => {
+      if (state.scope === "week") return weekKey(item.date) === state.period;
+      return monthKey(item.date) === state.period;
+    });
+    people = aggregateVsPersonal(days);
+  }
+
+  const hasData = people.length > 0;
   byId("empty-state").hidden = hasData;
   byId("report-heading").hidden = !hasData;
   byId("vs-headtohead").hidden = !hasData;
@@ -502,15 +547,11 @@ function renderVs() {
     return;
   }
 
-  const people = (day.personal || [])
-    .filter((row) => VS_GROUPS.includes(row.bigGroup))
-    .slice()
-    .sort(compareRows)
-    .map((row, index) => ({ ...row, rank: index + 1 }));
   state.personalRows = people;
 
-  byId("scope-label").textContent = "左娜PK晶晶";
-  byId("report-title").textContent = `${periodLabel("day", state.period)}PK日报`;
+  byId("scope-label").textContent = "左娜组 vs 韩晶晶组";
+  const scopeLabel = state.scope === "day" ? "日报" : state.scope === "week" ? "周报" : "月报";
+  byId("report-title").textContent = `${periodLabel(state.scope, state.period)}挽留PK${scopeLabel}`;
 
   const groupStat = (name) => {
     const members = people.filter((row) => row.bigGroup === name);
@@ -519,10 +560,10 @@ function renderVs() {
   };
   const g1 = groupStat(VS_GROUPS[0]);
   const g2 = groupStat(VS_GROUPS[1]);
-  byId("vs-group1-name").textContent = VS_GROUPS[0];
+  byId("vs-group1-name").textContent = VS_GROUP_LABELS[VS_GROUPS[0]];
   byId("vs-group1-avg").textContent = formatNumber(g1.avg, 2);
   byId("vs-group1-count").textContent = g1.count;
-  byId("vs-group2-name").textContent = VS_GROUPS[1];
+  byId("vs-group2-name").textContent = VS_GROUP_LABELS[VS_GROUPS[1]];
   byId("vs-group2-avg").textContent = formatNumber(g2.avg, 2);
   byId("vs-group2-count").textContent = g2.count;
   byId("vs-card-1").classList.toggle("is-winner", g1.avg >= g2.avg);
@@ -537,9 +578,10 @@ function renderVs() {
   renderRankList("personal-bottom", people, "personal", true);
   renderPersonalTable(people, byId("person-search").value);
 
+  const canDownload = (state.scope === "day" || state.scope === "week") && !!state.period;
   byId("image-button").textContent = "下载PK图片";
-  byId("image-button").disabled = false;
-  byId("image-button").title = `下载${state.period}的左娜PK晶晶图片`;
+  byId("image-button").disabled = !canDownload;
+  byId("image-button").title = canDownload ? `下载${state.period}的左娜PK韩晶晶图片` : "仅日报/周报可下载图片";
 }
 
 function render() {
@@ -559,7 +601,7 @@ function exportCsv() {
   } else if (mode === "vs") {
     header = ["位次", "姓名", "大组", "小组", "成功", "失败", "质检", "积分"];
     body = state.personalRows.map((row) => [row.rank, row.name, row.bigGroup, row.smallGroup, row.plus, row.failure, row.qc, row.score]);
-    filename = `${state.period}-左娜PK晶晶.csv`;
+    filename = `${state.period}-左娜PK韩晶晶.csv`;
   } else {
     header = ["位次", "姓名", "大组", "小组", "成功", "失败", "质检", "积分"];
     body = state.personalRows.map((row) => [row.rank, row.name, row.bigGroup, row.smallGroup, row.plus, row.failure, row.qc, row.score]);
@@ -583,12 +625,12 @@ async function downloadImage() {
       const response = await fetch(url, { method: "HEAD", cache: "no-store" });
       if (!response.ok) throw new Error("missing");
     } catch {
-      alert("该左娜PK晶晶图片尚未生成，暂时无法下载。");
+      alert("该左娜PK韩晶晶图片尚未生成，暂时无法下载。");
       return;
     }
     const anchor = document.createElement("a");
     anchor.href = url;
-    anchor.download = `${state.period}_左娜PK晶晶.png`;
+    anchor.download = `${state.period}_左娜PK韩晶晶.png`;
     anchor.click();
     return;
   }
