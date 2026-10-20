@@ -30,11 +30,22 @@ PROJECT_SCORES: dict[str, int] = {
     "15元10G包月流量包": 2,
     "套餐高迁": 4,
     "天翼智铃基础版": 1,
+    "9元10G通用流量权益-202206版": 2,
+    "20元20G流量包提速月包（3个月）": 2,
+    "30元40G流量包提速月包（3个月）": 2,
+    "19元30GB国内提速流量包-24个月": 2,
 }
 
 # 项目别名：业务上同义的项目名，统一归并到主项目计分。
 PROJECT_ALIASES: dict[str, str] = {
     "高改套餐": "套餐高迁",
+}
+
+MEMBERSHIP_OVERRIDES: dict[str, dict[str, str]] = {
+    "高冬雪": {"bigGroup": "左娜组", "smallGroup": "扬帆组"},
+    "张洁": {"bigGroup": "左娜组", "smallGroup": "扬帆组"},
+    "刘洋": {"bigGroup": "左娜组", "smallGroup": "扬帆组"},
+    "张晓丽": {"bigGroup": "左娜组", "smallGroup": "扬帆组"},
 }
 
 
@@ -111,12 +122,28 @@ def roster_from_retention() -> dict[str, dict]:
     for person in payload.get("roster", []):
         name = text(person.get("name"))
         if name and name not in excluded:
+            override = MEMBERSHIP_OVERRIDES.get(name)
             roster[name] = {
                 "name": name,
-                "bigGroup": text(person.get("bigGroup")) or "待确认班组",
-                "smallGroup": text(person.get("smallGroup")) or "待确认小组",
+                "bigGroup": override["bigGroup"] if override else text(person.get("bigGroup")) or "待确认班组",
+                "smallGroup": override["smallGroup"] if override else text(person.get("smallGroup")) or "待确认小组",
             }
     return roster
+
+
+def apply_membership_overrides(days: list[dict], roster: dict[str, dict]) -> list[dict]:
+    for day in days:
+        for person in day.get("personal", []):
+            name = text(person.get("name"))
+            if name not in MEMBERSHIP_OVERRIDES:
+                continue
+            membership = roster.get(name)
+            if not membership:
+                continue
+            person["bigGroup"] = membership["bigGroup"]
+            person["smallGroup"] = membership["smallGroup"]
+            person["matched"] = True
+    return days
 
 
 def excluded_names() -> set[str]:
@@ -182,6 +209,7 @@ def update_data(workbook_path: Path, data_file: Path = PK_DATA_FILE) -> dict:
     days = [item for item in existing.get("days", []) if item.get("date") != report_date]
     days.append({"date": report_date, "personal": day_personal})
     days.sort(key=lambda item: item["date"])
+    days = apply_membership_overrides(days, roster)
     personal = aggregate_personal(days, roster)
     payload = {
         "updatedAt": datetime.now().strftime("%Y-%m-%d %H:%M"),

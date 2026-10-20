@@ -17,6 +17,19 @@ LAST_FILES_FILE = ROOT / ".last-report-files.json"
 INBOX = ROOT / "待发布日报"
 SUPPORTED_SUFFIXES = {".xlsx", ".xlsm"}
 
+# 系统源数据中的历史错名统一归并到正式参赛人员。
+NAME_ALIASES: dict[str, str] = {
+    "闫红玉": "高建萍",
+}
+
+# 挽留赛两中心的小组归属修正。仅覆盖已确认人员，避免影响其他名单。
+MEMBERSHIP_OVERRIDES: dict[str, dict[str, str]] = {
+    "高冬雪": {"bigGroup": "左娜组", "smallGroup": "扬帆组"},
+    "张洁": {"bigGroup": "左娜组", "smallGroup": "扬帆组"},
+    "刘洋": {"bigGroup": "左娜组", "smallGroup": "扬帆组"},
+    "张晓丽": {"bigGroup": "左娜组", "smallGroup": "扬帆组"},
+}
+
 
 def inbox_workbooks() -> list[Path]:
     candidates = [
@@ -34,6 +47,18 @@ def inbox_workbooks() -> list[Path]:
 
 def text(value: object) -> str:
     return "" if value is None else str(value).strip()
+
+
+def canonical_name(value: object) -> str:
+    name = text(value)
+    return NAME_ALIASES.get(name, name)
+
+
+def corrected_membership(name: str, big_group: str, small_group: str) -> tuple[str, str]:
+    override = MEMBERSHIP_OVERRIDES.get(name)
+    if override:
+        return override["bigGroup"], override["smallGroup"]
+    return big_group, small_group
 
 
 def integer(value: object) -> int:
@@ -87,29 +112,53 @@ def roster_from_payload(payload: dict) -> list[dict]:
     excluded = excluded_names(payload)
     registry: dict[str, dict] = {}
     for person in payload.get("roster", []):
-        name = text(person.get("name"))
+        name = canonical_name(person.get("name"))
         if name and name not in excluded:
+            big_group, small_group = corrected_membership(
+                name,
+                text(person.get("bigGroup")),
+                text(person.get("smallGroup")),
+            )
             registry[name] = {
                 "name": name,
-                "bigGroup": text(person.get("bigGroup")),
-                "smallGroup": text(person.get("smallGroup")),
+                "bigGroup": big_group,
+                "smallGroup": small_group,
             }
 
     for day_data in payload.get("days", []):
         for person in day_data.get("personal", []):
-            name = text(person.get("name"))
+            name = canonical_name(person.get("name"))
             if (
                 name
                 and name not in excluded
                 and person.get("matched")
                 and name not in registry
             ):
+                big_group, small_group = corrected_membership(
+                    name,
+                    text(person.get("bigGroup")),
+                    text(person.get("smallGroup")),
+                )
                 registry[name] = {
                     "name": name,
-                    "bigGroup": text(person.get("bigGroup")),
-                    "smallGroup": text(person.get("smallGroup")),
+                    "bigGroup": big_group,
+                    "smallGroup": small_group,
                 }
     return list(registry.values())
+
+
+def apply_membership_overrides(days: list[dict]) -> list[dict]:
+    for day_data in days:
+        for person in day_data.get("personal", []):
+            name = canonical_name(person.get("name"))
+            override = MEMBERSHIP_OVERRIDES.get(name)
+            if not override:
+                continue
+            person["name"] = name
+            person["bigGroup"] = override["bigGroup"]
+            person["smallGroup"] = override["smallGroup"]
+            person["matched"] = True
+    return days
 
 
 def read_detailed_day(workbook, roster: list[dict], excluded: set[str]) -> dict:
@@ -117,7 +166,7 @@ def read_detailed_day(workbook, roster: list[dict], excluded: set[str]) -> dict:
     imported: dict[str, dict] = {}
     report_date = ""
     for row in sheet.iter_rows(min_row=4, values_only=True):
-        name = text(row[3])
+        name = canonical_name(row[3])
         if not name or name in excluded:
             continue
         if not report_date:
@@ -126,8 +175,11 @@ def read_detailed_day(workbook, roster: list[dict], excluded: set[str]) -> dict:
                 report_date = date_value.strftime("%Y-%m-%d")
             else:
                 report_date = text(date_value)[:10]
-        big_group = text(row[1]) or "待确认班组"
-        small_group = text(row[2]) or "待确认小组"
+        big_group, small_group = corrected_membership(
+            name,
+            text(row[1]) or "待确认班组",
+            text(row[2]) or "待确认小组",
+        )
         plus = integer(row[4])
         failure = integer(row[5])
         qc = integer(row[6])
@@ -197,9 +249,9 @@ def read_compact_day(
     failure_names: Counter[str] = Counter()
     qc_names: Counter[str] = Counter()
     for row in sheet.iter_rows(min_row=2, max_col=3, values_only=True):
-        plus_names.update(names_in_cell(row[0]))
-        failure_names.update(names_in_cell(row[1]))
-        qc_names.update(names_in_cell(row[2]))
+        plus_names.update(canonical_name(name) for name in names_in_cell(row[0]))
+        failure_names.update(canonical_name(name) for name in names_in_cell(row[1]))
+        qc_names.update(canonical_name(name) for name in names_in_cell(row[2]))
 
     roster_by_name = {person["name"]: person for person in roster}
     event_names = (set(plus_names) | set(failure_names) | set(qc_names)) - excluded
@@ -286,7 +338,9 @@ def update_data(
         payload = {"updatedAt": "", "roster": [], "days": []}
 
     day_data = read_day(workbook_path, payload, report_date_override)
-    days = [item for item in payload.get("days", []) if item.get("date") != day_data["date"]]
+    days = apply_membership_overrides(
+        [item for item in payload.get("days", []) if item.get("date") != day_data["date"]]
+    )
     days.append(day_data)
     days.sort(key=lambda item: item["date"])
     roster = update_roster(payload, day_data)

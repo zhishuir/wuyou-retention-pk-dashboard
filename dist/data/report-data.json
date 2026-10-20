@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16 10:30",
+  "updatedAt": "2026-10-20 09:48",
   "excluded": [
     "关艾",
     "刘宇",
@@ -511,22 +511,22 @@
     {
       "name": "高冬雪",
       "bigGroup": "左娜组",
-      "smallGroup": "聚力组"
+      "smallGroup": "扬帆组"
     },
     {
       "name": "张洁",
       "bigGroup": "左娜组",
-      "smallGroup": "聚力组"
+      "smallGroup": "扬帆组"
     },
     {
       "name": "刘洋",
       "bigGroup": "左娜组",
-      "smallGroup": "聚力组"
+      "smallGroup": "扬帆组"
     },
     {
       "name": "张晓丽",
       "bigGroup": "左娜组",
-      "smallGroup": "聚力组"
+      "smallGroup": "扬帆组"
     },
     {
       "name": "冯艳丽",
@@ -1556,7 +1556,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 0,
           "qc": 0,
@@ -1586,7 +1586,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 2,
           "qc": 0,
@@ -1616,7 +1616,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -1626,7 +1626,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -2601,7 +2601,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 3,
           "qc": 0,
@@ -2631,7 +2631,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 1,
           "qc": 0,
@@ -2691,7 +2691,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -2701,7 +2701,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -3716,7 +3716,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 3,
           "qc": 0,
@@ -3726,7 +3726,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 4,
           "qc": 0,
@@ -3736,7 +3736,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 0,
           "qc": 0,
@@ -3746,7 +3746,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -4811,7 +4811,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -4821,7 +4821,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -4831,7 +4831,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 2,
           "failure": 1,
           "qc": 0,
@@ -4841,7 +4841,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 3,
           "qc": 0,
@@ -5906,7 +5906,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -5916,7 +5916,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 2,
           "qc": 0,
@@ -5926,7 +5926,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -5936,7 +5936,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -7001,7 +7001,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -7011,7 +7011,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -7021,7 +7021,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -7031,7 +7031,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -8096,7 +8096,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -8106,7 +8106,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 3,
           "qc": 0,
@@ -8116,7 +8116,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -8126,7 +8126,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 3,
           "qc": 0,
@@ -9191,7 +9191,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 2,
           "failure": 1,
           "qc": 0,
@@ -9201,7 +9201,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 0,
           "qc": 0,
@@ -9211,7 +9211,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -9221,7 +9221,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -10286,7 +10286,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 3,
           "qc": 0,
@@ -10296,7 +10296,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -10306,7 +10306,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -10316,7 +10316,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -11381,7 +11381,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -11391,7 +11391,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -11401,7 +11401,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -11411,7 +11411,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 2,
           "qc": 0,
@@ -11442,10 +11442,10 @@
           "name": "高建萍",
           "bigGroup": "晶晶组",
           "smallGroup": "暖心组",
-          "plus": 0,
+          "plus": 1,
           "failure": 0,
           "qc": 0,
-          "score": 0,
+          "score": 1,
           "matched": true
         },
         {
@@ -12476,7 +12476,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 0,
           "qc": 0,
@@ -12486,7 +12486,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 2,
           "qc": 0,
@@ -12496,7 +12496,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -12506,7 +12506,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -13571,7 +13571,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -13581,7 +13581,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -13591,7 +13591,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -13601,7 +13601,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 4,
           "qc": 0,
@@ -14666,7 +14666,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 3,
           "failure": 3,
           "qc": 0,
@@ -14676,7 +14676,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 1,
           "qc": 0,
@@ -14686,7 +14686,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -14696,7 +14696,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -15761,7 +15761,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 0,
           "qc": 0,
@@ -15771,7 +15771,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 3,
           "qc": 0,
@@ -15781,7 +15781,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -15791,7 +15791,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -16856,7 +16856,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 3,
           "failure": 3,
           "qc": 0,
@@ -16866,7 +16866,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 3,
           "qc": 0,
@@ -16876,7 +16876,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 2,
           "qc": 0,
@@ -16886,7 +16886,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 0,
           "qc": 0,
@@ -17951,7 +17951,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 1,
           "qc": 0,
@@ -17961,7 +17961,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -17971,7 +17971,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 2,
           "qc": 0,
@@ -17981,7 +17981,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -19046,7 +19046,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -19056,7 +19056,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 3,
           "failure": 1,
           "qc": 0,
@@ -19066,7 +19066,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -19076,7 +19076,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -20141,7 +20141,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 2,
           "qc": 0,
@@ -20151,7 +20151,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 2,
           "failure": 3,
           "qc": 0,
@@ -20161,7 +20161,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -20171,7 +20171,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -21236,7 +21236,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 5,
           "qc": 0,
@@ -21246,7 +21246,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 2,
           "failure": 4,
           "qc": 0,
@@ -21256,7 +21256,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 2,
           "qc": 0,
@@ -21266,7 +21266,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -22341,7 +22341,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 4,
           "failure": 1,
           "qc": 0,
@@ -22351,7 +22351,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 1,
           "qc": 0,
@@ -22361,7 +22361,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -22371,7 +22371,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -22403,9 +22403,9 @@
           "bigGroup": "晶晶组",
           "smallGroup": "暖心组",
           "plus": 0,
-          "failure": 1,
+          "failure": 2,
           "qc": 0,
-          "score": -1,
+          "score": -2,
           "matched": true
         },
         {
@@ -23466,7 +23466,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -23476,7 +23476,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 2,
           "failure": 3,
           "qc": 0,
@@ -23486,7 +23486,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 1,
           "qc": 0,
@@ -23496,7 +23496,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -23527,10 +23527,10 @@
           "name": "高建萍",
           "bigGroup": "晶晶组",
           "smallGroup": "暖心组",
-          "plus": 0,
+          "plus": 1,
           "failure": 1,
           "qc": 0,
-          "score": -1,
+          "score": 0,
           "matched": true
         },
         {
@@ -24561,7 +24561,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 1,
           "qc": 0,
@@ -24571,7 +24571,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 3,
           "failure": 1,
           "qc": 0,
@@ -24581,7 +24581,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -24591,7 +24591,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -24622,10 +24622,10 @@
           "name": "高建萍",
           "bigGroup": "晶晶组",
           "smallGroup": "暖心组",
-          "plus": 0,
+          "plus": 1,
           "failure": 0,
           "qc": 0,
-          "score": 0,
+          "score": 1,
           "matched": true
         },
         {
@@ -25656,7 +25656,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 2,
           "failure": 3,
           "qc": 0,
@@ -25666,7 +25666,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -25676,7 +25676,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -25686,7 +25686,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -26751,7 +26751,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -26761,7 +26761,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 0,
           "qc": 0,
@@ -26771,7 +26771,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -26781,7 +26781,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -27856,7 +27856,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 2,
           "failure": 4,
           "qc": 0,
@@ -27866,7 +27866,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 3,
           "qc": 0,
@@ -27876,7 +27876,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 5,
           "qc": 0,
@@ -27886,7 +27886,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -27917,10 +27917,10 @@
           "name": "高建萍",
           "bigGroup": "晶晶组",
           "smallGroup": "暖心组",
-          "plus": 0,
+          "plus": 1,
           "failure": 0,
           "qc": 0,
-          "score": 0,
+          "score": 1,
           "matched": true
         },
         {
@@ -28951,7 +28951,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -28961,7 +28961,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -28971,7 +28971,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 1,
           "qc": 0,
@@ -28981,7 +28981,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 0,
           "qc": 0,
@@ -30056,7 +30056,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 2,
           "failure": 6,
           "qc": 0,
@@ -30066,7 +30066,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -30076,7 +30076,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 2,
           "qc": 0,
@@ -30086,7 +30086,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -30117,10 +30117,10 @@
           "name": "高建萍",
           "bigGroup": "晶晶组",
           "smallGroup": "暖心组",
-          "plus": 0,
+          "plus": 1,
           "failure": 5,
           "qc": 0,
-          "score": -5,
+          "score": -4,
           "matched": true
         },
         {
@@ -31151,7 +31151,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -31161,7 +31161,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 0,
           "qc": 0,
@@ -31171,7 +31171,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -31181,7 +31181,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -32246,7 +32246,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -32256,7 +32256,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 3,
           "qc": 0,
@@ -32266,7 +32266,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -32276,7 +32276,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -33351,7 +33351,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -33361,7 +33361,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -33371,7 +33371,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -33381,7 +33381,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -34466,7 +34466,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -34476,7 +34476,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -34486,7 +34486,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -34496,7 +34496,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -35561,7 +35561,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 0,
           "qc": 0,
@@ -35571,7 +35571,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 1,
           "qc": 0,
@@ -35581,7 +35581,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 1,
           "qc": 0,
@@ -35591,7 +35591,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -36656,7 +36656,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 2,
           "failure": 1,
           "qc": 0,
@@ -36666,7 +36666,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -36676,7 +36676,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -36686,7 +36686,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 2,
           "qc": 0,
@@ -37761,7 +37761,7 @@
         {
           "name": "高冬雪",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 4,
           "failure": 0,
           "qc": 0,
@@ -37771,7 +37771,7 @@
         {
           "name": "张洁",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 1,
           "qc": 0,
@@ -37781,7 +37781,7 @@
         {
           "name": "刘洋",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 0,
           "failure": 0,
           "qc": 0,
@@ -37791,7 +37791,7 @@
         {
           "name": "张晓丽",
           "bigGroup": "左娜组",
-          "smallGroup": "聚力组",
+          "smallGroup": "扬帆组",
           "plus": 1,
           "failure": 0,
           "qc": 0,
