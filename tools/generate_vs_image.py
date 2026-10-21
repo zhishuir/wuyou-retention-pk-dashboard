@@ -118,7 +118,7 @@ def save(image: Image.Image, local_name: str, web_name: str) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="生成左娜组 vs 韩晶晶组 PK日报/周报图片。")
+    parser = argparse.ArgumentParser(description="生成左娜组 vs 韩晶晶组 PK日/周/月报图片。")
     parser.add_argument("--date", action="append", help="日报日期，格式 YYYY-MM-DD；可重复填写。")
     args = parser.parse_args()
     try:
@@ -158,7 +158,19 @@ def main() -> int:
             save(image, f"{week_key}_左娜PK晶晶.png", f"vs-{week_key}.png")
             generated += 1
 
-        print(f"左娜PK晶晶图片生成完成，共 {generated} 张（含日报和周报）。")
+        # 月报（自然月，与网页的月份筛选口径一致）
+        months = sorted({report_date[:7] for report_date in dates})
+        for month in months:
+            days = [item for item in all_days if item.get("date", "").startswith(month)]
+            groups = build_report(payload, days)
+            if not groups or not groups[0]["members"]:
+                continue
+            year, month_number = month.split("-")
+            image = generate(groups, "月报", f"{year}年{int(month_number)}月")
+            save(image, f"{month}_左娜PK晶晶月报.png", f"vs-month-{month}.png")
+            generated += 1
+
+        print(f"左娜PK晶晶图片生成完成，共 {generated} 张（含日、周、月报）。")
         return 0
     except Exception as exc:
         print(f"左娜PK晶晶图片生成失败：{exc}")

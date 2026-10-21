@@ -231,7 +231,11 @@ def main() -> int:
             image.save(local_path, format="PNG", optimize=True)
             image.save(web_path, format="PNG", optimize=True)
             print(f"已生成图片：{local_path}")
+        from generate_monthly_image import generate_months
+
+        month_count = generate_months(payload, sorted({value[:7] for value in report_dates}))
         print(f"日报图片生成完成：共 {len(list(dict.fromkeys(report_dates)))} 张。")
+        print(f"对应月报图片已更新：共 {month_count} 张。")
         return 0
     except Exception as exc:
         print(f"图片生成失败：{exc}")

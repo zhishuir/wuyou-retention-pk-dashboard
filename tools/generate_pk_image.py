@@ -70,6 +70,10 @@ def build_report(payload: dict, report_date: str) -> dict:
         personal_source = payload.get("personal", [])
     else:
         personal_source = day.get("personal", [])
+    return report_from_personal(personal_source)
+
+
+def report_from_personal(personal_source: list[dict]) -> dict:
     personal = rank_rows(list(personal_source), "score")
     matched = [row for row in personal if row.get("matched") and row.get("bigGroup") != "待确认班组"]
     projects: set[str] = set()
@@ -86,19 +90,50 @@ def build_report(payload: dict, report_date: str) -> dict:
     }
 
 
-def generate(report: dict, report_date: str) -> Image.Image:
+def build_month_report(payload: dict, month: str) -> dict:
+    people: dict[str, dict] = {}
+    for day in payload.get("days", []):
+        if not day.get("date", "").startswith(month):
+            continue
+        for row in day.get("personal", []):
+            name = row.get("name")
+            if not name:
+                continue
+            person = people.setdefault(name, {
+                "name": name,
+                "bigGroup": row.get("bigGroup") or "待确认班组",
+                "smallGroup": row.get("smallGroup") or "待确认小组",
+                "matched": row.get("matched") is not False,
+                "score": 0,
+                "detail": {},
+            })
+            person["bigGroup"] = row.get("bigGroup") or person["bigGroup"]
+            person["smallGroup"] = row.get("smallGroup") or person["smallGroup"]
+            person["matched"] = row.get("matched") is not False and person["bigGroup"] != "待确认班组"
+            person["score"] += int(row.get("score") or 0)
+            for project, count in (row.get("detail") or {}).items():
+                person["detail"][project] = person["detail"].get(project, 0) + int(count)
+    if not people:
+        raise ValueError(f"营销PK数据中找不到 {month} 月报。")
+    return report_from_personal(list(people.values()))
+
+
+def generate(report: dict, report_date: str, *, kind: str = "日报") -> Image.Image:
     image = Image.new("RGB", (1242, 2000), COLORS["canvas"])
     draw = ImageDraw.Draw(image)
     draw.rectangle((0, 0, 1242, 278), fill=COLORS["navy"])
     draw.rectangle((0, 270, 1242, 278), fill=COLORS["teal"])
     draw.text((56, 42), "中国电信", font=font(20), fill="#b9c8d8")
-    draw.text((56, 80), "营销PK赛日报", font=font(50, True), fill="#ffffff")
-    year, month, day = report_date.split("-")
-    draw.text((1186, 96), f"{year}年{int(month)}月{int(day)}日", font=font(26, True), fill="#ffffff", anchor="ra")
+    draw.text((56, 80), f"营销PK赛{kind}", font=font(50, True), fill="#ffffff")
+    date_parts = report_date.split("-")
+    date_text = f"{date_parts[0]}年{int(date_parts[1])}月"
+    if kind == "日报":
+        date_text += f"{int(date_parts[2])}日"
+    draw.text((1186, 96), date_text, font=font(26, True), fill="#ffffff", anchor="ra")
     draw.text((1186, 140), "个人、小组及大组积分排名", font=font(19), fill="#b9c8d8", anchor="ra")
 
     kpis = [
-        ("当日总加分", report["total"], COLORS["teal"], "分"),
+        ("本月总加分" if kind == "月报" else "当日总加分", report["total"], COLORS["teal"], "分"),
         ("参赛人数", report["people"], COLORS["navy2"], "人"),
         ("加分项目", report["projects"], COLORS["amber"], "个"),
         ("最高个人积分", report["top"], COLORS["navy2"], "分"),
@@ -158,6 +193,15 @@ def main() -> int:
             image.save(web_path, format="PNG", optimize=True)
             generated += 1
             print(f"已生成营销PK赛图片：{local_path}")
+        months = sorted({day["date"][:7] for day in payload.get("days", [])})
+        for month in months:
+            report = build_month_report(payload, month)
+            image = generate(report, month, kind="月报")
+            local_path = LOCAL_OUTPUT / f"{month}_营销PK赛月报.png"
+            web_path = WEB_OUTPUT / f"pk-month-{month}.png"
+            image.save(local_path, format="PNG", optimize=True)
+            image.save(web_path, format="PNG", optimize=True)
+            print(f"已生成营销PK赛月报图片：{local_path}")
         print(f"营销PK赛日报图片生成完成，共 {generated} 张。")
         return 0
     except Exception as exc:

@@ -295,9 +295,10 @@ function renderRetention() {
   byId("kpi-qc").textContent = report.qc;
   byId("kpi-total").textContent = report.total;
   byId("kpi-days").textContent = `统计天数 ${days.length}`;
-  byId("image-button").disabled = !["day", "week"].includes(state.scope);
-  byId("image-button").textContent = state.scope === "week" ? "下载周报图片" : "下载日报图片";
-  byId("image-button").title = state.scope === "day" ? "下载当前日期的PNG日报" : state.scope === "week" ? "下载本周PNG周报" : "月报暂无图片";
+  const imageLabel = { day: "日报", week: "周报", month: "月报" }[state.scope];
+  byId("image-button").disabled = !state.period;
+  byId("image-button").textContent = `下载${imageLabel}图片`;
+  byId("image-button").title = `下载当前${imageLabel}PNG图片`;
 
   renderRankList("personal-top", report.personal, "personal");
   renderRankList("personal-bottom", report.personal, "personal", true);
@@ -412,11 +413,11 @@ function renderPk() {
     ? "营销PK赛赛季累计排名通报"
     : `${periodLabel(state.scope, state.period)}营销PK赛排名通报`;
 
-  const canDownload = state.scope === "day" && !!state.period;
+  const canDownload = ["day", "month"].includes(state.scope) && !!state.period;
   byId("image-button").hidden = false;
-  byId("image-button").textContent = "下载PK日报图片";
+  byId("image-button").textContent = state.scope === "month" ? "下载PK月报图片" : "下载PK日报图片";
   byId("image-button").disabled = !canDownload;
-  byId("image-button").title = canDownload ? `下载${state.period}的营销PK赛PNG图片` : "仅日报可下载PNG图片";
+  byId("image-button").title = canDownload ? `下载${state.period}的营销PK赛PNG图片` : "周报和累计暂无PNG图片";
 
   const total = personal.reduce((sum, row) => sum + Number(row.score || 0), 0);
   const activeProjects = new Set();
@@ -578,10 +579,10 @@ function renderVs() {
   renderRankList("personal-bottom", people, "personal", true);
   renderPersonalTable(people, byId("person-search").value);
 
-  const canDownload = (state.scope === "day" || state.scope === "week") && !!state.period;
-  byId("image-button").textContent = "下载PK图片";
+  const canDownload = !!state.period;
+  byId("image-button").textContent = `下载PK${scopeLabel}图片`;
   byId("image-button").disabled = !canDownload;
-  byId("image-button").title = canDownload ? `下载${state.period}的左娜PK韩晶晶图片` : "仅日报/周报可下载图片";
+  byId("image-button").title = canDownload ? `下载${state.period}的左娜PK韩晶晶${scopeLabel}图片` : "暂无可下载图片";
 }
 
 function render() {
@@ -620,7 +621,8 @@ function exportCsv() {
 async function downloadImage() {
   if (state.mode === "vs") {
     if (!state.period) return;
-    const url = `./images/reports/vs-${state.period}.png`;
+    const prefix = state.scope === "month" ? "vs-month-" : "vs-";
+    const url = `./images/reports/${prefix}${state.period}.png`;
     try {
       const response = await fetch(url, { method: "HEAD", cache: "no-store" });
       if (!response.ok) throw new Error("missing");
@@ -630,30 +632,34 @@ async function downloadImage() {
     }
     const anchor = document.createElement("a");
     anchor.href = url;
-    anchor.download = `${state.period}_左娜PK韩晶晶.png`;
+    anchor.download = `${state.period}_左娜PK韩晶晶${{ day: "日报", week: "周报", month: "月报" }[state.scope]}.png`;
     anchor.click();
     return;
   }
   if (state.mode === "pk") {
-    const pkDate = state.scope === "day" && state.period ? state.period : (state.pk && state.pk.date ? state.pk.date : "");
-    if (!pkDate) return;
-    const url = `./images/reports/pk-${pkDate}.png`;
+    if (!["day", "month"].includes(state.scope) || !state.period) return;
+    const period = state.period;
+    const url = state.scope === "month"
+      ? `./images/reports/pk-month-${period}.png`
+      : `./images/reports/pk-${period}.png`;
     try {
       const response = await fetch(url, { method: "HEAD", cache: "no-store" });
       if (!response.ok) throw new Error("missing");
     } catch {
-      alert("该营销PK日报图片尚未生成，暂时无法下载。");
+      alert("该营销PK报表图片尚未生成，暂时无法下载。");
       return;
     }
     const anchor = document.createElement("a");
     anchor.href = url;
-    anchor.download = `${pkDate}_营销PK赛.png`;
+    anchor.download = `${period}_营销PK赛${state.scope === "month" ? "月报" : "日报"}.png`;
     anchor.click();
     return;
   }
-  if (!["day", "week"].includes(state.scope) || !state.period) return;
-  const label = state.scope === "week" ? "周报" : "日报";
-  const url = `./images/reports/${state.period}.png`;
+  if (!["day", "week", "month"].includes(state.scope) || !state.period) return;
+  const label = { day: "日报", week: "周报", month: "月报" }[state.scope];
+  const url = state.scope === "month"
+    ? `./images/reports/month-${state.period}.png`
+    : `./images/reports/${state.period}.png`;
   try {
     const response = await fetch(url, { method: "HEAD", cache: "no-store" });
     if (!response.ok) throw new Error("missing");
