@@ -20,6 +20,7 @@ SUPPORTED_SUFFIXES = {".xlsx", ".xlsm"}
 # 系统源数据中的历史错名统一归并到正式参赛人员。
 NAME_ALIASES: dict[str, str] = {
     "闫红玉": "高建萍",
+    "温舒然": "温姝然",
 }
 
 # 挽留赛两中心的小组归属修正。仅覆盖已确认人员，避免影响其他名单。
@@ -164,6 +165,7 @@ def apply_membership_overrides(days: list[dict]) -> list[dict]:
 def read_detailed_day(workbook, roster: list[dict], excluded: set[str]) -> dict:
     sheet = workbook["计分明细"]
     imported: dict[str, dict] = {}
+    roster_by_name = {person["name"]: person for person in roster}
     report_date = ""
     for row in sheet.iter_rows(min_row=4, values_only=True):
         name = canonical_name(row[3])
@@ -175,11 +177,16 @@ def read_detailed_day(workbook, roster: list[dict], excluded: set[str]) -> dict:
                 report_date = date_value.strftime("%Y-%m-%d")
             else:
                 report_date = text(date_value)[:10]
-        big_group, small_group = corrected_membership(
-            name,
-            text(row[1]) or "待确认班组",
-            text(row[2]) or "待确认小组",
-        )
+        membership = roster_by_name.get(name)
+        if membership:
+            big_group = membership["bigGroup"]
+            small_group = membership["smallGroup"]
+        else:
+            big_group, small_group = corrected_membership(
+                name,
+                text(row[1]) or "待确认班组",
+                text(row[2]) or "待确认小组",
+            )
         plus = integer(row[4])
         failure = integer(row[5])
         qc = integer(row[6])

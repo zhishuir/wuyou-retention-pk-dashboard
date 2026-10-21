@@ -11,7 +11,6 @@ from openpyxl import load_workbook
 
 ROOT = Path(__file__).resolve().parents[1]
 PK_DATA_FILE = ROOT / "dist" / "data" / "pk-data.json"
-RETENTION_DATA_FILE = ROOT / "dist" / "data" / "report-data.json"
 INBOX = ROOT / "待发布PK"
 LAST_DATE_FILE = ROOT / ".last-pk-date"
 LAST_FILES_FILE = ROOT / ".last-pk-files.json"
@@ -48,9 +47,18 @@ MEMBERSHIP_OVERRIDES: dict[str, dict[str, str]] = {
     "张晓丽": {"bigGroup": "左娜组", "smallGroup": "扬帆组"},
 }
 
+NAME_ALIASES: dict[str, str] = {
+    "温舒然": "温姝然",
+}
+
 
 def text(value: object) -> str:
     return "" if value is None else str(value).strip()
+
+
+def canonical_name(value: object) -> str:
+    name = text(value)
+    return NAME_ALIASES.get(name, name)
 
 
 def inbox_workbooks() -> list[Path]:
@@ -101,7 +109,7 @@ def read_records(workbook) -> tuple[dict, set[str]]:
     counts: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
     unknown_projects: set[str] = set()
     for row in sheet.iter_rows(min_row=2, max_col=max(index.values()) + 1, values_only=True):
-        name = text(row[index["name"]])
+        name = canonical_name(row[index["name"]])
         project = text(row[index["project"]])
         if not name:
             continue
@@ -115,8 +123,7 @@ def read_records(workbook) -> tuple[dict, set[str]]:
     return dict(counts), unknown_projects
 
 
-def roster_from_retention() -> dict[str, dict]:
-    payload = json.loads(RETENTION_DATA_FILE.read_text(encoding="utf-8"))
+def roster_from_marketing(payload: dict) -> dict[str, dict]:
     excluded = {text(name) for name in payload.get("excluded", []) if text(name)}
     roster: dict[str, dict] = {}
     for person in payload.get("roster", []):
@@ -134,20 +141,18 @@ def roster_from_retention() -> dict[str, dict]:
 def apply_membership_overrides(days: list[dict], roster: dict[str, dict]) -> list[dict]:
     for day in days:
         for person in day.get("personal", []):
-            name = text(person.get("name"))
-            if name not in MEMBERSHIP_OVERRIDES:
-                continue
+            name = canonical_name(person.get("name"))
             membership = roster.get(name)
             if not membership:
                 continue
+            person["name"] = name
             person["bigGroup"] = membership["bigGroup"]
             person["smallGroup"] = membership["smallGroup"]
             person["matched"] = True
     return days
 
 
-def excluded_names() -> set[str]:
-    payload = json.loads(RETENTION_DATA_FILE.read_text(encoding="utf-8"))
+def excluded_names(payload: dict) -> set[str]:
     return {text(name) for name in payload.get("excluded", []) if text(name)}
 
 
@@ -195,17 +200,19 @@ def aggregate_personal(days: list[dict], roster: dict[str, dict]) -> list[dict]:
 def update_data(workbook_path: Path, data_file: Path = PK_DATA_FILE) -> dict:
     workbook = load_workbook(workbook_path, data_only=True, read_only=True)
     counts, unknown_projects = read_records(workbook)
-    roster = roster_from_retention()
-    excluded = excluded_names()
+    if data_file.exists():
+        existing = json.loads(data_file.read_text(encoding="utf-8"))
+    else:
+        existing = {}
+    roster = roster_from_marketing(existing)
+    if not roster:
+        raise ValueError("营销赛名单尚未配置，请先同步营销赛分组表。")
+    excluded = excluded_names(existing)
     counts = {name: detail for name, detail in counts.items() if name not in excluded}
     if not counts:
         raise ValueError("「加分记录」表中没有有效数据。")
     report_date = parse_date_from_filename(workbook_path)
     day_personal = build_personal(counts, roster)
-    if data_file.exists():
-        existing = json.loads(data_file.read_text(encoding="utf-8"))
-    else:
-        existing = {}
     days = [item for item in existing.get("days", []) if item.get("date") != report_date]
     days.append({"date": report_date, "personal": day_personal})
     days.sort(key=lambda item: item["date"])
@@ -214,6 +221,8 @@ def update_data(workbook_path: Path, data_file: Path = PK_DATA_FILE) -> dict:
     payload = {
         "updatedAt": datetime.now().strftime("%Y-%m-%d %H:%M"),
         "date": days[-1]["date"],
+        "excluded": sorted(excluded),
+        "roster": list(roster.values()),
         "projectScores": build_project_scores(),
         "days": days,
         "personal": personal,
