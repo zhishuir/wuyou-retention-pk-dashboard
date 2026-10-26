@@ -87,7 +87,11 @@ if errorlevel 1 goto :failed
 
 echo [4/4] 正在发布到 GitHub...
 git push
-if errorlevel 1 goto :failed
+if errorlevel 1 (
+  echo 直连推送失败，正在自动分批推送...
+  py -3 tools\push_safely.py
+  if errorlevel 1 goto :failed
+)
 
 py -3 tools\archive_processed_reports.py
 if errorlevel 1 goto :failed
@@ -101,6 +105,8 @@ pause
 goto :end
 
 :nothing
+py -3 tools\push_safely.py
+if errorlevel 1 goto :failed
 py -3 tools\archive_processed_reports.py
 if errorlevel 1 goto :failed
 
