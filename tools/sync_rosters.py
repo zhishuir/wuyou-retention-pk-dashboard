@@ -19,7 +19,11 @@ from update_pk_from_workbook import (
     parse_date_from_filename as pk_date,
     read_records,
 )
-from update_from_workbook import canonical_name as retention_name, read_day
+from update_from_workbook import (
+    canonical_name as retention_name,
+    normalize_group_names,
+    read_day,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -61,6 +65,7 @@ def marketing_roster(path: Path) -> tuple[list[dict], list[str]]:
             if CONFIRMED_MARKETING_HEADCOUNT.get((big, small)) != len(names):
                 raise ValueError(f"营销分组表 {small} 标注 {declared} 人，实际 {len(names)} 人，请先核实。")
             warnings.append(f"{small}：表内标注 {declared} 人，按已确认的 {len(names)} 人计算")
+        big, small = normalize_group_names(big, small)
         roster.extend({"name": name, "bigGroup": big, "smallGroup": small} for name in names)
     validate_roster(roster, "营销分组表")
     if declared_total is not None and declared_total != len(roster):
@@ -87,7 +92,13 @@ def retention_roster(path: Path) -> list[dict]:
             raise ValueError(f"挽留分组表中 {name} 缺少班组或小组。")
         if row[3] is not None:
             declared_counts[(big, small)] = int(row[3])
-        roster.append({"name": retention_name(name), "bigGroup": big, "smallGroup": small})
+        roster.append(
+            {
+                "name": retention_name(name),
+                "bigGroup": big,
+                "smallGroup": normalize_group_names(big, small)[1],
+            }
+        )
     validate_roster(roster, "挽留分组表")
     actual_counts = Counter((p["bigGroup"], p["smallGroup"]) for p in roster)
     for group, count in actual_counts.items():

@@ -9,6 +9,8 @@ from pathlib import Path
 
 from openpyxl import load_workbook
 
+from update_from_workbook import normalize_group_names
+
 ROOT = Path(__file__).resolve().parents[1]
 PK_DATA_FILE = ROOT / "dist" / "data" / "pk-data.json"
 INBOX = ROOT / "待发布PK"
@@ -130,10 +132,13 @@ def roster_from_marketing(payload: dict) -> dict[str, dict]:
         name = text(person.get("name"))
         if name and name not in excluded:
             override = MEMBERSHIP_OVERRIDES.get(name)
+            big_group = override["bigGroup"] if override else text(person.get("bigGroup")) or "待确认班组"
+            small_group = override["smallGroup"] if override else text(person.get("smallGroup")) or "待确认小组"
+            big_group, small_group = normalize_group_names(big_group, small_group)
             roster[name] = {
                 "name": name,
-                "bigGroup": override["bigGroup"] if override else text(person.get("bigGroup")) or "待确认班组",
-                "smallGroup": override["smallGroup"] if override else text(person.get("smallGroup")) or "待确认小组",
+                "bigGroup": big_group,
+                "smallGroup": small_group,
             }
     return roster
 

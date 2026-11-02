@@ -18,6 +18,7 @@ from generate_daily_image import (
 )
 
 DATA_FILE = ROOT / "dist" / "data" / "report-data.json"
+LAST_DATE_FILE = ROOT / ".last-report-date"
 WEB_OUTPUT = ROOT / "dist" / "images" / "reports"
 VS_GROUPS = ["左娜组", "晶晶组"]
 VS_GROUP_LABELS = {"左娜组": "左娜组", "晶晶组": "韩晶晶组"}
@@ -120,6 +121,7 @@ def save(image: Image.Image, local_name: str, web_name: str) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description="生成左娜组 vs 韩晶晶组 PK日/周/月报图片。")
     parser.add_argument("--date", action="append", help="日报日期，格式 YYYY-MM-DD；可重复填写。")
+    parser.add_argument("--all", action="store_true", help="重新生成全部历史日期、周报和月报。")
     args = parser.parse_args()
     try:
         payload = json.loads(DATA_FILE.read_text(encoding="utf-8"))
@@ -129,9 +131,22 @@ def main() -> int:
             raise ValueError("没有可用的日报日期。")
         generated = 0
 
-        # 日报
-        daily_dates = args.date or dates
-        for report_date in dict.fromkeys(daily_dates):
+        # 日报：默认只生成最近一次导入的日期，避免每次全量重绘
+        if args.all:
+            daily_dates = dates
+        elif args.date:
+            daily_dates = args.date
+        elif LAST_DATE_FILE.exists():
+            daily_dates = [
+                value.strip()
+                for value in LAST_DATE_FILE.read_text(encoding="utf-8").splitlines()
+                if value.strip()
+            ]
+        else:
+            daily_dates = dates
+        known_dates = set(dates)
+        daily_dates = [value for value in dict.fromkeys(daily_dates) if value in known_dates]
+        for report_date in daily_dates:
             day = next((item for item in all_days if item.get("date") == report_date), None)
             if day is None:
                 continue
@@ -142,11 +157,17 @@ def main() -> int:
             save(image, f"{report_date}_左娜PK晶晶.png", f"vs-{report_date}.png")
             generated += 1
 
-        # 周报（自然周）
+        # 周报（自然周）：只重绘本次日期所在的周，但按整周的全部数据统计
+        target_weeks = {
+            "~".join(bound.isoformat() for bound in week_bounds(date.fromisoformat(report_date)))
+            for report_date in daily_dates
+        }
         weeks: dict[str, list[str]] = {}
         for report_date in dates:
             start, end = week_bounds(date.fromisoformat(report_date))
-            weeks.setdefault(f"{start.isoformat()}~{end.isoformat()}", []).append(report_date)
+            key = f"{start.isoformat()}~{end.isoformat()}"
+            if key in target_weeks:
+                weeks.setdefault(key, []).append(report_date)
         for week_key, week_dates in sorted(weeks.items()):
             days = [item for item in all_days if item.get("date") in week_dates]
             groups = build_report(payload, days)
@@ -159,7 +180,7 @@ def main() -> int:
             generated += 1
 
         # 月报（自然月，与网页的月份筛选口径一致）
-        months = sorted({report_date[:7] for report_date in dates})
+        months = sorted({report_date[:7] for report_date in daily_dates})
         for month in months:
             days = [item for item in all_days if item.get("date", "").startswith(month)]
             groups = build_report(payload, days)

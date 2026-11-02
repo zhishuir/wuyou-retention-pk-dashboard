@@ -31,6 +31,16 @@ MEMBERSHIP_OVERRIDES: dict[str, dict[str, str]] = {
     "张晓丽": {"bigGroup": "左娜组", "smallGroup": "扬帆组"},
 }
 
+# 班组重名消歧：新媒体（左娜组）下的“扬帆组”与话务大组“扬帆组”同名，
+# 网页统一显示为“凌云组”；话务的“扬帆组”保持不变。
+GROUP_RENAMES: dict[tuple[str, str], str] = {
+    ("左娜组", "扬帆组"): "凌云组",
+}
+
+
+def normalize_group_names(big_group: str, small_group: str) -> tuple[str, str]:
+    return big_group, GROUP_RENAMES.get((big_group, small_group), small_group)
+
 
 def inbox_workbooks() -> list[Path]:
     candidates = [
@@ -58,8 +68,8 @@ def canonical_name(value: object) -> str:
 def corrected_membership(name: str, big_group: str, small_group: str) -> tuple[str, str]:
     override = MEMBERSHIP_OVERRIDES.get(name)
     if override:
-        return override["bigGroup"], override["smallGroup"]
-    return big_group, small_group
+        big_group, small_group = override["bigGroup"], override["smallGroup"]
+    return normalize_group_names(big_group, small_group)
 
 
 def integer(value: object) -> int:

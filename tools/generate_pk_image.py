@@ -167,18 +167,29 @@ def main() -> int:
     parser.add_argument(
         "--date",
         action="append",
-        help="日报日期，格式 YYYY-MM-DD；可重复填写。默认生成本次导入的全部日期。",
+        help="日报日期，格式 YYYY-MM-DD；可重复填写。默认只生成最近一次导入的日期。",
     )
+    parser.add_argument("--all", action="store_true", help="重新生成全部历史日期和月份。")
     args = parser.parse_args()
     try:
         payload = json.loads(DATA_FILE.read_text(encoding="utf-8"))
-        if args.date:
+        all_dates = [item.get("date") for item in payload.get("days", [])]
+        if not all_dates and payload.get("date"):
+            all_dates = [payload.get("date")]
+        if args.all:
+            report_dates = all_dates
+        elif args.date:
             report_dates = args.date
+        elif LAST_DATE_FILE.exists():
+            report_dates = [
+                value.strip()
+                for value in LAST_DATE_FILE.read_text(encoding="utf-8").splitlines()
+                if value.strip()
+            ]
         else:
-            report_dates = [item.get("date") for item in payload.get("days", [])]
-            if not report_dates and payload.get("date"):
-                report_dates = [payload.get("date")]
-        report_dates = list(dict.fromkeys(report_dates))
+            report_dates = all_dates
+        known_dates = set(all_dates)
+        report_dates = [value for value in dict.fromkeys(report_dates) if value in known_dates]
         if not report_dates:
             raise ValueError("没有找到日报日期。")
         LOCAL_OUTPUT.mkdir(parents=True, exist_ok=True)
@@ -193,7 +204,7 @@ def main() -> int:
             image.save(web_path, format="PNG", optimize=True)
             generated += 1
             print(f"已生成营销PK赛图片：{local_path}")
-        months = sorted({day["date"][:7] for day in payload.get("days", [])})
+        months = sorted({value[:7] for value in report_dates})
         for month in months:
             report = build_month_report(payload, month)
             image = generate(report, month, kind="月报")
