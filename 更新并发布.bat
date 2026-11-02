@@ -99,8 +99,7 @@ if errorlevel 1 goto :failed
 echo.
 echo 数据已发布，网页将在数分钟内自动更新。
 echo 网址：https://zhishuir.github.io/wuyou-retention-pk-dashboard/
-echo 日报图片已保存在“通报图片”文件夹，可直接发送到微信群。
-start "" explorer.exe "%CD%\通报图片"
+echo 图片已同步到网页，可在网页上查看或下载。
 pause
 goto :end
 
@@ -112,8 +111,7 @@ if errorlevel 1 goto :failed
 
 echo.
 echo 没有新的数据需要发布。
-echo 图片已重新生成，可在“通报图片”文件夹中查看。
-start "" explorer.exe "%CD%\通报图片"
+echo 图片已同步到网页，可在网页上查看或下载。
 pause
 goto :end
 

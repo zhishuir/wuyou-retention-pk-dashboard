@@ -10,7 +10,6 @@ from PIL import Image, ImageDraw
 from generate_daily_image import (
     COLORS,
     ROOT,
-    LOCAL_OUTPUT,
     SITE_URL,
     font,
     rank_rows,
@@ -111,10 +110,8 @@ def daily_date_text(report_date: str) -> str:
     return f"{year}年{int(month)}月{int(day)}日"
 
 
-def save(image: Image.Image, local_name: str, web_name: str) -> None:
-    LOCAL_OUTPUT.mkdir(parents=True, exist_ok=True)
+def save(image: Image.Image, web_name: str) -> None:
     WEB_OUTPUT.mkdir(parents=True, exist_ok=True)
-    image.save(LOCAL_OUTPUT / local_name, format="PNG", optimize=True)
     image.save(WEB_OUTPUT / web_name, format="PNG", optimize=True)
 
 
@@ -154,7 +151,7 @@ def main() -> int:
             if not groups or not groups[0]["members"]:
                 continue
             image = generate(groups, "日报", daily_date_text(report_date))
-            save(image, f"{report_date}_左娜PK晶晶.png", f"vs-{report_date}.png")
+            save(image, f"vs-{report_date}.png")
             generated += 1
 
         # 周报（自然周）：只重绘本次日期所在的周，但按整周的全部数据统计
@@ -176,7 +173,7 @@ def main() -> int:
             start, end = week_key.split("~")
             date_text = f"{start.replace('-', '.')} — {end.replace('-', '.')}"
             image = generate(groups, "周报", date_text)
-            save(image, f"{week_key}_左娜PK晶晶.png", f"vs-{week_key}.png")
+            save(image, f"vs-{week_key}.png")
             generated += 1
 
         # 月报（自然月，与网页的月份筛选口径一致）
@@ -188,7 +185,7 @@ def main() -> int:
                 continue
             year, month_number = month.split("-")
             image = generate(groups, "月报", f"{year}年{int(month_number)}月")
-            save(image, f"{month}_左娜PK晶晶月报.png", f"vs-month-{month}.png")
+            save(image, f"vs-month-{month}.png")
             generated += 1
 
         print(f"左娜PK晶晶图片生成完成，共 {generated} 张（含日、周、月报）。")

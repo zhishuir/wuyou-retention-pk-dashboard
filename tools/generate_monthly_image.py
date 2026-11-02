@@ -7,7 +7,7 @@ import calendar
 import json
 from datetime import date
 
-from generate_daily_image import DATA_FILE, LOCAL_OUTPUT, WEB_OUTPUT, generate
+from generate_daily_image import DATA_FILE, WEB_OUTPUT, generate
 from generate_weekly_image import aggregate_week
 
 
@@ -16,7 +16,6 @@ def generate_months(payload: dict, months: list[str] | None = None) -> int:
     selected = months or available
     if not selected:
         raise ValueError("没有可生成的挽留月报数据。")
-    LOCAL_OUTPUT.mkdir(parents=True, exist_ok=True)
     WEB_OUTPUT.mkdir(parents=True, exist_ok=True)
     for month in dict.fromkeys(selected):
         year, month_number = (int(part) for part in month.split("-"))
@@ -30,7 +29,6 @@ def generate_months(payload: dict, months: list[str] | None = None) -> int:
             date_text=f"{year}年{month_number}月",
             total_unit="本月",
         )
-        image.save(LOCAL_OUTPUT / f"{month}_降档低签挽留月报.png", format="PNG", optimize=True)
         image.save(WEB_OUTPUT / f"month-{month}.png", format="PNG", optimize=True)
     return len(list(dict.fromkeys(selected)))
 

@@ -10,7 +10,6 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = ROOT / "dist" / "data" / "report-data.json"
 LAST_DATE_FILE = ROOT / ".last-report-date"
-LOCAL_OUTPUT = ROOT / "通报图片"
 WEB_OUTPUT = ROOT / "dist" / "images" / "reports"
 SITE_URL = "zhishuir.github.io/wuyou-retention-pk-dashboard"
 
@@ -221,16 +220,13 @@ def main() -> int:
         if not report_dates:
             raise ValueError("没有找到刚导入的日报日期。")
         payload = json.loads(DATA_FILE.read_text(encoding="utf-8"))
-        LOCAL_OUTPUT.mkdir(parents=True, exist_ok=True)
         WEB_OUTPUT.mkdir(parents=True, exist_ok=True)
         for report_date in dict.fromkeys(report_dates):
             report = build_report(payload, report_date)
             image = generate(report)
-            local_path = LOCAL_OUTPUT / f"{report_date}_降档低签挽留日报.png"
             web_path = WEB_OUTPUT / f"{report_date}.png"
-            image.save(local_path, format="PNG", optimize=True)
             image.save(web_path, format="PNG", optimize=True)
-            print(f"已生成图片：{local_path}")
+            print(f"已生成图片：{web_path}")
         from generate_monthly_image import generate_months
 
         month_count = generate_months(payload, sorted({value[:7] for value in report_dates}))

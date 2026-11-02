@@ -9,7 +9,6 @@ from PIL import Image, ImageDraw
 from generate_daily_image import (
     COLORS,
     ROOT,
-    LOCAL_OUTPUT,
     SITE_URL,
     draw_rank_section,
     font,
@@ -192,27 +191,22 @@ def main() -> int:
         report_dates = [value for value in dict.fromkeys(report_dates) if value in known_dates]
         if not report_dates:
             raise ValueError("没有找到日报日期。")
-        LOCAL_OUTPUT.mkdir(parents=True, exist_ok=True)
         WEB_OUTPUT.mkdir(parents=True, exist_ok=True)
         generated = 0
         for report_date in report_dates:
             report = build_report(payload, report_date)
             image = generate(report, report_date)
-            local_path = LOCAL_OUTPUT / f"{report_date}_营销PK赛.png"
             web_path = WEB_OUTPUT / f"pk-{report_date}.png"
-            image.save(local_path, format="PNG", optimize=True)
             image.save(web_path, format="PNG", optimize=True)
             generated += 1
-            print(f"已生成营销PK赛图片：{local_path}")
+            print(f"已生成营销PK赛图片：{web_path}")
         months = sorted({value[:7] for value in report_dates})
         for month in months:
             report = build_month_report(payload, month)
             image = generate(report, month, kind="月报")
-            local_path = LOCAL_OUTPUT / f"{month}_营销PK赛月报.png"
             web_path = WEB_OUTPUT / f"pk-month-{month}.png"
-            image.save(local_path, format="PNG", optimize=True)
             image.save(web_path, format="PNG", optimize=True)
-            print(f"已生成营销PK赛月报图片：{local_path}")
+            print(f"已生成营销PK赛月报图片：{web_path}")
         print(f"营销PK赛日报图片生成完成，共 {generated} 张。")
         return 0
     except Exception as exc:

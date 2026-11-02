@@ -5,7 +5,7 @@ import json
 from datetime import date, timedelta
 from pathlib import Path
 
-from generate_daily_image import DATA_FILE, LOCAL_OUTPUT, WEB_OUTPUT, generate, rank_rows
+from generate_daily_image import DATA_FILE, WEB_OUTPUT, generate, rank_rows
 
 
 def week_bounds(anchor: date) -> tuple[date, date]:
@@ -133,13 +133,10 @@ def main() -> int:
             date_text=range_label(start, end),
             total_unit="本周",
         )
-        LOCAL_OUTPUT.mkdir(parents=True, exist_ok=True)
         WEB_OUTPUT.mkdir(parents=True, exist_ok=True)
-        local_path = LOCAL_OUTPUT / f"{report['date']}_降档低签挽留周报.png"
         web_path = WEB_OUTPUT / f"{report['date']}.png"
-        image.save(local_path, format="PNG", optimize=True)
         image.save(web_path, format="PNG", optimize=True)
-        print(f"已生成周报图片：{local_path}（{start.isoformat()} ~ {end.isoformat()}）")
+        print(f"已生成周报图片：{web_path}（{start.isoformat()} ~ {end.isoformat()}）")
         return 0
     except Exception as exc:
         print(f"周报生成失败：{exc}")
