@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-13 14:26",
-  "date": "2026-11-11",
+  "updatedAt": "2026-11-16 09:16",
+  "date": "2026-11-14",
   "excluded": [
     "乌兰",
     "关艾",
@@ -38211,6 +38211,2446 @@
           "rank": 64
         }
       ]
+    },
+    {
+      "date": "2026-11-12",
+      "personal": [
+        {
+          "name": "李瑞琴",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组1组",
+          "matched": true,
+          "score": 20,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 8,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 1
+        },
+        {
+          "name": "王鑫",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组2组",
+          "matched": true,
+          "score": 16,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 5,
+            "30元40G流量包提速月包（3个月）": 1,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 2
+        },
+        {
+          "name": "索志娟",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组2组",
+          "matched": true,
+          "score": 16,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 6,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 3
+        },
+        {
+          "name": "张燕飞",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组2组",
+          "matched": true,
+          "score": 14,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 6,
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 4
+        },
+        {
+          "name": "白明宇",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组1组",
+          "matched": true,
+          "score": 14,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 7
+          },
+          "rank": 5
+        },
+        {
+          "name": "秦帅",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组1组",
+          "matched": true,
+          "score": 14,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "9元10G通用流量权益-202206版": 1,
+            "套餐高迁": 2
+          },
+          "rank": 6
+        },
+        {
+          "name": "郑倩倩",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组2组",
+          "matched": true,
+          "score": 14,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 5,
+            "30元40G流量包提速月包（3个月）": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 7
+        },
+        {
+          "name": "孙佳敏",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组2组",
+          "matched": true,
+          "score": 12,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 5,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 8
+        },
+        {
+          "name": "张乐",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组2组",
+          "matched": true,
+          "score": 12,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "9元10G通用流量权益-202206版": 4
+          },
+          "rank": 9
+        },
+        {
+          "name": "岑高霞",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组2组",
+          "matched": true,
+          "score": 10,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 5
+          },
+          "rank": 10
+        },
+        {
+          "name": "敖登格日勒",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组3组",
+          "matched": true,
+          "score": 10,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "20元20G流量包提速月包（3个月）": 1,
+            "30元40G流量包提速月包（3个月）": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 11
+        },
+        {
+          "name": "李曾辉",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组1组",
+          "matched": true,
+          "score": 10,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "30元40G流量包提速月包（3个月）": 4
+          },
+          "rank": 12
+        },
+        {
+          "name": "高莉娜",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组1组",
+          "matched": true,
+          "score": 10,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 4,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 13
+        },
+        {
+          "name": "刘晓琼",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组1组",
+          "matched": true,
+          "score": 8,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "30元40G流量包提速月包（3个月）": 3
+          },
+          "rank": 14
+        },
+        {
+          "name": "敖珊珊",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组2组",
+          "matched": true,
+          "score": 8,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "30元40G流量包提速月包（3个月）": 2
+          },
+          "rank": 15
+        },
+        {
+          "name": "温姝然",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组1组",
+          "matched": true,
+          "score": 8,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 4
+          },
+          "rank": 16
+        },
+        {
+          "name": "王丹丹",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组1组",
+          "matched": true,
+          "score": 8,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 4
+          },
+          "rank": 17
+        },
+        {
+          "name": "索梦娜",
+          "bigGroup": "专席组",
+          "smallGroup": "专席组2组",
+          "matched": true,
+          "score": 8,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 18
+        },
+        {
+          "name": "赵龙",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组1组",
+          "matched": true,
+          "score": 8,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 4
+          },
+          "rank": 19
+        },
+        {
+          "name": "韩俊楠",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组1组",
+          "matched": true,
+          "score": 8,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 20
+        },
+        {
+          "name": "黄晓叶",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组3组",
+          "matched": true,
+          "score": 8,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 4
+          },
+          "rank": 21
+        },
+        {
+          "name": "刘宇",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组2组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 22
+        },
+        {
+          "name": "刘耀川",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组2组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3
+          },
+          "rank": 23
+        },
+        {
+          "name": "宋荣华",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组2组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 24
+        },
+        {
+          "name": "李慧敏",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组2组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 25
+        },
+        {
+          "name": "李晨",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组2组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3
+          },
+          "rank": 26
+        },
+        {
+          "name": "杨廷",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组2组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 27
+        },
+        {
+          "name": "白书羽",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组3组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 28
+        },
+        {
+          "name": "红岩",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组2组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 29
+        },
+        {
+          "name": "苏丽娅",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组1组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3
+          },
+          "rank": 30
+        },
+        {
+          "name": "邢建美",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组2组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 31
+        },
+        {
+          "name": "郭治宏",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组1组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "20元20G流量包提速月包（3个月）": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 32
+        },
+        {
+          "name": "闫裕",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组3组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3
+          },
+          "rank": 33
+        },
+        {
+          "name": "零英霞",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组2组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 34
+        },
+        {
+          "name": "包萨如拉",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组2组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 35
+        },
+        {
+          "name": "岱钦",
+          "bigGroup": "专席组",
+          "smallGroup": "专席组1组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "套餐高迁": 1
+          },
+          "rank": 36
+        },
+        {
+          "name": "巴彦格格",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组3组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 37
+        },
+        {
+          "name": "张一菲",
+          "bigGroup": "晶晶组",
+          "smallGroup": "同心组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "套餐高迁": 1
+          },
+          "rank": 38
+        },
+        {
+          "name": "张云飞",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组3组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2
+          },
+          "rank": 39
+        },
+        {
+          "name": "张文冰",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组2组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2
+          },
+          "rank": 40
+        },
+        {
+          "name": "张海燕",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组1组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 41
+        },
+        {
+          "name": "张璇",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组1组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 42
+        },
+        {
+          "name": "张羽靖",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组1组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2
+          },
+          "rank": 43
+        },
+        {
+          "name": "李玥怡",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组1组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 44
+        },
+        {
+          "name": "杨洁",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组2组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2
+          },
+          "rank": 45
+        },
+        {
+          "name": "温婧",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组1组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2
+          },
+          "rank": 46
+        },
+        {
+          "name": "王娟",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组1组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2
+          },
+          "rank": 47
+        },
+        {
+          "name": "田媛媛",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组1组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 48
+        },
+        {
+          "name": "白希婷",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组1组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 49
+        },
+        {
+          "name": "袁杰",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组2组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "套餐高迁": 1
+          },
+          "rank": 50
+        },
+        {
+          "name": "要文燕",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组1组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 51
+        },
+        {
+          "name": "赵文霞",
+          "bigGroup": "专席组",
+          "smallGroup": "专席组1组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2
+          },
+          "rank": 52
+        },
+        {
+          "name": "赵阳",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组3组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2
+          },
+          "rank": 53
+        },
+        {
+          "name": "刘海燕",
+          "bigGroup": "晶晶组",
+          "smallGroup": "聚力组",
+          "matched": true,
+          "score": 3,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "9.9元权益包": 1
+          },
+          "rank": 54
+        },
+        {
+          "name": "云燕茹",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "matched": false,
+          "score": 2,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1
+          },
+          "rank": 55
+        },
+        {
+          "name": "刘洋",
+          "bigGroup": "左娜组",
+          "smallGroup": "凌云组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1
+          },
+          "rank": 56
+        },
+        {
+          "name": "姚佳慧",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组2组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1
+          },
+          "rank": 57
+        },
+        {
+          "name": "孟宪彬",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组1组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 58
+        },
+        {
+          "name": "张丽云",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组1组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1
+          },
+          "rank": 59
+        },
+        {
+          "name": "张兰",
+          "bigGroup": "专席组",
+          "smallGroup": "专席组1组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1
+          },
+          "rank": 60
+        },
+        {
+          "name": "张怡",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "matched": false,
+          "score": 2,
+          "detail": {
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 61
+        },
+        {
+          "name": "张馨方",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组3组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1
+          },
+          "rank": 62
+        },
+        {
+          "name": "李丹妮",
+          "bigGroup": "专席组",
+          "smallGroup": "专席组2组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1
+          },
+          "rank": 63
+        },
+        {
+          "name": "李婧",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组1组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1
+          },
+          "rank": 64
+        },
+        {
+          "name": "李波",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组2组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 65
+        },
+        {
+          "name": "苏志婷",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组2组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1
+          },
+          "rank": 66
+        },
+        {
+          "name": "贾鹏",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "matched": false,
+          "score": 2,
+          "detail": {
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 67
+        },
+        {
+          "name": "郭璇",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组1组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 68
+        },
+        {
+          "name": "银芳芳",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组2组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 69
+        },
+        {
+          "name": "韩璐",
+          "bigGroup": "晶晶组",
+          "smallGroup": "聚力组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1
+          },
+          "rank": 70
+        },
+        {
+          "name": "高秀丽",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组2组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1
+          },
+          "rank": 71
+        },
+        {
+          "name": "魏颖",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组3组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1
+          },
+          "rank": 72
+        }
+      ]
+    },
+    {
+      "date": "2026-11-13",
+      "personal": [
+        {
+          "name": "敖登格日勒",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组3组",
+          "matched": true,
+          "score": 18,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 6,
+            "30元40G流量包提速月包（3个月）": 2,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 1
+        },
+        {
+          "name": "王丹丹",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组1组",
+          "matched": true,
+          "score": 17,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 6,
+            "20元20G-7天提速流量包": 1,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 2
+        },
+        {
+          "name": "白明宇",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组1组",
+          "matched": true,
+          "score": 16,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 6,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 3
+        },
+        {
+          "name": "刘慧",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组3组",
+          "matched": true,
+          "score": 14,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 5,
+            "30元40G流量包提速月包（3个月）": 2
+          },
+          "rank": 4
+        },
+        {
+          "name": "敖珊珊",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组2组",
+          "matched": true,
+          "score": 14,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 5,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 5
+        },
+        {
+          "name": "宋荣华",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组2组",
+          "matched": true,
+          "score": 12,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "30元40G流量包提速月包（3个月）": 1,
+            "9元10G通用流量权益-202206版": 3
+          },
+          "rank": 6
+        },
+        {
+          "name": "田媛媛",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组1组",
+          "matched": true,
+          "score": 12,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 5,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 7
+        },
+        {
+          "name": "苏丽娅",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组1组",
+          "matched": true,
+          "score": 12,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 4,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 8
+        },
+        {
+          "name": "包萨如拉",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组2组",
+          "matched": true,
+          "score": 11,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3,
+            "20元20G-7天提速流量包": 1,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 9
+        },
+        {
+          "name": "张乐",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组2组",
+          "matched": true,
+          "score": 11,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 4,
+            "30元30G-7天提速流量包": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 10
+        },
+        {
+          "name": "李婧",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组1组",
+          "matched": true,
+          "score": 10,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 4,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 11
+        },
+        {
+          "name": "李波",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组2组",
+          "matched": true,
+          "score": 10,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 12
+        },
+        {
+          "name": "王艳清",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组1组",
+          "matched": true,
+          "score": 10,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "9元10G通用流量权益-202206版": 3
+          },
+          "rank": 13
+        },
+        {
+          "name": "袁杰",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组2组",
+          "matched": true,
+          "score": 10,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3,
+            "20元20G流量包提速月包（3个月）": 1,
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 14
+        },
+        {
+          "name": "赵慧",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组3组",
+          "matched": true,
+          "score": 10,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 5
+          },
+          "rank": 15
+        },
+        {
+          "name": "杨洁",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组2组",
+          "matched": true,
+          "score": 9,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "20元20G-7天提速流量包": 1,
+            "30元40G流量包提速月包（3个月）": 1,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 16
+        },
+        {
+          "name": "苏志婷",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组2组",
+          "matched": true,
+          "score": 9,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3,
+            "20元20G-7天提速流量包": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 17
+        },
+        {
+          "name": "刘永乐",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "matched": false,
+          "score": 8,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 4
+          },
+          "rank": 18
+        },
+        {
+          "name": "李海越",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组1组",
+          "matched": true,
+          "score": 8,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "30元40G流量包提速月包（3个月）": 2
+          },
+          "rank": 19
+        },
+        {
+          "name": "李瑞琴",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组1组",
+          "matched": true,
+          "score": 8,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 20
+        },
+        {
+          "name": "王芳",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组2组",
+          "matched": true,
+          "score": 8,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "套餐高迁": 1
+          },
+          "rank": 21
+        },
+        {
+          "name": "董鹏",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组1组",
+          "matched": true,
+          "score": 8,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "20元20G-7天提速流量包": 2,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 22
+        },
+        {
+          "name": "赵阳",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组3组",
+          "matched": true,
+          "score": 8,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "20元20G流量包提速月包（3个月）": 1,
+            "30元30G-7天提速流量包": 2
+          },
+          "rank": 23
+        },
+        {
+          "name": "郭治宏",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组1组",
+          "matched": true,
+          "score": 8,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "30元40G流量包提速月包（3个月）": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 24
+        },
+        {
+          "name": "刘晓琼",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组1组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3
+          },
+          "rank": 25
+        },
+        {
+          "name": "张云飞",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组3组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3
+          },
+          "rank": 26
+        },
+        {
+          "name": "张洁",
+          "bigGroup": "左娜组",
+          "smallGroup": "凌云组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3
+          },
+          "rank": 27
+        },
+        {
+          "name": "张璇",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组1组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 28
+        },
+        {
+          "name": "李玥怡",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组1组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 29
+        },
+        {
+          "name": "温姝然",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组1组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3
+          },
+          "rank": 30
+        },
+        {
+          "name": "王娟",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组1组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3
+          },
+          "rank": 31
+        },
+        {
+          "name": "盛洁",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组2组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 32
+        },
+        {
+          "name": "贾晓庆",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组1组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3
+          },
+          "rank": 33
+        },
+        {
+          "name": "赵丽鸿",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "matched": false,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 34
+        },
+        {
+          "name": "赵靖蓉",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组2组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 35
+        },
+        {
+          "name": "赵龙",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组1组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3
+          },
+          "rank": 36
+        },
+        {
+          "name": "郝英",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组1组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3
+          },
+          "rank": 37
+        },
+        {
+          "name": "银芳芳",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组2组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "30元40G流量包提速月包（3个月）": 2,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 38
+        },
+        {
+          "name": "闫裕",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组3组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3
+          },
+          "rank": 39
+        },
+        {
+          "name": "韩俊楠",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组1组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 40
+        },
+        {
+          "name": "高庆羽",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组3组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "30元40G流量包提速月包（3个月）": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 41
+        },
+        {
+          "name": "孙佳敏",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组2组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 42
+        },
+        {
+          "name": "尚晓霞",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组1组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2
+          },
+          "rank": 43
+        },
+        {
+          "name": "巴彦格格",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组3组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2
+          },
+          "rank": 44
+        },
+        {
+          "name": "张文冰",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组2组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2
+          },
+          "rank": 45
+        },
+        {
+          "name": "张洁45",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组2组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 46
+        },
+        {
+          "name": "张馨方",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组3组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 47
+        },
+        {
+          "name": "李慧敏",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组2组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2
+          },
+          "rank": 48
+        },
+        {
+          "name": "李曾辉",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组1组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 49
+        },
+        {
+          "name": "温婧",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组1组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 50
+        },
+        {
+          "name": "红岩",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组2组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 51
+        },
+        {
+          "name": "董贝贝",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "matched": false,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2
+          },
+          "rank": 52
+        },
+        {
+          "name": "赵文霞",
+          "bigGroup": "专席组",
+          "smallGroup": "专席组1组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "20元20G流量包提速月包（3个月）": 1
+          },
+          "rank": 53
+        },
+        {
+          "name": "韩璐",
+          "bigGroup": "晶晶组",
+          "smallGroup": "聚力组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 54
+        },
+        {
+          "name": "冀芳均",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组1组",
+          "matched": true,
+          "score": 3,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "20元20G-7天提速流量包": 1
+          },
+          "rank": 55
+        },
+        {
+          "name": "刘宇",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组2组",
+          "matched": true,
+          "score": 3,
+          "detail": {
+            "20元20G-7天提速流量包": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 56
+        },
+        {
+          "name": "姚佳慧",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组2组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 57
+        },
+        {
+          "name": "张海燕",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组1组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1
+          },
+          "rank": 58
+        },
+        {
+          "name": "池聪慧",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "matched": false,
+          "score": 2,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1
+          },
+          "rank": 59
+        },
+        {
+          "name": "王乐",
+          "bigGroup": "专席组",
+          "smallGroup": "专席组1组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1
+          },
+          "rank": 60
+        },
+        {
+          "name": "高莉娜",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组1组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1
+          },
+          "rank": 61
+        },
+        {
+          "name": "魏颖",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组3组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 62
+        }
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "personal": [
+        {
+          "name": "赵晶",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组1组",
+          "matched": true,
+          "score": 26,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 7,
+            "30元40G流量包提速月包（3个月）": 1,
+            "9元10G通用流量权益-202206版": 5
+          },
+          "rank": 1
+        },
+        {
+          "name": "张璇",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组1组",
+          "matched": true,
+          "score": 24,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 7,
+            "20元20G-7天提速流量包": 1,
+            "30元30G-7天提速流量包": 1,
+            "30元40G流量包提速月包（3个月）": 1,
+            "9元10G通用流量权益-202206版": 3
+          },
+          "rank": 2
+        },
+        {
+          "name": "赵丽鸿",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "matched": false,
+          "score": 20,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 5,
+            "9元10G通用流量权益-202206版": 5
+          },
+          "rank": 3
+        },
+        {
+          "name": "邢建美",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组2组",
+          "matched": true,
+          "score": 19,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3,
+            "20元20G-7天提速流量包": 1,
+            "9元10G通用流量权益-202206版": 6
+          },
+          "rank": 4
+        },
+        {
+          "name": "姚佳慧",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组2组",
+          "matched": true,
+          "score": 16,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 6,
+            "套餐高迁": 1
+          },
+          "rank": 5
+        },
+        {
+          "name": "赵龙",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组1组",
+          "matched": true,
+          "score": 15,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3,
+            "30元30G-7天提速流量包": 1,
+            "30元40G流量包提速月包（3个月）": 1,
+            "9元10G通用流量权益-202206版": 3
+          },
+          "rank": 6
+        },
+        {
+          "name": "尚晓霞",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组1组",
+          "matched": true,
+          "score": 14,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 5,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 7
+        },
+        {
+          "name": "张馨方",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组3组",
+          "matched": true,
+          "score": 14,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 5,
+            "30元40G流量包提速月包（3个月）": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 8
+        },
+        {
+          "name": "李晨",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组2组",
+          "matched": true,
+          "score": 14,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3,
+            "9元10G通用流量权益-202206版": 4
+          },
+          "rank": 9
+        },
+        {
+          "name": "温婧",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组1组",
+          "matched": true,
+          "score": 14,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 6,
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 10
+        },
+        {
+          "name": "赵阳",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组3组",
+          "matched": true,
+          "score": 14,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 5,
+            "30元40G流量包提速月包（3个月）": 2
+          },
+          "rank": 11
+        },
+        {
+          "name": "韩俊楠",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组1组",
+          "matched": true,
+          "score": 14,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 4,
+            "30元40G流量包提速月包（3个月）": 3
+          },
+          "rank": 12
+        },
+        {
+          "name": "李海越",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组1组",
+          "matched": true,
+          "score": 13,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "20元20G-7天提速流量包": 1,
+            "20元20G流量包提速月包（3个月）": 2,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 13
+        },
+        {
+          "name": "巴彦格格",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组3组",
+          "matched": true,
+          "score": 12,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3,
+            "9元10G通用流量权益-202206版": 1,
+            "套餐高迁": 1
+          },
+          "rank": 14
+        },
+        {
+          "name": "张丽云",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组1组",
+          "matched": true,
+          "score": 12,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 5,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 15
+        },
+        {
+          "name": "红岩",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组2组",
+          "matched": true,
+          "score": 12,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 5,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 16
+        },
+        {
+          "name": "要文燕",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组1组",
+          "matched": true,
+          "score": 12,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 5,
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 17
+        },
+        {
+          "name": "刘宇",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组2组",
+          "matched": true,
+          "score": 11,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "20元20G-7天提速流量包": 1,
+            "30元40G流量包提速月包（3个月）": 2,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 18
+        },
+        {
+          "name": "张洁",
+          "bigGroup": "左娜组",
+          "smallGroup": "凌云组",
+          "matched": true,
+          "score": 11,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3,
+            "20元20G-7天提速流量包": 1,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 19
+        },
+        {
+          "name": "零英霞",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组2组",
+          "matched": true,
+          "score": 11,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "30元30G-7天提速流量包": 1,
+            "9元10G通用流量权益-202206版": 3
+          },
+          "rank": 20
+        },
+        {
+          "name": "刘慧",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组3组",
+          "matched": true,
+          "score": 10,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 5
+          },
+          "rank": 21
+        },
+        {
+          "name": "包萨如拉",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组2组",
+          "matched": true,
+          "score": 10,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 5
+          },
+          "rank": 22
+        },
+        {
+          "name": "岑高霞",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组2组",
+          "matched": true,
+          "score": 10,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 5
+          },
+          "rank": 23
+        },
+        {
+          "name": "张云飞",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组3组",
+          "matched": true,
+          "score": 10,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 4,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 24
+        },
+        {
+          "name": "李婧",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组1组",
+          "matched": true,
+          "score": 10,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3,
+            "30元40G流量包提速月包（3个月）": 2
+          },
+          "rank": 25
+        },
+        {
+          "name": "王芳",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组2组",
+          "matched": true,
+          "score": 10,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 4,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 26
+        },
+        {
+          "name": "秦帅",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组1组",
+          "matched": true,
+          "score": 10,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 4,
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 27
+        },
+        {
+          "name": "苏志婷",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组2组",
+          "matched": true,
+          "score": 10,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "30元40G流量包提速月包（3个月）": 1,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 28
+        },
+        {
+          "name": "贾晓庆",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组1组",
+          "matched": true,
+          "score": 10,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 29
+        },
+        {
+          "name": "高莉娜",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组1组",
+          "matched": true,
+          "score": 10,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3,
+            "20元20G流量包提速月包（3个月）": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 30
+        },
+        {
+          "name": "张羽靖",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组1组",
+          "matched": true,
+          "score": 9,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "20元20G-7天提速流量包": 1,
+            "30元40G流量包提速月包（3个月）": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 31
+        },
+        {
+          "name": "刘耀川",
+          "bigGroup": "卓越组",
+          "smallGroup": "卓越组2组",
+          "matched": true,
+          "score": 8,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 32
+        },
+        {
+          "name": "杨廷",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组2组",
+          "matched": true,
+          "score": 8,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3,
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 33
+        },
+        {
+          "name": "王艳清",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组1组",
+          "matched": true,
+          "score": 8,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 4
+          },
+          "rank": 34
+        },
+        {
+          "name": "赵慧",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组3组",
+          "matched": true,
+          "score": 8,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 4
+          },
+          "rank": 35
+        },
+        {
+          "name": "赵文霞",
+          "bigGroup": "专席组",
+          "smallGroup": "专席组1组",
+          "matched": true,
+          "score": 8,
+          "detail": {
+            "9元10G通用流量权益-202206版": 4
+          },
+          "rank": 36
+        },
+        {
+          "name": "赵靖蓉",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组2组",
+          "matched": true,
+          "score": 8,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3,
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 37
+        },
+        {
+          "name": "刘洋",
+          "bigGroup": "左娜组",
+          "smallGroup": "凌云组",
+          "matched": true,
+          "score": 7,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3,
+            "20元20G-7天提速流量包": 1
+          },
+          "rank": 38
+        },
+        {
+          "name": "王乐",
+          "bigGroup": "专席组",
+          "smallGroup": "专席组1组",
+          "matched": true,
+          "score": 7,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3,
+            "30元30G-7天提速流量包": 1
+          },
+          "rank": 39
+        },
+        {
+          "name": "高庆羽",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组3组",
+          "matched": true,
+          "score": 7,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3,
+            "30元30G-7天提速流量包": 1
+          },
+          "rank": 40
+        },
+        {
+          "name": "冀芳均",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组1组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 41
+        },
+        {
+          "name": "孙佳敏",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组2组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 42
+        },
+        {
+          "name": "杨洁",
+          "bigGroup": "领航组",
+          "smallGroup": "领航组2组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 43
+        },
+        {
+          "name": "田媛媛",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组1组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 3
+          },
+          "rank": 44
+        },
+        {
+          "name": "盛洁",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组2组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 45
+        },
+        {
+          "name": "郭治宏",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组1组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 46
+        },
+        {
+          "name": "银芳芳",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组2组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 47
+        },
+        {
+          "name": "韩璐",
+          "bigGroup": "晶晶组",
+          "smallGroup": "聚力组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 48
+        },
+        {
+          "name": "黄晓叶",
+          "bigGroup": "扬帆组",
+          "smallGroup": "扬帆组3组",
+          "matched": true,
+          "score": 6,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 49
+        },
+        {
+          "name": "刘海燕",
+          "bigGroup": "晶晶组",
+          "smallGroup": "聚力组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 50
+        },
+        {
+          "name": "孟宪彬",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组1组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 51
+        },
+        {
+          "name": "张文冰",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组2组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2
+          },
+          "rank": 52
+        },
+        {
+          "name": "张燕飞",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组2组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2
+          },
+          "rank": 53
+        },
+        {
+          "name": "张鑫",
+          "bigGroup": "晶晶组",
+          "smallGroup": "同心组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "套餐高迁": 1
+          },
+          "rank": 54
+        },
+        {
+          "name": "李曾辉",
+          "bigGroup": "星耀组",
+          "smallGroup": "星耀组1组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 55
+        },
+        {
+          "name": "李波",
+          "bigGroup": "天籁组",
+          "smallGroup": "天籁组2组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 56
+        },
+        {
+          "name": "白书羽",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组3组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "20元20G-7天提速流量包": 2,
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 57
+        },
+        {
+          "name": "郑倩倩",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组2组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 58
+        },
+        {
+          "name": "郝英",
+          "bigGroup": "先锋组",
+          "smallGroup": "先锋组1组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1,
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 59
+        },
+        {
+          "name": "郭夏苗",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "matched": false,
+          "score": 4,
+          "detail": {
+            "9元10G通用流量权益-202206版": 2
+          },
+          "rank": 60
+        },
+        {
+          "name": "郭璇",
+          "bigGroup": "青春组",
+          "smallGroup": "青春组1组",
+          "matched": true,
+          "score": 4,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 2
+          },
+          "rank": 61
+        },
+        {
+          "name": "刘晓琼",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组1组",
+          "matched": true,
+          "score": 3,
+          "detail": {
+            "9.9元权益包": 1,
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 62
+        },
+        {
+          "name": "系统工号IVR",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "matched": false,
+          "score": 3,
+          "detail": {
+            "30元30G-7天提速流量包": 3
+          },
+          "rank": 63
+        },
+        {
+          "name": "董贝贝",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "matched": false,
+          "score": 3,
+          "detail": {
+            "20元20G-7天提速流量包": 1,
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 64
+        },
+        {
+          "name": "刘绿叶",
+          "bigGroup": "晶晶组",
+          "smallGroup": "聚力组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 65
+        },
+        {
+          "name": "包晓荣",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "matched": false,
+          "score": 2,
+          "detail": {
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 66
+        },
+        {
+          "name": "徐鸿玉",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "matched": false,
+          "score": 2,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1
+          },
+          "rank": 67
+        },
+        {
+          "name": "李瑞琴",
+          "bigGroup": "虎翼组",
+          "smallGroup": "虎翼组1组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "30元40G流量包提速月包（3个月）": 1
+          },
+          "rank": 68
+        },
+        {
+          "name": "武晔",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "matched": false,
+          "score": 2,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1
+          },
+          "rank": 69
+        },
+        {
+          "name": "池聪慧",
+          "bigGroup": "待确认班组",
+          "smallGroup": "待确认小组",
+          "matched": false,
+          "score": 2,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1
+          },
+          "rank": 70
+        },
+        {
+          "name": "王琪",
+          "bigGroup": "左娜组",
+          "smallGroup": "乘风组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "19元30GB国内提速流量包-24个月": 1
+          },
+          "rank": 71
+        },
+        {
+          "name": "魏颖",
+          "bigGroup": "雄鹰组",
+          "smallGroup": "雄鹰组3组",
+          "matched": true,
+          "score": 2,
+          "detail": {
+            "9元10G通用流量权益-202206版": 1
+          },
+          "rank": 72
+        }
+      ]
     }
   ],
   "personal": [
@@ -38219,16 +40659,16 @@
       "bigGroup": "虎翼组",
       "smallGroup": "虎翼组1组",
       "matched": true,
-      "score": 439,
+      "score": 455,
       "detail": {
         "15元10G包月流量包": 6,
-        "19元30GB国内提速流量包-24个月": 124,
+        "19元30GB国内提速流量包-24个月": 130,
         "20元20G-7天提速流量包": 21,
         "20元20G流量包提速月包（3个月）": 9,
         "30元30G-7天提速流量包": 4,
-        "30元40G流量包提速月包（3个月）": 3,
+        "30元40G流量包提速月包（3个月）": 4,
         "35元20G连续包月流量包（首月19.9元）": 7,
-        "9元10G通用流量权益-202206版": 54,
+        "9元10G通用流量权益-202206版": 55,
         "套餐高迁": 2
       },
       "rank": 1
@@ -38238,17 +40678,17 @@
       "bigGroup": "青春组",
       "smallGroup": "青春组2组",
       "matched": true,
-      "score": 338,
+      "score": 360,
       "detail": {
         "15元10G包月流量包": 10,
-        "19元30GB国内提速流量包-24个月": 92,
+        "19元30GB国内提速流量包-24个月": 100,
         "20元20G-7天提速流量包": 32,
         "20元20G流量包提速月包（3个月）": 2,
         "30元30G-7天提速流量包": 7,
-        "30元40G流量包提速月包（3个月）": 7,
+        "30元40G流量包提速月包（3个月）": 8,
         "35元20G连续包月流量包（首月19.9元）": 6,
         "9.9元权益包": 3,
-        "9元10G通用流量权益-202206版": 21,
+        "9元10G通用流量权益-202206版": 23,
         "套餐高迁": 5
       },
       "rank": 2
@@ -38258,16 +40698,16 @@
       "bigGroup": "虎翼组",
       "smallGroup": "虎翼组2组",
       "matched": true,
-      "score": 322,
+      "score": 342,
       "detail": {
         "15元10G包月流量包": 13,
-        "19元30GB国内提速流量包-24个月": 82,
+        "19元30GB国内提速流量包-24个月": 88,
         "20元20G-7天提速流量包": 20,
         "30元30G-7天提速流量包": 5,
         "30元40G流量包提速月包（3个月）": 8,
         "35元20G连续包月流量包（首月19.9元）": 1,
         "9.9元权益包": 6,
-        "9元10G通用流量权益-202206版": 37,
+        "9元10G通用流量权益-202206版": 41,
         "天翼智铃基础版": 1,
         "套餐高迁": 2
       },
@@ -38278,16 +40718,17 @@
       "bigGroup": "领航组",
       "smallGroup": "领航组3组",
       "matched": true,
-      "score": 313,
+      "score": 341,
       "detail": {
         "15元10G包月流量包": 9,
-        "19元30GB国内提速流量包-24个月": 93,
+        "19元30GB国内提速流量包-24个月": 101,
         "20元20G-7天提速流量包": 38,
+        "20元20G流量包提速月包（3个月）": 1,
         "30元30G-7天提速流量包": 2,
-        "30元40G流量包提速月包（3个月）": 4,
+        "30元40G流量包提速月包（3个月）": 7,
         "35元20G连续包月流量包（首月19.9元）": 4,
         "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 22,
+        "9元10G通用流量权益-202206版": 24,
         "套餐高迁": 2
       },
       "rank": 4
@@ -38297,16 +40738,16 @@
       "bigGroup": "星耀组",
       "smallGroup": "星耀组2组",
       "matched": true,
-      "score": 300,
+      "score": 321,
       "detail": {
         "15元10G包月流量包": 12,
-        "19元30GB国内提速流量包-24个月": 73,
-        "20元20G-7天提速流量包": 20,
+        "19元30GB国内提速流量包-24个月": 79,
+        "20元20G-7天提速流量包": 21,
         "30元30G-7天提速流量包": 2,
-        "30元40G流量包提速月包（3个月）": 3,
+        "30元40G流量包提速月包（3个月）": 4,
         "35元20G连续包月流量包（首月19.9元）": 5,
         "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 39,
+        "9元10G通用流量权益-202206版": 42,
         "天翼智铃基础版": 1,
         "套餐高迁": 3
       },
@@ -38317,237 +40758,234 @@
       "bigGroup": "扬帆组",
       "smallGroup": "扬帆组2组",
       "matched": true,
-      "score": 282,
+      "score": 302,
       "detail": {
         "15元10G包月流量包": 4,
-        "19元30GB国内提速流量包-24个月": 50,
+        "19元30GB国内提速流量包-24个月": 57,
         "20元20G-7天提速流量包": 32,
         "20元20G流量包提速月包（3个月）": 7,
         "30元30G-7天提速流量包": 7,
         "30元40G流量包提速月包（3个月）": 8,
         "35元20G连续包月流量包（首月19.9元）": 4,
         "9.9元权益包": 2,
-        "9元10G通用流量权益-202206版": 31,
+        "9元10G通用流量权益-202206版": 32,
         "天翼智铃基础版": 1,
-        "套餐高迁": 8
+        "套餐高迁": 9
       },
       "rank": 6
-    },
-    {
-      "name": "张丽云",
-      "bigGroup": "青春组",
-      "smallGroup": "青春组1组",
-      "matched": true,
-      "score": 276,
-      "detail": {
-        "15元10G包月流量包": 6,
-        "19元30GB国内提速流量包-24个月": 43,
-        "20元20G-7天提速流量包": 11,
-        "20元20G流量包提速月包（3个月）": 10,
-        "30元30G-7天提速流量包": 2,
-        "30元40G流量包提速月包（3个月）": 5,
-        "35元20G连续包月流量包（首月19.9元）": 5,
-        "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 58,
-        "套餐高迁": 2
-      },
-      "rank": 7
-    },
-    {
-      "name": "李曾辉",
-      "bigGroup": "星耀组",
-      "smallGroup": "星耀组1组",
-      "matched": true,
-      "score": 271,
-      "detail": {
-        "15元10G包月流量包": 8,
-        "19元30GB国内提速流量包-24个月": 71,
-        "20元20G-7天提速流量包": 31,
-        "20元20G流量包提速月包（3个月）": 1,
-        "30元30G-7天提速流量包": 3,
-        "30元40G流量包提速月包（3个月）": 12,
-        "35元20G连续包月流量包（首月19.9元）": 4,
-        "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 18,
-        "套餐高迁": 2
-      },
-      "rank": 8
-    },
-    {
-      "name": "温婧",
-      "bigGroup": "先锋组",
-      "smallGroup": "先锋组1组",
-      "matched": true,
-      "score": 270,
-      "detail": {
-        "15元10G包月流量包": 5,
-        "19元30GB国内提速流量包-24个月": 66,
-        "20元20G-7天提速流量包": 23,
-        "30元30G-7天提速流量包": 10,
-        "30元40G流量包提速月包（3个月）": 4,
-        "35元20G连续包月流量包（首月19.9元）": 4,
-        "9元10G通用流量权益-202206版": 31,
-        "天翼智铃基础版": 1,
-        "套餐高迁": 4
-      },
-      "rank": 9
-    },
-    {
-      "name": "高莉娜",
-      "bigGroup": "青春组",
-      "smallGroup": "青春组1组",
-      "matched": true,
-      "score": 266,
-      "detail": {
-        "15元10G包月流量包": 5,
-        "19元30GB国内提速流量包-24个月": 64,
-        "20元20G-7天提速流量包": 27,
-        "20元20G流量包提速月包（3个月）": 4,
-        "30元30G-7天提速流量包": 9,
-        "30元40G流量包提速月包（3个月）": 8,
-        "35元20G连续包月流量包（首月19.9元）": 4,
-        "9.9元权益包": 4,
-        "9元10G通用流量权益-202206版": 24,
-        "套餐高迁": 2
-      },
-      "rank": 10
-    },
-    {
-      "name": "白明宇",
-      "bigGroup": "卓越组",
-      "smallGroup": "卓越组1组",
-      "matched": true,
-      "score": 262,
-      "detail": {
-        "15元10G包月流量包": 7,
-        "19元30GB国内提速流量包-24个月": 64,
-        "20元20G-7天提速流量包": 28,
-        "20元20G流量包提速月包（3个月）": 4,
-        "30元30G-7天提速流量包": 4,
-        "35元20G连续包月流量包（首月19.9元）": 1,
-        "9.9元权益包": 2,
-        "9元10G通用流量权益-202206版": 30,
-        "套餐高迁": 4
-      },
-      "rank": 11
     },
     {
       "name": "张璇",
       "bigGroup": "扬帆组",
       "smallGroup": "扬帆组1组",
       "matched": true,
-      "score": 261,
+      "score": 295,
       "detail": {
         "15元10G包月流量包": 6,
-        "19元30GB国内提速流量包-24个月": 57,
-        "20元20G-7天提速流量包": 28,
+        "19元30GB国内提速流量包-24个月": 67,
+        "20元20G-7天提速流量包": 29,
         "20元20G流量包提速月包（3个月）": 8,
-        "30元30G-7天提速流量包": 4,
-        "30元40G流量包提速月包（3个月）": 7,
+        "30元30G-7天提速流量包": 5,
+        "30元40G流量包提速月包（3个月）": 8,
         "35元20G连续包月流量包（首月19.9元）": 2,
         "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 32,
+        "9元10G通用流量权益-202206版": 37,
         "套餐高迁": 1
       },
-      "rank": 12
+      "rank": 7
     },
     {
-      "name": "郝英",
+      "name": "温婧",
       "bigGroup": "先锋组",
       "smallGroup": "先锋组1组",
       "matched": true,
-      "score": 261,
+      "score": 292,
       "detail": {
-        "15元10G包月流量包": 4,
-        "19元30GB国内提速流量包-24个月": 86,
+        "15元10G包月流量包": 5,
+        "19元30GB国内提速流量包-24个月": 74,
+        "20元20G-7天提速流量包": 23,
+        "30元30G-7天提速流量包": 10,
+        "30元40G流量包提速月包（3个月）": 5,
+        "35元20G连续包月流量包（首月19.9元）": 4,
+        "9元10G通用流量权益-202206版": 33,
+        "天翼智铃基础版": 1,
+        "套餐高迁": 4
+      },
+      "rank": 8
+    },
+    {
+      "name": "白明宇",
+      "bigGroup": "卓越组",
+      "smallGroup": "卓越组1组",
+      "matched": true,
+      "score": 292,
+      "detail": {
+        "15元10G包月流量包": 7,
+        "19元30GB国内提速流量包-24个月": 77,
+        "20元20G-7天提速流量包": 28,
+        "20元20G流量包提速月包（3个月）": 4,
+        "30元30G-7天提速流量包": 4,
+        "35元20G连续包月流量包（首月19.9元）": 1,
+        "9.9元权益包": 2,
+        "9元10G通用流量权益-202206版": 32,
+        "套餐高迁": 4
+      },
+      "rank": 9
+    },
+    {
+      "name": "张丽云",
+      "bigGroup": "青春组",
+      "smallGroup": "青春组1组",
+      "matched": true,
+      "score": 290,
+      "detail": {
+        "15元10G包月流量包": 6,
+        "19元30GB国内提速流量包-24个月": 49,
         "20元20G-7天提速流量包": 11,
-        "20元20G流量包提速月包（3个月）": 6,
-        "30元30G-7天提速流量包": 1,
-        "30元40G流量包提速月包（3个月）": 7,
+        "20元20G流量包提速月包（3个月）": 10,
+        "30元30G-7天提速流量包": 2,
+        "30元40G流量包提速月包（3个月）": 5,
+        "35元20G连续包月流量包（首月19.9元）": 5,
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 59,
+        "套餐高迁": 2
+      },
+      "rank": 10
+    },
+    {
+      "name": "李曾辉",
+      "bigGroup": "星耀组",
+      "smallGroup": "星耀组1组",
+      "matched": true,
+      "score": 289,
+      "detail": {
+        "15元10G包月流量包": 8,
+        "19元30GB国内提速流量包-24个月": 74,
+        "20元20G-7天提速流量包": 31,
+        "20元20G流量包提速月包（3个月）": 1,
+        "30元30G-7天提速流量包": 3,
+        "30元40G流量包提速月包（3个月）": 17,
+        "35元20G连续包月流量包（首月19.9元）": 4,
         "9.9元权益包": 1,
         "9元10G通用流量权益-202206版": 19,
-        "套餐高迁": 1
+        "套餐高迁": 2
       },
-      "rank": 13
+      "rank": 11
+    },
+    {
+      "name": "高莉娜",
+      "bigGroup": "青春组",
+      "smallGroup": "青春组1组",
+      "matched": true,
+      "score": 288,
+      "detail": {
+        "15元10G包月流量包": 5,
+        "19元30GB国内提速流量包-24个月": 72,
+        "20元20G-7天提速流量包": 27,
+        "20元20G流量包提速月包（3个月）": 5,
+        "30元30G-7天提速流量包": 9,
+        "30元40G流量包提速月包（3个月）": 8,
+        "35元20G连续包月流量包（首月19.9元）": 4,
+        "9.9元权益包": 4,
+        "9元10G通用流量权益-202206版": 26,
+        "套餐高迁": 2
+      },
+      "rank": 12
     },
     {
       "name": "郑倩倩",
       "bigGroup": "青春组",
       "smallGroup": "青春组2组",
       "matched": true,
-      "score": 255,
+      "score": 273,
       "detail": {
         "15元10G包月流量包": 4,
-        "19元30GB国内提速流量包-24个月": 57,
+        "19元30GB国内提速流量包-24个月": 63,
         "20元20G-7天提速流量包": 21,
         "20元20G流量包提速月包（3个月）": 5,
         "30元30G-7天提速流量包": 1,
-        "30元40G流量包提速月包（3个月）": 6,
+        "30元40G流量包提速月包（3个月）": 7,
         "35元20G连续包月流量包（首月19.9元）": 1,
         "9.9元权益包": 3,
-        "9元10G通用流量权益-202206版": 34,
+        "9元10G通用流量权益-202206版": 36,
         "套餐高迁": 4
+      },
+      "rank": 13
+    },
+    {
+      "name": "郝英",
+      "bigGroup": "先锋组",
+      "smallGroup": "先锋组1组",
+      "matched": true,
+      "score": 271,
+      "detail": {
+        "15元10G包月流量包": 4,
+        "19元30GB国内提速流量包-24个月": 90,
+        "20元20G-7天提速流量包": 11,
+        "20元20G流量包提速月包（3个月）": 6,
+        "30元30G-7天提速流量包": 1,
+        "30元40G流量包提速月包（3个月）": 8,
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 19,
+        "套餐高迁": 1
       },
       "rank": 14
-    },
-    {
-      "name": "白希婷",
-      "bigGroup": "卓越组",
-      "smallGroup": "卓越组1组",
-      "matched": true,
-      "score": 252,
-      "detail": {
-        "15元10G包月流量包": 5,
-        "19元30GB国内提速流量包-24个月": 44,
-        "20元20G-7天提速流量包": 31,
-        "20元20G流量包提速月包（3个月）": 6,
-        "30元30G-7天提速流量包": 3,
-        "30元40G流量包提速月包（3个月）": 9,
-        "35元20G连续包月流量包（首月19.9元）": 2,
-        "9.9元权益包": 4,
-        "9元10G通用流量权益-202206版": 31,
-        "套餐高迁": 5
-      },
-      "rank": 15
-    },
-    {
-      "name": "李玥怡",
-      "bigGroup": "领航组",
-      "smallGroup": "领航组1组",
-      "matched": true,
-      "score": 251,
-      "detail": {
-        "15元10G包月流量包": 11,
-        "19元30GB国内提速流量包-24个月": 54,
-        "20元20G-7天提速流量包": 32,
-        "20元20G流量包提速月包（3个月）": 1,
-        "30元30G-7天提速流量包": 5,
-        "30元40G流量包提速月包（3个月）": 7,
-        "35元20G连续包月流量包（首月19.9元）": 7,
-        "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 17,
-        "天翼智铃基础版": 3,
-        "套餐高迁": 4
-      },
-      "rank": 16
     },
     {
       "name": "李婧",
       "bigGroup": "领航组",
       "smallGroup": "领航组1组",
       "matched": true,
-      "score": 248,
+      "score": 270,
       "detail": {
         "15元10G包月流量包": 5,
-        "19元30GB国内提速流量包-24个月": 74,
+        "19元30GB国内提速流量包-24个月": 82,
         "20元20G-7天提速流量包": 15,
         "20元20G流量包提速月包（3个月）": 2,
         "30元30G-7天提速流量包": 1,
-        "30元40G流量包提速月包（3个月）": 8,
+        "30元40G流量包提速月包（3个月）": 10,
         "35元20G连续包月流量包（首月19.9元）": 6,
-        "9元10G通用流量权益-202206版": 9,
+        "9元10G通用流量权益-202206版": 10,
         "天翼智铃基础版": 4,
         "套餐高迁": 5
+      },
+      "rank": 15
+    },
+    {
+      "name": "秦帅",
+      "bigGroup": "雄鹰组",
+      "smallGroup": "雄鹰组1组",
+      "matched": true,
+      "score": 269,
+      "detail": {
+        "15元10G包月流量包": 2,
+        "19元30GB国内提速流量包-24个月": 66,
+        "20元20G-7天提速流量包": 40,
+        "20元20G流量包提速月包（3个月）": 2,
+        "30元30G-7天提速流量包": 5,
+        "30元40G流量包提速月包（3个月）": 10,
+        "35元20G连续包月流量包（首月19.9元）": 2,
+        "9.9元权益包": 4,
+        "9元10G通用流量权益-202206版": 10,
+        "套餐高迁": 9
+      },
+      "rank": 16
+    },
+    {
+      "name": "孙佳敏",
+      "bigGroup": "星耀组",
+      "smallGroup": "星耀组2组",
+      "matched": true,
+      "score": 266,
+      "detail": {
+        "15元10G包月流量包": 8,
+        "19元30GB国内提速流量包-24个月": 64,
+        "20元20G-7天提速流量包": 18,
+        "30元30G-7天提速流量包": 5,
+        "30元40G流量包提速月包（3个月）": 4,
+        "35元20G连续包月流量包（首月19.9元）": 2,
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 43
       },
       "rank": 17
     },
@@ -38556,66 +40994,28 @@
       "bigGroup": "先锋组",
       "smallGroup": "先锋组1组",
       "matched": true,
-      "score": 247,
+      "score": 263,
       "detail": {
         "15元10G包月流量包": 11,
-        "19元30GB国内提速流量包-24个月": 58,
+        "19元30GB国内提速流量包-24个月": 64,
         "20元20G-7天提速流量包": 20,
         "20元20G流量包提速月包（3个月）": 3,
         "30元30G-7天提速流量包": 3,
         "30元40G流量包提速月包（3个月）": 6,
         "35元20G连续包月流量包（首月19.9元）": 1,
-        "9元10G通用流量权益-202206版": 33
+        "9元10G通用流量权益-202206版": 35
       },
       "rank": 18
-    },
-    {
-      "name": "秦帅",
-      "bigGroup": "雄鹰组",
-      "smallGroup": "雄鹰组1组",
-      "matched": true,
-      "score": 245,
-      "detail": {
-        "15元10G包月流量包": 2,
-        "19元30GB国内提速流量包-24个月": 60,
-        "20元20G-7天提速流量包": 40,
-        "20元20G流量包提速月包（3个月）": 2,
-        "30元30G-7天提速流量包": 5,
-        "30元40G流量包提速月包（3个月）": 9,
-        "35元20G连续包月流量包（首月19.9元）": 2,
-        "9.9元权益包": 4,
-        "9元10G通用流量权益-202206版": 9,
-        "套餐高迁": 7
-      },
-      "rank": 19
-    },
-    {
-      "name": "孙佳敏",
-      "bigGroup": "星耀组",
-      "smallGroup": "星耀组2组",
-      "matched": true,
-      "score": 244,
-      "detail": {
-        "15元10G包月流量包": 8,
-        "19元30GB国内提速流量包-24个月": 57,
-        "20元20G-7天提速流量包": 18,
-        "30元30G-7天提速流量包": 5,
-        "30元40G流量包提速月包（3个月）": 4,
-        "35元20G连续包月流量包（首月19.9元）": 2,
-        "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 39
-      },
-      "rank": 20
     },
     {
       "name": "岑高霞",
       "bigGroup": "领航组",
       "smallGroup": "领航组2组",
       "matched": true,
-      "score": 242,
+      "score": 262,
       "detail": {
         "15元10G包月流量包": 5,
-        "19元30GB国内提速流量包-24个月": 68,
+        "19元30GB国内提速流量包-24个月": 78,
         "20元20G-7天提速流量包": 29,
         "20元20G流量包提速月包（3个月）": 3,
         "30元30G-7天提速流量包": 5,
@@ -38624,92 +41024,115 @@
         "9元10G通用流量权益-202206版": 15,
         "套餐高迁": 3
       },
-      "rank": 21
+      "rank": 19
     },
     {
-      "name": "王娟",
+      "name": "李玥怡",
+      "bigGroup": "领航组",
+      "smallGroup": "领航组1组",
+      "matched": true,
+      "score": 261,
+      "detail": {
+        "15元10G包月流量包": 11,
+        "19元30GB国内提速流量包-24个月": 56,
+        "20元20G-7天提速流量包": 32,
+        "20元20G流量包提速月包（3个月）": 1,
+        "30元30G-7天提速流量包": 5,
+        "30元40G流量包提速月包（3个月）": 7,
+        "35元20G连续包月流量包（首月19.9元）": 7,
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 20,
+        "天翼智铃基础版": 3,
+        "套餐高迁": 4
+      },
+      "rank": 20
+    },
+    {
+      "name": "白希婷",
       "bigGroup": "卓越组",
       "smallGroup": "卓越组1组",
       "matched": true,
-      "score": 240,
+      "score": 256,
       "detail": {
-        "15元10G包月流量包": 8,
-        "19元30GB国内提速流量包-24个月": 78,
-        "20元20G-7天提速流量包": 9,
-        "30元40G流量包提速月包（3个月）": 2,
-        "35元20G连续包月流量包（首月19.9元）": 6,
-        "9元10G通用流量权益-202206版": 21,
-        "天翼智铃基础版": 1
+        "15元10G包月流量包": 5,
+        "19元30GB国内提速流量包-24个月": 45,
+        "20元20G-7天提速流量包": 31,
+        "20元20G流量包提速月包（3个月）": 6,
+        "30元30G-7天提速流量包": 3,
+        "30元40G流量包提速月包（3个月）": 9,
+        "35元20G连续包月流量包（首月19.9元）": 2,
+        "9.9元权益包": 4,
+        "9元10G通用流量权益-202206版": 32,
+        "套餐高迁": 5
       },
-      "rank": 22
+      "rank": 21
     },
     {
-      "name": "高庆羽",
-      "bigGroup": "先锋组",
-      "smallGroup": "先锋组3组",
+      "name": "包萨如拉",
+      "bigGroup": "青春组",
+      "smallGroup": "青春组2组",
       "matched": true,
-      "score": 240,
+      "score": 253,
       "detail": {
-        "15元10G包月流量包": 8,
-        "19元30GB国内提速流量包-24个月": 41,
-        "20元20G-7天提速流量包": 41,
-        "20元20G流量包提速月包（3个月）": 1,
-        "30元30G-7天提速流量包": 3,
-        "30元40G流量包提速月包（3个月）": 6,
-        "35元20G连续包月流量包（首月19.9元）": 4,
+        "15元10G包月流量包": 3,
+        "19元30GB国内提速流量包-24个月": 76,
+        "20元20G-7天提速流量包": 24,
+        "30元30G-7天提速流量包": 1,
+        "30元40G流量包提速月包（3个月）": 1,
+        "35元20G连续包月流量包（首月19.9元）": 1,
+        "9.9元权益包": 2,
         "9元10G通用流量权益-202206版": 26,
-        "套餐高迁": 6
+        "套餐高迁": 3
       },
-      "rank": 23
+      "rank": 22
     },
     {
       "name": "杨洁",
       "bigGroup": "领航组",
       "smallGroup": "领航组2组",
       "matched": true,
-      "score": 234,
+      "score": 253,
       "detail": {
         "15元10G包月流量包": 8,
-        "19元30GB国内提速流量包-24个月": 53,
-        "20元20G-7天提速流量包": 25,
+        "19元30GB国内提速流量包-24个月": 58,
+        "20元20G-7天提速流量包": 26,
         "30元30G-7天提速流量包": 4,
-        "30元40G流量包提速月包（3个月）": 3,
+        "30元40G流量包提速月包（3个月）": 4,
         "35元20G连续包月流量包（首月19.9元）": 3,
         "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 21,
+        "9元10G通用流量权益-202206版": 24,
         "套餐高迁": 7
       },
-      "rank": 24
+      "rank": 23
     },
     {
-      "name": "王鑫",
-      "bigGroup": "扬帆组",
-      "smallGroup": "扬帆组2组",
+      "name": "高庆羽",
+      "bigGroup": "先锋组",
+      "smallGroup": "先锋组3组",
       "matched": true,
-      "score": 234,
+      "score": 253,
       "detail": {
-        "15元10G包月流量包": 6,
+        "15元10G包月流量包": 8,
         "19元30GB国内提速流量包-24个月": 45,
-        "20元20G-7天提速流量包": 22,
-        "20元20G流量包提速月包（3个月）": 2,
-        "30元30G-7天提速流量包": 8,
-        "30元40G流量包提速月包（3个月）": 5,
-        "9.9元权益包": 7,
-        "9元10G通用流量权益-202206版": 34,
-        "天翼智铃基础版": 1,
-        "套餐高迁": 3
+        "20元20G-7天提速流量包": 41,
+        "20元20G流量包提速月包（3个月）": 1,
+        "30元30G-7天提速流量包": 4,
+        "30元40G流量包提速月包（3个月）": 7,
+        "35元20G连续包月流量包（首月19.9元）": 4,
+        "9元10G通用流量权益-202206版": 27,
+        "套餐高迁": 6
       },
-      "rank": 25
+      "rank": 24
     },
     {
       "name": "赵慧",
       "bigGroup": "先锋组",
       "smallGroup": "先锋组3组",
       "matched": true,
-      "score": 233,
+      "score": 251,
       "detail": {
         "15元10G包月流量包": 7,
-        "19元30GB国内提速流量包-24个月": 73,
+        "19元30GB国内提速流量包-24个月": 82,
         "20元20G-7天提速流量包": 28,
         "30元30G-7天提速流量包": 8,
         "30元40G流量包提速月包（3个月）": 1,
@@ -38718,140 +41141,373 @@
         "9元10G通用流量权益-202206版": 5,
         "套餐高迁": 4
       },
+      "rank": 25
+    },
+    {
+      "name": "王娟",
+      "bigGroup": "卓越组",
+      "smallGroup": "卓越组1组",
+      "matched": true,
+      "score": 250,
+      "detail": {
+        "15元10G包月流量包": 8,
+        "19元30GB国内提速流量包-24个月": 83,
+        "20元20G-7天提速流量包": 9,
+        "30元40G流量包提速月包（3个月）": 2,
+        "35元20G连续包月流量包（首月19.9元）": 6,
+        "9元10G通用流量权益-202206版": 21,
+        "天翼智铃基础版": 1
+      },
       "rank": 26
     },
     {
-      "name": "赵靖蓉",
-      "bigGroup": "雄鹰组",
-      "smallGroup": "雄鹰组2组",
+      "name": "王鑫",
+      "bigGroup": "扬帆组",
+      "smallGroup": "扬帆组2组",
       "matched": true,
-      "score": 231,
+      "score": 250,
       "detail": {
-        "15元10G包月流量包": 14,
-        "19元30GB国内提速流量包-24个月": 45,
-        "20元20G-7天提速流量包": 28,
-        "30元30G-7天提速流量包": 7,
-        "30元40G流量包提速月包（3个月）": 4,
-        "35元20G连续包月流量包（首月19.9元）": 4,
-        "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 19,
-        "天翼智铃基础版": 3,
-        "套餐高迁": 5
-      },
-      "rank": 27
-    },
-    {
-      "name": "包萨如拉",
-      "bigGroup": "青春组",
-      "smallGroup": "青春组2组",
-      "matched": true,
-      "score": 228,
-      "detail": {
-        "15元10G包月流量包": 3,
-        "19元30GB国内提速流量包-24个月": 68,
-        "20元20G-7天提速流量包": 23,
-        "30元30G-7天提速流量包": 1,
-        "30元40G流量包提速月包（3个月）": 1,
-        "35元20G连续包月流量包（首月19.9元）": 1,
-        "9.9元权益包": 2,
-        "9元10G通用流量权益-202206版": 22,
+        "15元10G包月流量包": 6,
+        "19元30GB国内提速流量包-24个月": 50,
+        "20元20G-7天提速流量包": 22,
+        "20元20G流量包提速月包（3个月）": 2,
+        "30元30G-7天提速流量包": 8,
+        "30元40G流量包提速月包（3个月）": 6,
+        "9.9元权益包": 7,
+        "9元10G通用流量权益-202206版": 36,
+        "天翼智铃基础版": 1,
         "套餐高迁": 3
       },
-      "rank": 28
+      "rank": 27
     },
     {
       "name": "敖珊珊",
       "bigGroup": "天籁组",
       "smallGroup": "天籁组2组",
       "matched": true,
-      "score": 227,
+      "score": 249,
       "detail": {
         "15元10G包月流量包": 4,
-        "19元30GB国内提速流量包-24个月": 50,
+        "19元30GB国内提速流量包-24个月": 57,
         "20元20G-7天提速流量包": 36,
         "30元30G-7天提速流量包": 4,
-        "30元40G流量包提速月包（3个月）": 6,
+        "30元40G流量包提速月包（3个月）": 8,
         "35元20G连续包月流量包（首月19.9元）": 1,
         "9.9元权益包": 3,
-        "9元10G通用流量权益-202206版": 19,
+        "9元10G通用流量权益-202206版": 21,
         "套餐高迁": 6
       },
-      "rank": 29
+      "rank": 28
     },
     {
-      "name": "零英霞",
-      "bigGroup": "先锋组",
-      "smallGroup": "先锋组2组",
+      "name": "赵靖蓉",
+      "bigGroup": "雄鹰组",
+      "smallGroup": "雄鹰组2组",
       "matched": true,
-      "score": 225,
+      "score": 245,
       "detail": {
-        "15元10G包月流量包": 5,
-        "19元30GB国内提速流量包-24个月": 44,
-        "20元20G-7天提速流量包": 31,
-        "30元30G-7天提速流量包": 4,
-        "30元40G流量包提速月包（3个月）": 4,
-        "35元20G连续包月流量包（首月19.9元）": 1,
-        "9.9元权益包": 2,
-        "9元10G通用流量权益-202206版": 34,
-        "套餐高迁": 3
-      },
-      "rank": 30
-    },
-    {
-      "name": "李慧敏",
-      "bigGroup": "卓越组",
-      "smallGroup": "卓越组2组",
-      "matched": true,
-      "score": 222,
-      "detail": {
-        "15元10G包月流量包": 8,
-        "19元30GB国内提速流量包-24个月": 48,
-        "20元20G-7天提速流量包": 29,
-        "30元30G-7天提速流量包": 8,
-        "30元40G流量包提速月包（3个月）": 10,
+        "15元10G包月流量包": 14,
+        "19元30GB国内提速流量包-24个月": 50,
+        "20元20G-7天提速流量包": 28,
+        "30元30G-7天提速流量包": 7,
+        "30元40G流量包提速月包（3个月）": 5,
+        "35元20G连续包月流量包（首月19.9元）": 4,
         "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 22,
-        "套餐高迁": 2
+        "9元10G通用流量权益-202206版": 20,
+        "天翼智铃基础版": 3,
+        "套餐高迁": 5
       },
-      "rank": 31
+      "rank": 29
     },
     {
       "name": "田媛媛",
       "bigGroup": "天籁组",
       "smallGroup": "天籁组1组",
       "matched": true,
-      "score": 222,
+      "score": 244,
       "detail": {
         "15元10G包月流量包": 8,
-        "19元30GB国内提速流量包-24个月": 51,
+        "19元30GB国内提速流量包-24个月": 60,
         "20元20G-7天提速流量包": 40,
         "20元20G流量包提速月包（3个月）": 2,
         "30元30G-7天提速流量包": 6,
+        "30元40G流量包提速月包（3个月）": 5,
+        "35元20G连续包月流量包（首月19.9元）": 1,
+        "9元10G通用流量权益-202206版": 17,
+        "套餐高迁": 3
+      },
+      "rank": 30
+    },
+    {
+      "name": "零英霞",
+      "bigGroup": "先锋组",
+      "smallGroup": "先锋组2组",
+      "matched": true,
+      "score": 242,
+      "detail": {
+        "15元10G包月流量包": 5,
+        "19元30GB国内提速流量包-24个月": 48,
+        "20元20G-7天提速流量包": 31,
+        "30元30G-7天提速流量包": 5,
         "30元40G流量包提速月包（3个月）": 4,
         "35元20G连续包月流量包（首月19.9元）": 1,
-        "9元10G通用流量权益-202206版": 16,
+        "9.9元权益包": 2,
+        "9元10G通用流量权益-202206版": 38,
+        "套餐高迁": 3
+      },
+      "rank": 31
+    },
+    {
+      "name": "巴彦格格",
+      "bigGroup": "领航组",
+      "smallGroup": "领航组3组",
+      "matched": true,
+      "score": 237,
+      "detail": {
+        "15元10G包月流量包": 9,
+        "19元30GB国内提速流量包-24个月": 56,
+        "20元20G-7天提速流量包": 27,
+        "30元30G-7天提速流量包": 4,
+        "30元40G流量包提速月包（3个月）": 2,
+        "35元20G连续包月流量包（首月19.9元）": 6,
+        "9.9元权益包": 2,
+        "9元10G通用流量权益-202206版": 22,
+        "天翼智铃基础版": 2,
         "套餐高迁": 3
       },
       "rank": 32
+    },
+    {
+      "name": "赵晶",
+      "bigGroup": "领航组",
+      "smallGroup": "领航组1组",
+      "matched": true,
+      "score": 236,
+      "detail": {
+        "15元10G包月流量包": 8,
+        "19元30GB国内提速流量包-24个月": 32,
+        "20元20G-7天提速流量包": 14,
+        "20元20G流量包提速月包（3个月）": 21,
+        "30元30G-7天提速流量包": 1,
+        "30元40G流量包提速月包（3个月）": 11,
+        "35元20G连续包月流量包（首月19.9元）": 4,
+        "9.9元权益包": 5,
+        "9元10G通用流量权益-202206版": 26,
+        "套餐高迁": 3
+      },
+      "rank": 33
     },
     {
       "name": "黄晓叶",
       "bigGroup": "扬帆组",
       "smallGroup": "扬帆组3组",
       "matched": true,
-      "score": 221,
+      "score": 235,
       "detail": {
         "15元10G包月流量包": 7,
-        "19元30GB国内提速流量包-24个月": 44,
+        "19元30GB国内提速流量包-24个月": 50,
         "20元20G-7天提速流量包": 19,
         "20元20G流量包提速月包（3个月）": 1,
         "30元30G-7天提速流量包": 2,
         "30元40G流量包提速月包（3个月）": 2,
         "35元20G连续包月流量包（首月19.9元）": 3,
-        "9元10G通用流量权益-202206版": 33,
+        "9元10G通用流量权益-202206版": 34,
         "套餐高迁": 5
       },
-      "rank": 33
+      "rank": 34
+    },
+    {
+      "name": "银芳芳",
+      "bigGroup": "雄鹰组",
+      "smallGroup": "雄鹰组2组",
+      "matched": true,
+      "score": 233,
+      "detail": {
+        "15元10G包月流量包": 6,
+        "19元30GB国内提速流量包-24个月": 39,
+        "20元20G-7天提速流量包": 22,
+        "20元20G流量包提速月包（3个月）": 7,
+        "30元30G-7天提速流量包": 8,
+        "30元40G流量包提速月包（3个月）": 14,
+        "35元20G连续包月流量包（首月19.9元）": 4,
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 25,
+        "套餐高迁": 3
+      },
+      "rank": 35
+    },
+    {
+      "name": "李慧敏",
+      "bigGroup": "卓越组",
+      "smallGroup": "卓越组2组",
+      "matched": true,
+      "score": 232,
+      "detail": {
+        "15元10G包月流量包": 8,
+        "19元30GB国内提速流量包-24个月": 52,
+        "20元20G-7天提速流量包": 29,
+        "30元30G-7天提速流量包": 8,
+        "30元40G流量包提速月包（3个月）": 10,
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 23,
+        "套餐高迁": 2
+      },
+      "rank": 36
+    },
+    {
+      "name": "宋荣华",
+      "bigGroup": "天籁组",
+      "smallGroup": "天籁组2组",
+      "matched": true,
+      "score": 231,
+      "detail": {
+        "15元10G包月流量包": 4,
+        "19元30GB国内提速流量包-24个月": 43,
+        "20元20G-7天提速流量包": 31,
+        "20元20G流量包提速月包（3个月）": 3,
+        "30元30G-7天提速流量包": 6,
+        "30元40G流量包提速月包（3个月）": 6,
+        "35元20G连续包月流量包（首月19.9元）": 4,
+        "9元10G通用流量权益-202206版": 29,
+        "套餐高迁": 4
+      },
+      "rank": 37
+    },
+    {
+      "name": "索志娟",
+      "bigGroup": "虎翼组",
+      "smallGroup": "虎翼组2组",
+      "matched": true,
+      "score": 228,
+      "detail": {
+        "15元10G包月流量包": 5,
+        "19元30GB国内提速流量包-24个月": 69,
+        "20元20G-7天提速流量包": 30,
+        "20元20G流量包提速月包（3个月）": 2,
+        "30元30G-7天提速流量包": 2,
+        "30元40G流量包提速月包（3个月）": 2,
+        "35元20G连续包月流量包（首月19.9元）": 1,
+        "9.9元权益包": 2,
+        "9元10G通用流量权益-202206版": 10,
+        "套餐高迁": 4
+      },
+      "rank": 38
+    },
+    {
+      "name": "王艳清",
+      "bigGroup": "雄鹰组",
+      "smallGroup": "雄鹰组1组",
+      "matched": true,
+      "score": 226,
+      "detail": {
+        "15元10G包月流量包": 8,
+        "19元30GB国内提速流量包-24个月": 23,
+        "20元20G-7天提速流量包": 22,
+        "20元20G流量包提速月包（3个月）": 19,
+        "30元30G-7天提速流量包": 3,
+        "30元40G流量包提速月包（3个月）": 12,
+        "35元20G连续包月流量包（首月19.9元）": 4,
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 22,
+        "套餐高迁": 6
+      },
+      "rank": 39
+    },
+    {
+      "name": "赵文霞",
+      "bigGroup": "专席组",
+      "smallGroup": "专席组1组",
+      "matched": true,
+      "score": 223,
+      "detail": {
+        "15元10G包月流量包": 2,
+        "19元30GB国内提速流量包-24个月": 25,
+        "20元20G-7天提速流量包": 27,
+        "20元20G流量包提速月包（3个月）": 9,
+        "30元30G-7天提速流量包": 3,
+        "30元40G流量包提速月包（3个月）": 13,
+        "35元20G连续包月流量包（首月19.9元）": 1,
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 38,
+        "套餐高迁": 4
+      },
+      "rank": 40
+    },
+    {
+      "name": "尚晓霞",
+      "bigGroup": "星耀组",
+      "smallGroup": "星耀组1组",
+      "matched": true,
+      "score": 222,
+      "detail": {
+        "15元10G包月流量包": 4,
+        "19元30GB国内提速流量包-24个月": 74,
+        "20元20G-7天提速流量包": 8,
+        "30元30G-7天提速流量包": 2,
+        "30元40G流量包提速月包（3个月）": 4,
+        "35元20G连续包月流量包（首月19.9元）": 1,
+        "9元10G通用流量权益-202206版": 19,
+        "套餐高迁": 2
+      },
+      "rank": 41
+    },
+    {
+      "name": "李海越",
+      "bigGroup": "星耀组",
+      "smallGroup": "星耀组1组",
+      "matched": true,
+      "score": 222,
+      "detail": {
+        "15元10G包月流量包": 7,
+        "19元30GB国内提速流量包-24个月": 52,
+        "20元20G-7天提速流量包": 54,
+        "20元20G流量包提速月包（3个月）": 3,
+        "30元30G-7天提速流量包": 7,
+        "30元40G流量包提速月包（3个月）": 4,
+        "35元20G连续包月流量包（首月19.9元）": 1,
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 13
+      },
+      "rank": 42
+    },
+    {
+      "name": "刘晓琼",
+      "bigGroup": "虎翼组",
+      "smallGroup": "虎翼组1组",
+      "matched": true,
+      "score": 221,
+      "detail": {
+        "15元10G包月流量包": 7,
+        "19元30GB国内提速流量包-24个月": 52,
+        "20元20G-7天提速流量包": 21,
+        "20元20G流量包提速月包（3个月）": 1,
+        "30元30G-7天提速流量包": 1,
+        "30元40G流量包提速月包（3个月）": 5,
+        "35元20G连续包月流量包（首月19.9元）": 2,
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 22,
+        "套餐高迁": 5
+      },
+      "rank": 43
+    },
+    {
+      "name": "赵龙",
+      "bigGroup": "虎翼组",
+      "smallGroup": "虎翼组1组",
+      "matched": true,
+      "score": 220,
+      "detail": {
+        "15元10G包月流量包": 6,
+        "19元30GB国内提速流量包-24个月": 54,
+        "20元20G-7天提速流量包": 21,
+        "20元20G流量包提速月包（3个月）": 2,
+        "30元30G-7天提速流量包": 2,
+        "30元40G流量包提速月包（3个月）": 4,
+        "35元20G连续包月流量包（首月19.9元）": 3,
+        "9.9元权益包": 3,
+        "9元10G通用流量权益-202206版": 28
+      },
+      "rank": 44
     },
     {
       "name": "马超",
@@ -38871,232 +41527,152 @@
         "9元10G通用流量权益-202206版": 32,
         "套餐高迁": 2
       },
-      "rank": 34
+      "rank": 45
     },
     {
-      "name": "银芳芳",
-      "bigGroup": "雄鹰组",
-      "smallGroup": "雄鹰组2组",
-      "matched": true,
-      "score": 219,
-      "detail": {
-        "15元10G包月流量包": 6,
-        "19元30GB国内提速流量包-24个月": 37,
-        "20元20G-7天提速流量包": 22,
-        "20元20G流量包提速月包（3个月）": 7,
-        "30元30G-7天提速流量包": 8,
-        "30元40G流量包提速月包（3个月）": 12,
-        "35元20G连续包月流量包（首月19.9元）": 4,
-        "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 22,
-        "套餐高迁": 3
-      },
-      "rank": 35
-    },
-    {
-      "name": "巴彦格格",
-      "bigGroup": "领航组",
-      "smallGroup": "领航组3组",
-      "matched": true,
-      "score": 217,
-      "detail": {
-        "15元10G包月流量包": 9,
-        "19元30GB国内提速流量包-24个月": 50,
-        "20元20G-7天提速流量包": 27,
-        "30元30G-7天提速流量包": 4,
-        "30元40G流量包提速月包（3个月）": 2,
-        "35元20G连续包月流量包（首月19.9元）": 6,
-        "9.9元权益包": 2,
-        "9元10G通用流量权益-202206版": 20,
-        "天翼智铃基础版": 2,
-        "套餐高迁": 2
-      },
-      "rank": 36
-    },
-    {
-      "name": "宋荣华",
-      "bigGroup": "天籁组",
-      "smallGroup": "天籁组2组",
-      "matched": true,
-      "score": 213,
-      "detail": {
-        "15元10G包月流量包": 4,
-        "19元30GB国内提速流量包-24个月": 39,
-        "20元20G-7天提速流量包": 31,
-        "20元20G流量包提速月包（3个月）": 3,
-        "30元30G-7天提速流量包": 6,
-        "30元40G流量包提速月包（3个月）": 5,
-        "35元20G连续包月流量包（首月19.9元）": 4,
-        "9元10G通用流量权益-202206版": 25,
-        "套餐高迁": 4
-      },
-      "rank": 37
-    },
-    {
-      "name": "索志娟",
+      "name": "邢建美",
       "bigGroup": "虎翼组",
       "smallGroup": "虎翼组2组",
       "matched": true,
-      "score": 212,
+      "score": 216,
+      "detail": {
+        "15元10G包月流量包": 7,
+        "19元30GB国内提速流量包-24个月": 24,
+        "20元20G-7天提速流量包": 35,
+        "20元20G流量包提速月包（3个月）": 4,
+        "30元30G-7天提速流量包": 8,
+        "30元40G流量包提速月包（3个月）": 3,
+        "35元20G连续包月流量包（首月19.9元）": 2,
+        "9.9元权益包": 5,
+        "9元10G通用流量权益-202206版": 39,
+        "天翼智铃基础版": 2,
+        "套餐高迁": 2
+      },
+      "rank": 46
+    },
+    {
+      "name": "刘慧",
+      "bigGroup": "雄鹰组",
+      "smallGroup": "雄鹰组3组",
+      "matched": true,
+      "score": 215,
+      "detail": {
+        "15元10G包月流量包": 8,
+        "19元30GB国内提速流量包-24个月": 67,
+        "20元20G-7天提速流量包": 19,
+        "20元20G流量包提速月包（3个月）": 3,
+        "30元30G-7天提速流量包": 1,
+        "30元40G流量包提速月包（3个月）": 7,
+        "9.9元权益包": 5,
+        "9元10G通用流量权益-202206版": 6,
+        "套餐高迁": 2
+      },
+      "rank": 47
+    },
+    {
+      "name": "张云飞",
+      "bigGroup": "先锋组",
+      "smallGroup": "先锋组3组",
+      "matched": true,
+      "score": 215,
+      "detail": {
+        "15元10G包月流量包": 9,
+        "19元30GB国内提速流量包-24个月": 55,
+        "20元20G-7天提速流量包": 18,
+        "20元20G流量包提速月包（3个月）": 5,
+        "30元30G-7天提速流量包": 3,
+        "30元40G流量包提速月包（3个月）": 6,
+        "35元20G连续包月流量包（首月19.9元）": 2,
+        "9元10G通用流量权益-202206版": 20
+      },
+      "rank": 48
+    },
+    {
+      "name": "李瑞琴",
+      "bigGroup": "虎翼组",
+      "smallGroup": "虎翼组1组",
+      "matched": true,
+      "score": 215,
       "detail": {
         "15元10G包月流量包": 5,
-        "19元30GB国内提速流量包-24个月": 63,
-        "20元20G-7天提速流量包": 30,
-        "20元20G流量包提速月包（3个月）": 2,
+        "19元30GB国内提速流量包-24个月": 56,
+        "20元20G-7天提速流量包": 25,
         "30元30G-7天提速流量包": 2,
         "30元40G流量包提速月包（3个月）": 2,
-        "35元20G连续包月流量包（首月19.9元）": 1,
-        "9.9元权益包": 2,
-        "9元10G通用流量权益-202206版": 8,
+        "35元20G连续包月流量包（首月19.9元）": 3,
+        "9元10G通用流量权益-202206版": 20,
         "套餐高迁": 4
       },
-      "rank": 38
-    },
-    {
-      "name": "赵晶",
-      "bigGroup": "领航组",
-      "smallGroup": "领航组1组",
-      "matched": true,
-      "score": 210,
-      "detail": {
-        "15元10G包月流量包": 8,
-        "19元30GB国内提速流量包-24个月": 25,
-        "20元20G-7天提速流量包": 14,
-        "20元20G流量包提速月包（3个月）": 21,
-        "30元30G-7天提速流量包": 1,
-        "30元40G流量包提速月包（3个月）": 10,
-        "35元20G连续包月流量包（首月19.9元）": 4,
-        "9.9元权益包": 5,
-        "9元10G通用流量权益-202206版": 21,
-        "套餐高迁": 3
-      },
-      "rank": 39
-    },
-    {
-      "name": "王艳清",
-      "bigGroup": "雄鹰组",
-      "smallGroup": "雄鹰组1组",
-      "matched": true,
-      "score": 208,
-      "detail": {
-        "15元10G包月流量包": 8,
-        "19元30GB国内提速流量包-24个月": 17,
-        "20元20G-7天提速流量包": 22,
-        "20元20G流量包提速月包（3个月）": 19,
-        "30元30G-7天提速流量包": 3,
-        "30元40G流量包提速月包（3个月）": 12,
-        "35元20G连续包月流量包（首月19.9元）": 4,
-        "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 19,
-        "套餐高迁": 6
-      },
-      "rank": 40
+      "rank": 49
     },
     {
       "name": "郭璇",
       "bigGroup": "青春组",
       "smallGroup": "青春组1组",
       "matched": true,
-      "score": 208,
+      "score": 214,
       "detail": {
         "15元10G包月流量包": 3,
-        "19元30GB国内提速流量包-24个月": 56,
+        "19元30GB国内提速流量包-24个月": 58,
         "20元20G-7天提速流量包": 24,
         "20元20G流量包提速月包（3个月）": 1,
         "30元30G-7天提速流量包": 4,
         "30元40G流量包提速月包（3个月）": 4,
         "35元20G连续包月流量包（首月19.9元）": 1,
         "9.9元权益包": 2,
-        "9元10G通用流量权益-202206版": 20,
+        "9元10G通用流量权益-202206版": 21,
         "套餐高迁": 2
       },
-      "rank": 41
+      "rank": 50
     },
     {
-      "name": "赵文霞",
-      "bigGroup": "专席组",
-      "smallGroup": "专席组1组",
+      "name": "李波",
+      "bigGroup": "天籁组",
+      "smallGroup": "天籁组2组",
       "matched": true,
-      "score": 207,
+      "score": 213,
       "detail": {
-        "15元10G包月流量包": 2,
-        "19元30GB国内提速流量包-24个月": 22,
-        "20元20G-7天提速流量包": 27,
-        "20元20G流量包提速月包（3个月）": 8,
+        "15元10G包月流量包": 6,
+        "19元30GB国内提速流量包-24个月": 34,
+        "20元20G-7天提速流量包": 19,
+        "20元20G流量包提速月包（3个月）": 3,
         "30元30G-7天提速流量包": 3,
-        "30元40G流量包提速月包（3个月）": 13,
-        "35元20G连续包月流量包（首月19.9元）": 1,
+        "30元40G流量包提速月包（3个月）": 3,
+        "35元20G连续包月流量包（首月19.9元）": 7,
         "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 34,
+        "9元10G通用流量权益-202206版": 30,
+        "套餐高迁": 6
+      },
+      "rank": 51
+    },
+    {
+      "name": "袁杰",
+      "bigGroup": "卓越组",
+      "smallGroup": "卓越组2组",
+      "matched": true,
+      "score": 213,
+      "detail": {
+        "15元10G包月流量包": 6,
+        "19元30GB国内提速流量包-24个月": 37,
+        "20元20G-7天提速流量包": 32,
+        "20元20G流量包提速月包（3个月）": 1,
+        "30元30G-7天提速流量包": 5,
+        "30元40G流量包提速月包（3个月）": 1,
+        "35元20G连续包月流量包（首月19.9元）": 4,
+        "9元10G通用流量权益-202206版": 31,
         "套餐高迁": 4
       },
-      "rank": 42
-    },
-    {
-      "name": "刘晓琼",
-      "bigGroup": "虎翼组",
-      "smallGroup": "虎翼组1组",
-      "matched": true,
-      "score": 204,
-      "detail": {
-        "15元10G包月流量包": 7,
-        "19元30GB国内提速流量包-24个月": 48,
-        "20元20G-7天提速流量包": 21,
-        "20元20G流量包提速月包（3个月）": 1,
-        "30元30G-7天提速流量包": 1,
-        "30元40G流量包提速月包（3个月）": 2,
-        "35元20G连续包月流量包（首月19.9元）": 2,
-        "9元10G通用流量权益-202206版": 21,
-        "套餐高迁": 5
-      },
-      "rank": 43
-    },
-    {
-      "name": "尚晓霞",
-      "bigGroup": "星耀组",
-      "smallGroup": "星耀组1组",
-      "matched": true,
-      "score": 204,
-      "detail": {
-        "15元10G包月流量包": 4,
-        "19元30GB国内提速流量包-24个月": 67,
-        "20元20G-7天提速流量包": 8,
-        "30元30G-7天提速流量包": 2,
-        "30元40G流量包提速月包（3个月）": 4,
-        "35元20G连续包月流量包（首月19.9元）": 1,
-        "9元10G通用流量权益-202206版": 17,
-        "套餐高迁": 2
-      },
-      "rank": 44
-    },
-    {
-      "name": "李海越",
-      "bigGroup": "星耀组",
-      "smallGroup": "星耀组1组",
-      "matched": true,
-      "score": 201,
-      "detail": {
-        "15元10G包月流量包": 7,
-        "19元30GB国内提速流量包-24个月": 48,
-        "20元20G-7天提速流量包": 53,
-        "20元20G流量包提速月包（3个月）": 1,
-        "30元30G-7天提速流量包": 7,
-        "30元40G流量包提速月包（3个月）": 2,
-        "35元20G连续包月流量包（首月19.9元）": 1,
-        "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 11
-      },
-      "rank": 45
+      "rank": 52
     },
     {
       "name": "闫裕",
       "bigGroup": "扬帆组",
       "smallGroup": "扬帆组3组",
       "matched": true,
-      "score": 200,
+      "score": 212,
       "detail": {
         "15元10G包月流量包": 4,
-        "19元30GB国内提速流量包-24个月": 47,
+        "19元30GB国内提速流量包-24个月": 53,
         "20元20G-7天提速流量包": 37,
         "30元30G-7天提速流量包": 9,
         "30元40G流量包提速月包（3个月）": 1,
@@ -39104,291 +41680,161 @@
         "9元10G通用流量权益-202206版": 14,
         "套餐高迁": 3
       },
-      "rank": 46
-    },
-    {
-      "name": "孟宪彬",
-      "bigGroup": "青春组",
-      "smallGroup": "青春组1组",
-      "matched": true,
-      "score": 199,
-      "detail": {
-        "15元10G包月流量包": 6,
-        "19元30GB国内提速流量包-24个月": 55,
-        "20元20G-7天提速流量包": 19,
-        "30元30G-7天提速流量包": 2,
-        "30元40G流量包提速月包（3个月）": 1,
-        "35元20G连续包月流量包（首月19.9元）": 1,
-        "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 19,
-        "天翼智铃基础版": 1,
-        "套餐高迁": 3
-      },
-      "rank": 47
-    },
-    {
-      "name": "袁杰",
-      "bigGroup": "卓越组",
-      "smallGroup": "卓越组2组",
-      "matched": true,
-      "score": 199,
-      "detail": {
-        "15元10G包月流量包": 6,
-        "19元30GB国内提速流量包-24个月": 34,
-        "20元20G-7天提速流量包": 32,
-        "30元30G-7天提速流量包": 5,
-        "35元20G连续包月流量包（首月19.9元）": 4,
-        "9元10G通用流量权益-202206版": 31,
-        "套餐高迁": 3
-      },
-      "rank": 48
-    },
-    {
-      "name": "张海燕",
-      "bigGroup": "天籁组",
-      "smallGroup": "天籁组1组",
-      "matched": true,
-      "score": 197,
-      "detail": {
-        "15元10G包月流量包": 6,
-        "19元30GB国内提速流量包-24个月": 51,
-        "20元20G-7天提速流量包": 20,
-        "30元30G-7天提速流量包": 2,
-        "30元40G流量包提速月包（3个月）": 5,
-        "35元20G连续包月流量包（首月19.9元）": 4,
-        "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 17,
-        "套餐高迁": 2
-      },
-      "rank": 49
-    },
-    {
-      "name": "李波",
-      "bigGroup": "天籁组",
-      "smallGroup": "天籁组2组",
-      "matched": true,
-      "score": 197,
-      "detail": {
-        "15元10G包月流量包": 6,
-        "19元30GB国内提速流量包-24个月": 30,
-        "20元20G-7天提速流量包": 19,
-        "20元20G流量包提速月包（3个月）": 3,
-        "30元30G-7天提速流量包": 3,
-        "30元40G流量包提速月包（3个月）": 3,
-        "35元20G连续包月流量包（首月19.9元）": 7,
-        "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 26,
-        "套餐高迁": 6
-      },
-      "rank": 50
-    },
-    {
-      "name": "张云飞",
-      "bigGroup": "先锋组",
-      "smallGroup": "先锋组3组",
-      "matched": true,
-      "score": 195,
-      "detail": {
-        "15元10G包月流量包": 9,
-        "19元30GB国内提速流量包-24个月": 46,
-        "20元20G-7天提速流量包": 18,
-        "20元20G流量包提速月包（3个月）": 5,
-        "30元30G-7天提速流量包": 3,
-        "30元40G流量包提速月包（3个月）": 6,
-        "35元20G连续包月流量包（首月19.9元）": 2,
-        "9元10G通用流量权益-202206版": 19
-      },
-      "rank": 51
-    },
-    {
-      "name": "刘慧",
-      "bigGroup": "雄鹰组",
-      "smallGroup": "雄鹰组3组",
-      "matched": true,
-      "score": 191,
-      "detail": {
-        "15元10G包月流量包": 8,
-        "19元30GB国内提速流量包-24个月": 57,
-        "20元20G-7天提速流量包": 19,
-        "20元20G流量包提速月包（3个月）": 3,
-        "30元30G-7天提速流量包": 1,
-        "30元40G流量包提速月包（3个月）": 5,
-        "9.9元权益包": 5,
-        "9元10G通用流量权益-202206版": 6,
-        "套餐高迁": 2
-      },
-      "rank": 52
-    },
-    {
-      "name": "盛洁",
-      "bigGroup": "雄鹰组",
-      "smallGroup": "雄鹰组2组",
-      "matched": true,
-      "score": 191,
-      "detail": {
-        "15元10G包月流量包": 13,
-        "19元30GB国内提速流量包-24个月": 32,
-        "20元20G-7天提速流量包": 28,
-        "20元20G流量包提速月包（3个月）": 1,
-        "30元30G-7天提速流量包": 3,
-        "30元40G流量包提速月包（3个月）": 5,
-        "35元20G连续包月流量包（首月19.9元）": 3,
-        "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 17,
-        "天翼智铃基础版": 1,
-        "套餐高迁": 4
-      },
       "rank": 53
-    },
-    {
-      "name": "赵龙",
-      "bigGroup": "虎翼组",
-      "smallGroup": "虎翼组1组",
-      "matched": true,
-      "score": 191,
-      "detail": {
-        "15元10G包月流量包": 6,
-        "19元30GB国内提速流量包-24个月": 44,
-        "20元20G-7天提速流量包": 21,
-        "20元20G流量包提速月包（3个月）": 2,
-        "30元30G-7天提速流量包": 1,
-        "30元40G流量包提速月包（3个月）": 3,
-        "35元20G连续包月流量包（首月19.9元）": 3,
-        "9.9元权益包": 3,
-        "9元10G通用流量权益-202206版": 25
-      },
-      "rank": 54
-    },
-    {
-      "name": "邢建美",
-      "bigGroup": "虎翼组",
-      "smallGroup": "虎翼组2组",
-      "matched": true,
-      "score": 191,
-      "detail": {
-        "15元10G包月流量包": 7,
-        "19元30GB国内提速流量包-24个月": 20,
-        "20元20G-7天提速流量包": 34,
-        "20元20G流量包提速月包（3个月）": 4,
-        "30元30G-7天提速流量包": 8,
-        "30元40G流量包提速月包（3个月）": 3,
-        "35元20G连续包月流量包（首月19.9元）": 2,
-        "9.9元权益包": 5,
-        "9元10G通用流量权益-202206版": 31,
-        "天翼智铃基础版": 2,
-        "套餐高迁": 2
-      },
-      "rank": 55
-    },
-    {
-      "name": "白书羽",
-      "bigGroup": "雄鹰组",
-      "smallGroup": "雄鹰组3组",
-      "matched": true,
-      "score": 190,
-      "detail": {
-        "15元10G包月流量包": 4,
-        "19元30GB国内提速流量包-24个月": 15,
-        "20元20G-7天提速流量包": 36,
-        "20元20G流量包提速月包（3个月）": 11,
-        "30元30G-7天提速流量包": 5,
-        "30元40G流量包提速月包（3个月）": 7,
-        "35元20G连续包月流量包（首月19.9元）": 3,
-        "9.9元权益包": 3,
-        "9元10G通用流量权益-202206版": 15,
-        "套餐高迁": 9
-      },
-      "rank": 56
-    },
-    {
-      "name": "董鹏",
-      "bigGroup": "卓越组",
-      "smallGroup": "卓越组1组",
-      "matched": true,
-      "score": 190,
-      "detail": {
-        "15元10G包月流量包": 5,
-        "19元30GB国内提速流量包-24个月": 45,
-        "20元20G-7天提速流量包": 28,
-        "20元20G流量包提速月包（3个月）": 3,
-        "30元30G-7天提速流量包": 5,
-        "30元40G流量包提速月包（3个月）": 4,
-        "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 19,
-        "套餐高迁": 1
-      },
-      "rank": 57
-    },
-    {
-      "name": "李瑞琴",
-      "bigGroup": "虎翼组",
-      "smallGroup": "虎翼组1组",
-      "matched": true,
-      "score": 185,
-      "detail": {
-        "15元10G包月流量包": 5,
-        "19元30GB国内提速流量包-24个月": 45,
-        "20元20G-7天提速流量包": 25,
-        "30元30G-7天提速流量包": 2,
-        "30元40G流量包提速月包（3个月）": 1,
-        "35元20G连续包月流量包（首月19.9元）": 3,
-        "9元10G通用流量权益-202206版": 17,
-        "套餐高迁": 4
-      },
-      "rank": 58
     },
     {
       "name": "赵阳",
       "bigGroup": "领航组",
       "smallGroup": "领航组3组",
       "matched": true,
-      "score": 184,
+      "score": 210,
       "detail": {
         "15元10G包月流量包": 1,
-        "19元30GB国内提速流量包-24个月": 46,
+        "19元30GB国内提速流量包-24个月": 55,
         "20元20G-7天提速流量包": 37,
-        "20元20G流量包提速月包（3个月）": 1,
-        "30元30G-7天提速流量包": 3,
-        "30元40G流量包提速月包（3个月）": 4,
+        "20元20G流量包提速月包（3个月）": 2,
+        "30元30G-7天提速流量包": 5,
+        "30元40G流量包提速月包（3个月）": 6,
         "35元20G连续包月流量包（首月19.9元）": 2,
         "9元10G通用流量权益-202206版": 16,
         "套餐高迁": 1
       },
+      "rank": 54
+    },
+    {
+      "name": "孟宪彬",
+      "bigGroup": "青春组",
+      "smallGroup": "青春组1组",
+      "matched": true,
+      "score": 205,
+      "detail": {
+        "15元10G包月流量包": 6,
+        "19元30GB国内提速流量包-24个月": 56,
+        "20元20G-7天提速流量包": 19,
+        "30元30G-7天提速流量包": 2,
+        "30元40G流量包提速月包（3个月）": 1,
+        "35元20G连续包月流量包（首月19.9元）": 1,
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 21,
+        "天翼智铃基础版": 1,
+        "套餐高迁": 3
+      },
+      "rank": 55
+    },
+    {
+      "name": "张海燕",
+      "bigGroup": "天籁组",
+      "smallGroup": "天籁组1组",
+      "matched": true,
+      "score": 203,
+      "detail": {
+        "15元10G包月流量包": 6,
+        "19元30GB国内提速流量包-24个月": 53,
+        "20元20G-7天提速流量包": 20,
+        "30元30G-7天提速流量包": 2,
+        "30元40G流量包提速月包（3个月）": 6,
+        "35元20G连续包月流量包（首月19.9元）": 4,
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 17,
+        "套餐高迁": 2
+      },
+      "rank": 56
+    },
+    {
+      "name": "盛洁",
+      "bigGroup": "雄鹰组",
+      "smallGroup": "雄鹰组2组",
+      "matched": true,
+      "score": 203,
+      "detail": {
+        "15元10G包月流量包": 13,
+        "19元30GB国内提速流量包-24个月": 35,
+        "20元20G-7天提速流量包": 28,
+        "20元20G流量包提速月包（3个月）": 1,
+        "30元30G-7天提速流量包": 3,
+        "30元40G流量包提速月包（3个月）": 6,
+        "35元20G连续包月流量包（首月19.9元）": 3,
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 19,
+        "天翼智铃基础版": 1,
+        "套餐高迁": 4
+      },
+      "rank": 57
+    },
+    {
+      "name": "白书羽",
+      "bigGroup": "雄鹰组",
+      "smallGroup": "雄鹰组3组",
+      "matched": true,
+      "score": 200,
+      "detail": {
+        "15元10G包月流量包": 4,
+        "19元30GB国内提速流量包-24个月": 17,
+        "20元20G-7天提速流量包": 38,
+        "20元20G流量包提速月包（3个月）": 11,
+        "30元30G-7天提速流量包": 5,
+        "30元40G流量包提速月包（3个月）": 9,
+        "35元20G连续包月流量包（首月19.9元）": 3,
+        "9.9元权益包": 3,
+        "9元10G通用流量权益-202206版": 15,
+        "套餐高迁": 9
+      },
+      "rank": 58
+    },
+    {
+      "name": "张馨方",
+      "bigGroup": "扬帆组",
+      "smallGroup": "扬帆组3组",
+      "matched": true,
+      "score": 198,
+      "detail": {
+        "15元10G包月流量包": 6,
+        "19元30GB国内提速流量包-24个月": 42,
+        "20元20G-7天提速流量包": 27,
+        "30元30G-7天提速流量包": 6,
+        "30元40G流量包提速月包（3个月）": 9,
+        "35元20G连续包月流量包（首月19.9元）": 2,
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 15,
+        "套餐高迁": 4
+      },
       "rank": 59
     },
     {
-      "name": "高秀丽",
+      "name": "董鹏",
       "bigGroup": "卓越组",
-      "smallGroup": "卓越组2组",
+      "smallGroup": "卓越组1组",
       "matched": true,
-      "score": 184,
+      "score": 198,
       "detail": {
-        "15元10G包月流量包": 8,
-        "19元30GB国内提速流量包-24个月": 32,
-        "20元20G-7天提速流量包": 29,
-        "20元20G流量包提速月包（3个月）": 11,
-        "30元30G-7天提速流量包": 1,
-        "30元40G流量包提速月包（3个月）": 12,
-        "9元10G通用流量权益-202206版": 10,
-        "套餐高迁": 2
+        "15元10G包月流量包": 5,
+        "19元30GB国内提速流量包-24个月": 47,
+        "20元20G-7天提速流量包": 30,
+        "20元20G流量包提速月包（3个月）": 3,
+        "30元30G-7天提速流量包": 5,
+        "30元40G流量包提速月包（3个月）": 4,
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 20,
+        "套餐高迁": 1
       },
       "rank": 60
     },
     {
-      "name": "王乐",
-      "bigGroup": "专席组",
-      "smallGroup": "专席组1组",
+      "name": "张燕飞",
+      "bigGroup": "青春组",
+      "smallGroup": "青春组2组",
       "matched": true,
-      "score": 179,
+      "score": 195,
       "detail": {
-        "15元10G包月流量包": 3,
-        "19元30GB国内提速流量包-24个月": 40,
-        "20元20G-7天提速流量包": 25,
+        "15元10G包月流量包": 4,
+        "19元30GB国内提速流量包-24个月": 50,
+        "20元20G-7天提速流量包": 30,
         "30元30G-7天提速流量包": 2,
-        "30元40G流量包提速月包（3个月）": 1,
+        "30元40G流量包提速月包（3个月）": 3,
         "35元20G连续包月流量包（首月19.9元）": 1,
-        "9元10G通用流量权益-202206版": 29,
-        "套餐高迁": 1
+        "9.9元权益包": 3,
+        "9元10G通用流量权益-202206版": 18,
+        "套餐高迁": 2
       },
       "rank": 61
     },
@@ -39397,9 +41843,9 @@
       "bigGroup": "星耀组",
       "smallGroup": "星耀组2组",
       "matched": true,
-      "score": 178,
+      "score": 190,
       "detail": {
-        "19元30GB国内提速流量包-24个月": 51,
+        "19元30GB国内提速流量包-24个月": 57,
         "20元20G-7天提速流量包": 17,
         "20元20G流量包提速月包（3个月）": 3,
         "30元30G-7天提速流量包": 3,
@@ -39411,71 +41857,50 @@
       "rank": 62
     },
     {
-      "name": "张馨方",
-      "bigGroup": "扬帆组",
-      "smallGroup": "扬帆组3组",
+      "name": "王乐",
+      "bigGroup": "专席组",
+      "smallGroup": "专席组1组",
       "matched": true,
-      "score": 178,
+      "score": 188,
       "detail": {
-        "15元10G包月流量包": 6,
-        "19元30GB国内提速流量包-24个月": 35,
-        "20元20G-7天提速流量包": 27,
-        "30元30G-7天提速流量包": 6,
-        "30元40G流量包提速月包（3个月）": 7,
-        "35元20G连续包月流量包（首月19.9元）": 2,
-        "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 14,
-        "套餐高迁": 4
+        "15元10G包月流量包": 3,
+        "19元30GB国内提速流量包-24个月": 44,
+        "20元20G-7天提速流量包": 25,
+        "30元30G-7天提速流量包": 3,
+        "30元40G流量包提速月包（3个月）": 1,
+        "35元20G连续包月流量包（首月19.9元）": 1,
+        "9元10G通用流量权益-202206版": 29,
+        "套餐高迁": 1
       },
       "rank": 63
     },
     {
-      "name": "张燕飞",
-      "bigGroup": "青春组",
-      "smallGroup": "青春组2组",
+      "name": "高秀丽",
+      "bigGroup": "卓越组",
+      "smallGroup": "卓越组2组",
       "matched": true,
-      "score": 177,
+      "score": 186,
       "detail": {
-        "15元10G包月流量包": 4,
-        "19元30GB国内提速流量包-24个月": 42,
-        "20元20G-7天提速流量包": 30,
-        "30元30G-7天提速流量包": 2,
-        "30元40G流量包提速月包（3个月）": 2,
-        "35元20G连续包月流量包（首月19.9元）": 1,
-        "9.9元权益包": 3,
-        "9元10G通用流量权益-202206版": 18,
+        "15元10G包月流量包": 8,
+        "19元30GB国内提速流量包-24个月": 33,
+        "20元20G-7天提速流量包": 29,
+        "20元20G流量包提速月包（3个月）": 11,
+        "30元30G-7天提速流量包": 1,
+        "30元40G流量包提速月包（3个月）": 12,
+        "9元10G通用流量权益-202206版": 10,
         "套餐高迁": 2
       },
       "rank": 64
-    },
-    {
-      "name": "张洁45",
-      "bigGroup": "先锋组",
-      "smallGroup": "先锋组2组",
-      "matched": true,
-      "score": 172,
-      "detail": {
-        "15元10G包月流量包": 4,
-        "19元30GB国内提速流量包-24个月": 34,
-        "20元20G-7天提速流量包": 22,
-        "30元30G-7天提速流量包": 3,
-        "30元40G流量包提速月包（3个月）": 3,
-        "35元20G连续包月流量包（首月19.9元）": 2,
-        "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 20,
-        "套餐高迁": 5
-      },
-      "rank": 65
     },
     {
       "name": "温姝然",
       "bigGroup": "天籁组",
       "smallGroup": "天籁组1组",
       "matched": true,
-      "score": 169,
+      "score": 183,
       "detail": {
         "15元10G包月流量包": 1,
-        "19元30GB国内提速流量包-24个月": 31,
+        "19元30GB国内提速流量包-24个月": 38,
         "20元20G-7天提速流量包": 21,
         "20元20G流量包提速月包（3个月）": 11,
         "30元30G-7天提速流量包": 3,
@@ -39485,6 +41910,25 @@
         "天翼智铃基础版": 1,
         "套餐高迁": 2
       },
+      "rank": 65
+    },
+    {
+      "name": "苏丽娅",
+      "bigGroup": "领航组",
+      "smallGroup": "领航组1组",
+      "matched": true,
+      "score": 183,
+      "detail": {
+        "15元10G包月流量包": 2,
+        "19元30GB国内提速流量包-24个月": 52,
+        "20元20G-7天提速流量包": 25,
+        "30元30G-7天提速流量包": 7,
+        "30元40G流量包提速月包（3个月）": 3,
+        "35元20G连续包月流量包（首月19.9元）": 2,
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 14,
+        "套餐高迁": 1
+      },
       "rank": 66
     },
     {
@@ -39492,109 +41936,110 @@
       "bigGroup": "扬帆组",
       "smallGroup": "扬帆组2组",
       "matched": true,
-      "score": 167,
+      "score": 181,
       "detail": {
         "15元10G包月流量包": 4,
-        "19元30GB国内提速流量包-24个月": 38,
+        "19元30GB国内提速流量包-24个月": 42,
         "20元20G-7天提速流量包": 18,
         "20元20G流量包提速月包（3个月）": 1,
         "30元30G-7天提速流量包": 1,
+        "30元40G流量包提速月包（3个月）": 1,
         "35元20G连续包月流量包（首月19.9元）": 1,
         "9.9元权益包": 2,
-        "9元10G通用流量权益-202206版": 27,
+        "9元10G通用流量权益-202206版": 29,
         "套餐高迁": 1
       },
       "rank": 67
-    },
-    {
-      "name": "刘耀川",
-      "bigGroup": "卓越组",
-      "smallGroup": "卓越组2组",
-      "matched": true,
-      "score": 165,
-      "detail": {
-        "15元10G包月流量包": 3,
-        "19元30GB国内提速流量包-24个月": 48,
-        "20元20G-7天提速流量包": 26,
-        "30元30G-7天提速流量包": 2,
-        "30元40G流量包提速月包（3个月）": 1,
-        "35元20G连续包月流量包（首月19.9元）": 2,
-        "9元10G通用流量权益-202206版": 6,
-        "天翼智铃基础版": 1,
-        "套餐高迁": 4
-      },
-      "rank": 68
-    },
-    {
-      "name": "苏丽娅",
-      "bigGroup": "领航组",
-      "smallGroup": "领航组1组",
-      "matched": true,
-      "score": 165,
-      "detail": {
-        "15元10G包月流量包": 2,
-        "19元30GB国内提速流量包-24个月": 45,
-        "20元20G-7天提速流量包": 25,
-        "30元30G-7天提速流量包": 7,
-        "30元40G流量包提速月包（3个月）": 3,
-        "35元20G连续包月流量包（首月19.9元）": 2,
-        "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 12,
-        "套餐高迁": 1
-      },
-      "rank": 69
-    },
-    {
-      "name": "索梦娜",
-      "bigGroup": "专席组",
-      "smallGroup": "专席组2组",
-      "matched": true,
-      "score": 163,
-      "detail": {
-        "15元10G包月流量包": 1,
-        "19元30GB国内提速流量包-24个月": 34,
-        "20元20G-7天提速流量包": 18,
-        "20元20G流量包提速月包（3个月）": 2,
-        "30元30G-7天提速流量包": 3,
-        "30元40G流量包提速月包（3个月）": 2,
-        "9.9元权益包": 2,
-        "9元10G通用流量权益-202206版": 27,
-        "套餐高迁": 2
-      },
-      "rank": 70
-    },
-    {
-      "name": "王芳",
-      "bigGroup": "先锋组",
-      "smallGroup": "先锋组2组",
-      "matched": true,
-      "score": 160,
-      "detail": {
-        "15元10G包月流量包": 1,
-        "19元30GB国内提速流量包-24个月": 40,
-        "20元20G-7天提速流量包": 26,
-        "30元30G-7天提速流量包": 9,
-        "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 19,
-        "套餐高迁": 1
-      },
-      "rank": 71
     },
     {
       "name": "王丹丹",
       "bigGroup": "天籁组",
       "smallGroup": "天籁组1组",
       "matched": true,
-      "score": 155,
+      "score": 180,
       "detail": {
         "15元10G包月流量包": 1,
-        "19元30GB国内提速流量包-24个月": 50,
-        "20元20G-7天提速流量包": 24,
+        "19元30GB国内提速流量包-24个月": 60,
+        "20元20G-7天提速流量包": 25,
         "20元20G流量包提速月包（3个月）": 3,
         "30元30G-7天提速流量包": 7,
         "30元40G流量包提速月包（3个月）": 1,
-        "9元10G通用流量权益-202206版": 5,
+        "9元10G通用流量权益-202206版": 7,
         "套餐高迁": 1
+      },
+      "rank": 68
+    },
+    {
+      "name": "刘耀川",
+      "bigGroup": "卓越组",
+      "smallGroup": "卓越组2组",
+      "matched": true,
+      "score": 179,
+      "detail": {
+        "15元10G包月流量包": 3,
+        "19元30GB国内提速流量包-24个月": 54,
+        "20元20G-7天提速流量包": 26,
+        "30元30G-7天提速流量包": 2,
+        "30元40G流量包提速月包（3个月）": 1,
+        "35元20G连续包月流量包（首月19.9元）": 2,
+        "9元10G通用流量权益-202206版": 7,
+        "天翼智铃基础版": 1,
+        "套餐高迁": 4
+      },
+      "rank": 69
+    },
+    {
+      "name": "王芳",
+      "bigGroup": "先锋组",
+      "smallGroup": "先锋组2组",
+      "matched": true,
+      "score": 178,
+      "detail": {
+        "15元10G包月流量包": 1,
+        "19元30GB国内提速流量包-24个月": 46,
+        "20元20G-7天提速流量包": 26,
+        "30元30G-7天提速流量包": 9,
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 20,
+        "套餐高迁": 2
+      },
+      "rank": 70
+    },
+    {
+      "name": "韩俊楠",
+      "bigGroup": "扬帆组",
+      "smallGroup": "扬帆组1组",
+      "matched": true,
+      "score": 178,
+      "detail": {
+        "15元10G包月流量包": 4,
+        "19元30GB国内提速流量包-24个月": 32,
+        "20元20G-7天提速流量包": 17,
+        "20元20G流量包提速月包（3个月）": 10,
+        "30元30G-7天提速流量包": 5,
+        "30元40G流量包提速月包（3个月）": 9,
+        "35元20G连续包月流量包（首月19.9元）": 6,
+        "9元10G通用流量权益-202206版": 13,
+        "套餐高迁": 2
+      },
+      "rank": 71
+    },
+    {
+      "name": "张洁45",
+      "bigGroup": "先锋组",
+      "smallGroup": "先锋组2组",
+      "matched": true,
+      "score": 176,
+      "detail": {
+        "15元10G包月流量包": 4,
+        "19元30GB国内提速流量包-24个月": 35,
+        "20元20G-7天提速流量包": 22,
+        "30元30G-7天提速流量包": 3,
+        "30元40G流量包提速月包（3个月）": 3,
+        "35元20G连续包月流量包（首月19.9元）": 2,
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 21,
+        "套餐高迁": 5
       },
       "rank": 72
     },
@@ -39603,65 +42048,103 @@
       "bigGroup": "扬帆组",
       "smallGroup": "扬帆组2组",
       "matched": true,
-      "score": 153,
+      "score": 173,
       "detail": {
         "15元10G包月流量包": 2,
-        "19元30GB国内提速流量包-24个月": 39,
-        "20元20G-7天提速流量包": 18,
+        "19元30GB国内提速流量包-24个月": 43,
+        "20元20G-7天提速流量包": 20,
         "30元30G-7天提速流量包": 3,
-        "30元40G流量包提速月包（3个月）": 2,
+        "30元40G流量包提速月包（3个月）": 5,
         "35元20G连续包月流量包（首月19.9元）": 3,
         "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 13,
+        "9元10G通用流量权益-202206版": 15,
         "天翼智铃基础版": 1,
         "套餐高迁": 3
       },
       "rank": 73
     },
     {
-      "name": "韩俊楠",
-      "bigGroup": "扬帆组",
-      "smallGroup": "扬帆组1组",
+      "name": "索梦娜",
+      "bigGroup": "专席组",
+      "smallGroup": "专席组2组",
       "matched": true,
-      "score": 150,
+      "score": 171,
       "detail": {
-        "15元10G包月流量包": 4,
-        "19元30GB国内提速流量包-24个月": 24,
-        "20元20G-7天提速流量包": 17,
-        "20元20G流量包提速月包（3个月）": 10,
-        "30元30G-7天提速流量包": 5,
-        "30元40G流量包提速月包（3个月）": 6,
-        "35元20G连续包月流量包（首月19.9元）": 6,
-        "9元10G通用流量权益-202206版": 10,
+        "15元10G包月流量包": 1,
+        "19元30GB国内提速流量包-24个月": 37,
+        "20元20G-7天提速流量包": 18,
+        "20元20G流量包提速月包（3个月）": 2,
+        "30元30G-7天提速流量包": 3,
+        "30元40G流量包提速月包（3个月）": 2,
+        "9.9元权益包": 2,
+        "9元10G通用流量权益-202206版": 28,
         "套餐高迁": 2
       },
       "rank": 74
+    },
+    {
+      "name": "张乐",
+      "bigGroup": "天籁组",
+      "smallGroup": "天籁组2组",
+      "matched": true,
+      "score": 160,
+      "detail": {
+        "15元10G包月流量包": 11,
+        "19元30GB国内提速流量包-24个月": 23,
+        "20元20G-7天提速流量包": 24,
+        "20元20G流量包提速月包（3个月）": 2,
+        "30元30G-7天提速流量包": 5,
+        "35元20G连续包月流量包（首月19.9元）": 3,
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 18,
+        "套餐高迁": 4
+      },
+      "rank": 75
+    },
+    {
+      "name": "郭治宏",
+      "bigGroup": "扬帆组",
+      "smallGroup": "扬帆组1组",
+      "matched": true,
+      "score": 159,
+      "detail": {
+        "15元10G包月流量包": 2,
+        "19元30GB国内提速流量包-24个月": 49,
+        "20元20G-7天提速流量包": 19,
+        "20元20G流量包提速月包（3个月）": 1,
+        "30元30G-7天提速流量包": 6,
+        "30元40G流量包提速月包（3个月）": 3,
+        "35元20G连续包月流量包（首月19.9元）": 1,
+        "9元10G通用流量权益-202206版": 7,
+        "套餐高迁": 2
+      },
+      "rank": 76
     },
     {
       "name": "魏颖",
       "bigGroup": "雄鹰组",
       "smallGroup": "雄鹰组3组",
       "matched": true,
-      "score": 146,
+      "score": 152,
       "detail": {
         "15元10G包月流量包": 8,
-        "19元30GB国内提速流量包-24个月": 28,
+        "19元30GB国内提速流量包-24个月": 29,
         "20元20G-7天提速流量包": 32,
         "20元20G流量包提速月包（3个月）": 4,
         "30元30G-7天提速流量包": 3,
         "30元40G流量包提速月包（3个月）": 5,
         "9.9元权益包": 3,
-        "9元10G通用流量权益-202206版": 7,
+        "9元10G通用流量权益-202206版": 9,
         "套餐高迁": 1
       },
-      "rank": 75
+      "rank": 77
     },
     {
       "name": "岱钦",
       "bigGroup": "专席组",
       "smallGroup": "专席组1组",
       "matched": true,
-      "score": 139,
+      "score": 143,
       "detail": {
         "15元10G包月流量包": 6,
         "19元30GB国内提速流量包-24个月": 28,
@@ -39671,85 +42154,65 @@
         "30元40G流量包提速月包（3个月）": 8,
         "35元20G连续包月流量包（首月19.9元）": 2,
         "9元10G通用流量权益-202206版": 5,
-        "套餐高迁": 1
-      },
-      "rank": 76
-    },
-    {
-      "name": "郭治宏",
-      "bigGroup": "扬帆组",
-      "smallGroup": "扬帆组1组",
-      "matched": true,
-      "score": 139,
-      "detail": {
-        "15元10G包月流量包": 2,
-        "19元30GB国内提速流量包-24个月": 45,
-        "20元20G-7天提速流量包": 19,
-        "30元30G-7天提速流量包": 6,
-        "30元40G流量包提速月包（3个月）": 2,
-        "35元20G连续包月流量包（首月19.9元）": 1,
-        "9元10G通用流量权益-202206版": 3,
         "套餐高迁": 2
       },
-      "rank": 77
-    },
-    {
-      "name": "张乐",
-      "bigGroup": "天籁组",
-      "smallGroup": "天籁组2组",
-      "matched": true,
-      "score": 137,
-      "detail": {
-        "15元10G包月流量包": 11,
-        "19元30GB国内提速流量包-24个月": 17,
-        "20元20G-7天提速流量包": 24,
-        "20元20G流量包提速月包（3个月）": 2,
-        "30元30G-7天提速流量包": 4,
-        "35元20G连续包月流量包（首月19.9元）": 3,
-        "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 13,
-        "套餐高迁": 4
-      },
       "rank": 78
-    },
-    {
-      "name": "张羽靖",
-      "bigGroup": "先锋组",
-      "smallGroup": "先锋组1组",
-      "matched": true,
-      "score": 129,
-      "detail": {
-        "15元10G包月流量包": 5,
-        "19元30GB国内提速流量包-24个月": 33,
-        "20元20G-7天提速流量包": 23,
-        "20元20G流量包提速月包（3个月）": 1,
-        "30元30G-7天提速流量包": 6,
-        "30元40G流量包提速月包（3个月）": 2,
-        "35元20G连续包月流量包（首月19.9元）": 5,
-        "9.9元权益包": 2,
-        "9元10G通用流量权益-202206版": 1,
-        "套餐高迁": 1
-      },
-      "rank": 79
     },
     {
       "name": "张洁",
       "bigGroup": "左娜组",
       "smallGroup": "凌云组",
       "matched": true,
-      "score": 125,
+      "score": 142,
       "detail": {
         "15元10G包月流量包": 4,
-        "19元30GB国内提速流量包-24个月": 37,
-        "20元20G-7天提速流量包": 7,
+        "19元30GB国内提速流量包-24个月": 43,
+        "20元20G-7天提速流量包": 8,
         "20元20G流量包提速月包（3个月）": 1,
         "30元30G-7天提速流量包": 7,
         "30元40G流量包提速月包（3个月）": 2,
         "9.9元权益包": 5,
-        "9元10G通用流量权益-202206版": 1,
+        "9元10G通用流量权益-202206版": 3,
         "套餐高迁": 4
       },
+      "rank": 79
+    },
+    {
+      "name": "张羽靖",
+      "bigGroup": "先锋组",
+      "smallGroup": "先锋组1组",
+      "matched": true,
+      "score": 142,
+      "detail": {
+        "15元10G包月流量包": 5,
+        "19元30GB国内提速流量包-24个月": 37,
+        "20元20G-7天提速流量包": 24,
+        "20元20G流量包提速月包（3个月）": 1,
+        "30元30G-7天提速流量包": 6,
+        "30元40G流量包提速月包（3个月）": 3,
+        "35元20G连续包月流量包（首月19.9元）": 5,
+        "9.9元权益包": 2,
+        "9元10G通用流量权益-202206版": 2,
+        "套餐高迁": 1
+      },
       "rank": 80
+    },
+    {
+      "name": "刘永乐",
+      "bigGroup": "待确认班组",
+      "smallGroup": "待确认小组",
+      "matched": false,
+      "score": 126,
+      "detail": {
+        "19元30GB国内提速流量包-24个月": 36,
+        "20元20G-7天提速流量包": 3,
+        "20元20G流量包提速月包（3个月）": 1,
+        "30元40G流量包提速月包（3个月）": 3,
+        "9元10G通用流量权益-202206版": 15,
+        "天翼智铃基础版": 1,
+        "套餐高迁": 3
+      },
+      "rank": 81
     },
     {
       "name": "武晓静",
@@ -39768,7 +42231,7 @@
         "9元10G通用流量权益-202206版": 12,
         "套餐高迁": 3
       },
-      "rank": 81
+      "rank": 82
     },
     {
       "name": "高冬雪",
@@ -39786,23 +42249,6 @@
         "9元10G通用流量权益-202206版": 7,
         "天翼智铃基础版": 1,
         "套餐高迁": 5
-      },
-      "rank": 82
-    },
-    {
-      "name": "刘永乐",
-      "bigGroup": "待确认班组",
-      "smallGroup": "待确认小组",
-      "matched": false,
-      "score": 118,
-      "detail": {
-        "19元30GB国内提速流量包-24个月": 32,
-        "20元20G-7天提速流量包": 3,
-        "20元20G流量包提速月包（3个月）": 1,
-        "30元40G流量包提速月包（3个月）": 3,
-        "9元10G通用流量权益-202206版": 15,
-        "天翼智铃基础版": 1,
-        "套餐高迁": 3
       },
       "rank": 83
     },
@@ -39829,19 +42275,38 @@
       "bigGroup": "雄鹰组",
       "smallGroup": "雄鹰组1组",
       "matched": true,
-      "score": 87,
+      "score": 96,
       "detail": {
         "15元10G包月流量包": 2,
-        "19元30GB国内提速流量包-24个月": 13,
-        "20元20G-7天提速流量包": 34,
+        "19元30GB国内提速流量包-24个月": 16,
+        "20元20G-7天提速流量包": 35,
         "30元30G-7天提速流量包": 1,
         "30元40G流量包提速月包（3个月）": 1,
         "35元20G连续包月流量包（首月19.9元）": 4,
-        "9元10G通用流量权益-202206版": 3,
+        "9元10G通用流量权益-202206版": 4,
         "天翼智铃基础版": 2,
         "套餐高迁": 1
       },
       "rank": 85
+    },
+    {
+      "name": "刘洋",
+      "bigGroup": "左娜组",
+      "smallGroup": "凌云组",
+      "matched": true,
+      "score": 78,
+      "detail": {
+        "19元30GB国内提速流量包-24个月": 15,
+        "20元20G-7天提速流量包": 8,
+        "20元20G流量包提速月包（3个月）": 1,
+        "30元30G-7天提速流量包": 3,
+        "30元40G流量包提速月包（3个月）": 1,
+        "35元20G连续包月流量包（首月19.9元）": 1,
+        "9.9元权益包": 5,
+        "9元10G通用流量权益-202206版": 7,
+        "套餐高迁": 3
+      },
+      "rank": 86
     },
     {
       "name": "张振楠",
@@ -39859,26 +42324,41 @@
         "9元10G通用流量权益-202206版": 9,
         "天翼智铃基础版": 3
       },
-      "rank": 86
+      "rank": 87
     },
     {
-      "name": "刘洋",
-      "bigGroup": "左娜组",
-      "smallGroup": "凌云组",
-      "matched": true,
-      "score": 69,
+      "name": "赵丽鸿",
+      "bigGroup": "待确认班组",
+      "smallGroup": "待确认小组",
+      "matched": false,
+      "score": 75,
       "detail": {
-        "19元30GB国内提速流量包-24个月": 11,
-        "20元20G-7天提速流量包": 7,
-        "20元20G流量包提速月包（3个月）": 1,
-        "30元30G-7天提速流量包": 3,
+        "19元30GB国内提速流量包-24个月": 23,
+        "20元20G-7天提速流量包": 2,
         "30元40G流量包提速月包（3个月）": 1,
-        "35元20G连续包月流量包（首月19.9元）": 1,
-        "9.9元权益包": 5,
-        "9元10G通用流量权益-202206版": 7,
-        "套餐高迁": 3
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 12
       },
-      "rank": 87
+      "rank": 88
+    },
+    {
+      "name": "刘海燕",
+      "bigGroup": "晶晶组",
+      "smallGroup": "聚力组",
+      "matched": true,
+      "score": 71,
+      "detail": {
+        "15元10G包月流量包": 2,
+        "19元30GB国内提速流量包-24个月": 10,
+        "20元20G-7天提速流量包": 2,
+        "20元20G流量包提速月包（3个月）": 1,
+        "30元30G-7天提速流量包": 2,
+        "30元40G流量包提速月包（3个月）": 5,
+        "9.9元权益包": 5,
+        "9元10G通用流量权益-202206版": 5,
+        "套餐高迁": 4
+      },
+      "rank": 89
     },
     {
       "name": "张津宇明",
@@ -39895,40 +42375,6 @@
         "9元10G通用流量权益-202206版": 4,
         "套餐高迁": 4
       },
-      "rank": 88
-    },
-    {
-      "name": "刘海燕",
-      "bigGroup": "晶晶组",
-      "smallGroup": "聚力组",
-      "matched": true,
-      "score": 64,
-      "detail": {
-        "15元10G包月流量包": 2,
-        "19元30GB国内提速流量包-24个月": 8,
-        "20元20G-7天提速流量包": 2,
-        "20元20G流量包提速月包（3个月）": 1,
-        "30元30G-7天提速流量包": 2,
-        "30元40G流量包提速月包（3个月）": 4,
-        "9.9元权益包": 4,
-        "9元10G通用流量权益-202206版": 5,
-        "套餐高迁": 4
-      },
-      "rank": 89
-    },
-    {
-      "name": "李丹妮",
-      "bigGroup": "专席组",
-      "smallGroup": "专席组2组",
-      "matched": true,
-      "score": 54,
-      "detail": {
-        "19元30GB国内提速流量包-24个月": 20,
-        "20元20G-7天提速流量包": 3,
-        "30元30G-7天提速流量包": 1,
-        "9元10G通用流量权益-202206版": 3,
-        "套餐高迁": 1
-      },
       "rank": 90
     },
     {
@@ -39936,22 +42382,39 @@
       "bigGroup": "晶晶组",
       "smallGroup": "聚力组",
       "matched": true,
-      "score": 54,
+      "score": 66,
       "detail": {
-        "19元30GB国内提速流量包-24个月": 13,
+        "19元30GB国内提速流量包-24个月": 17,
         "20元20G-7天提速流量包": 5,
         "30元30G-7天提速流量包": 5,
+        "30元40G流量包提速月包（3个月）": 1,
         "35元20G连续包月流量包（首月19.9元）": 1,
+        "9元10G通用流量权益-202206版": 1,
         "套餐高迁": 4
       },
       "rank": 91
+    },
+    {
+      "name": "李丹妮",
+      "bigGroup": "专席组",
+      "smallGroup": "专席组2组",
+      "matched": true,
+      "score": 56,
+      "detail": {
+        "19元30GB国内提速流量包-24个月": 21,
+        "20元20G-7天提速流量包": 3,
+        "30元30G-7天提速流量包": 1,
+        "9元10G通用流量权益-202206版": 3,
+        "套餐高迁": 1
+      },
+      "rank": 92
     },
     {
       "name": "刘绿叶",
       "bigGroup": "晶晶组",
       "smallGroup": "聚力组",
       "matched": true,
-      "score": 51,
+      "score": 53,
       "detail": {
         "15元10G包月流量包": 1,
         "19元30GB国内提速流量包-24个月": 3,
@@ -39959,23 +42422,8 @@
         "30元30G-7天提速流量包": 5,
         "30元40G流量包提速月包（3个月）": 1,
         "9.9元权益包": 2,
-        "9元10G通用流量权益-202206版": 2,
+        "9元10G通用流量权益-202206版": 3,
         "套餐高迁": 6
-      },
-      "rank": 92
-    },
-    {
-      "name": "赵丽鸿",
-      "bigGroup": "待确认班组",
-      "smallGroup": "待确认小组",
-      "matched": false,
-      "score": 49,
-      "detail": {
-        "19元30GB国内提速流量包-24个月": 16,
-        "20元20G-7天提速流量包": 2,
-        "30元40G流量包提速月包（3个月）": 1,
-        "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 6
       },
       "rank": 93
     },
@@ -40010,19 +42458,47 @@
       "rank": 95
     },
     {
+      "name": "池聪慧",
+      "bigGroup": "待确认班组",
+      "smallGroup": "待确认小组",
+      "matched": false,
+      "score": 43,
+      "detail": {
+        "19元30GB国内提速流量包-24个月": 15,
+        "20元20G-7天提速流量包": 5,
+        "9元10G通用流量权益-202206版": 4
+      },
+      "rank": 96
+    },
+    {
       "name": "王琪",
       "bigGroup": "左娜组",
       "smallGroup": "乘风组",
       "matched": true,
-      "score": 41,
+      "score": 43,
       "detail": {
         "15元10G包月流量包": 2,
-        "19元30GB国内提速流量包-24个月": 5,
+        "19元30GB国内提速流量包-24个月": 6,
         "20元20G-7天提速流量包": 2,
         "天翼智铃基础版": 1,
         "套餐高迁": 6
       },
-      "rank": 96
+      "rank": 97
+    },
+    {
+      "name": "董贝贝",
+      "bigGroup": "待确认班组",
+      "smallGroup": "待确认小组",
+      "matched": false,
+      "score": 42,
+      "detail": {
+        "19元30GB国内提速流量包-24个月": 15,
+        "20元20G-7天提速流量包": 3,
+        "30元40G流量包提速月包（3个月）": 1,
+        "9.9元权益包": 1,
+        "9元10G通用流量权益-202206版": 3
+      },
+      "rank": 98
     },
     {
       "name": "刘磊",
@@ -40037,20 +42513,7 @@
         "30元40G流量包提速月包（3个月）": 5,
         "9元10G通用流量权益-202206版": 3
       },
-      "rank": 97
-    },
-    {
-      "name": "池聪慧",
-      "bigGroup": "待确认班组",
-      "smallGroup": "待确认小组",
-      "matched": false,
-      "score": 39,
-      "detail": {
-        "19元30GB国内提速流量包-24个月": 13,
-        "20元20G-7天提速流量包": 5,
-        "9元10G通用流量权益-202206版": 4
-      },
-      "rank": 98
+      "rank": 99
     },
     {
       "name": "董一滨",
@@ -40064,7 +42527,7 @@
         "30元40G流量包提速月包（3个月）": 2,
         "9元10G通用流量权益-202206版": 2
       },
-      "rank": 99
+      "rank": 100
     },
     {
       "name": "王燕荣",
@@ -40081,20 +42544,6 @@
         "35元20G连续包月流量包（首月19.9元）": 1,
         "9元10G通用流量权益-202206版": 3,
         "套餐高迁": 1
-      },
-      "rank": 100
-    },
-    {
-      "name": "董贝贝",
-      "bigGroup": "待确认班组",
-      "smallGroup": "待确认小组",
-      "matched": false,
-      "score": 35,
-      "detail": {
-        "19元30GB国内提速流量包-24个月": 13,
-        "20元20G-7天提速流量包": 2,
-        "9.9元权益包": 1,
-        "9元10G通用流量权益-202206版": 3
       },
       "rank": 101
     },
@@ -40125,6 +42574,17 @@
       "rank": 103
     },
     {
+      "name": "张一菲",
+      "bigGroup": "晶晶组",
+      "smallGroup": "同心组",
+      "matched": true,
+      "score": 28,
+      "detail": {
+        "套餐高迁": 7
+      },
+      "rank": 104
+    },
+    {
       "name": "胡亚茹",
       "bigGroup": "待确认班组",
       "smallGroup": "待确认小组",
@@ -40137,7 +42597,7 @@
         "30元40G流量包提速月包（3个月）": 1,
         "9元10G通用流量权益-202206版": 7
       },
-      "rank": 104
+      "rank": 105
     },
     {
       "name": "马骄",
@@ -40150,17 +42610,6 @@
         "19元30GB国内提速流量包-24个月": 11,
         "20元20G-7天提速流量包": 2
       },
-      "rank": 105
-    },
-    {
-      "name": "张一菲",
-      "bigGroup": "晶晶组",
-      "smallGroup": "同心组",
-      "matched": true,
-      "score": 24,
-      "detail": {
-        "套餐高迁": 6
-      },
       "rank": 106
     },
     {
@@ -40168,9 +42617,9 @@
       "bigGroup": "专席组",
       "smallGroup": "专席组1组",
       "matched": true,
-      "score": 24,
+      "score": 26,
       "detail": {
-        "19元30GB国内提速流量包-24个月": 7,
+        "19元30GB国内提速流量包-24个月": 8,
         "20元20G-7天提速流量包": 7,
         "9.9元权益包": 1,
         "9元10G通用流量权益-202206版": 1
@@ -40207,6 +42656,18 @@
       "rank": 109
     },
     {
+      "name": "系统工号IVR",
+      "bigGroup": "待确认班组",
+      "smallGroup": "待确认小组",
+      "matched": false,
+      "score": 22,
+      "detail": {
+        "20元20G-7天提速流量包": 15,
+        "30元30G-7天提速流量包": 7
+      },
+      "rank": 110
+    },
+    {
       "name": "郑明丽",
       "bigGroup": "待确认班组",
       "smallGroup": "待确认小组",
@@ -40219,7 +42680,20 @@
         "9元10G通用流量权益-202206版": 4,
         "套餐高迁": 1
       },
-      "rank": 110
+      "rank": 111
+    },
+    {
+      "name": "张鑫",
+      "bigGroup": "晶晶组",
+      "smallGroup": "同心组",
+      "matched": true,
+      "score": 20,
+      "detail": {
+        "19元30GB国内提速流量包-24个月": 3,
+        "35元20G连续包月流量包（首月19.9元）": 1,
+        "套餐高迁": 3
+      },
+      "rank": 112
     },
     {
       "name": "杨莉",
@@ -40233,7 +42707,7 @@
         "9元10G通用流量权益-202206版": 1,
         "套餐高迁": 3
       },
-      "rank": 111
+      "rank": 113
     },
     {
       "name": "高慧洁",
@@ -40246,19 +42720,7 @@
         "35元20G连续包月流量包（首月19.9元）": 1,
         "套餐高迁": 4
       },
-      "rank": 112
-    },
-    {
-      "name": "系统工号IVR",
-      "bigGroup": "待确认班组",
-      "smallGroup": "待确认小组",
-      "matched": false,
-      "score": 19,
-      "detail": {
-        "20元20G-7天提速流量包": 15,
-        "30元30G-7天提速流量包": 4
-      },
-      "rank": 113
+      "rank": 114
     },
     {
       "name": "孙婷",
@@ -40271,7 +42733,18 @@
         "20元20G-7天提速流量包": 2,
         "9元10G通用流量权益-202206版": 6
       },
-      "rank": 114
+      "rank": 115
+    },
+    {
+      "name": "张怡",
+      "bigGroup": "待确认班组",
+      "smallGroup": "待确认小组",
+      "matched": false,
+      "score": 18,
+      "detail": {
+        "9元10G通用流量权益-202206版": 9
+      },
+      "rank": 116
     },
     {
       "name": "冯鹰",
@@ -40286,7 +42759,7 @@
         "9元10G通用流量权益-202206版": 1,
         "套餐高迁": 2
       },
-      "rank": 115
+      "rank": 117
     },
     {
       "name": "冯艳丽",
@@ -40300,30 +42773,6 @@
         "9元10G通用流量权益-202206版": 2,
         "套餐高迁": 2
       },
-      "rank": 116
-    },
-    {
-      "name": "张怡",
-      "bigGroup": "待确认班组",
-      "smallGroup": "待确认小组",
-      "matched": false,
-      "score": 16,
-      "detail": {
-        "9元10G通用流量权益-202206版": 8
-      },
-      "rank": 117
-    },
-    {
-      "name": "张鑫",
-      "bigGroup": "晶晶组",
-      "smallGroup": "同心组",
-      "matched": true,
-      "score": 16,
-      "detail": {
-        "19元30GB国内提速流量包-24个月": 3,
-        "35元20G连续包月流量包（首月19.9元）": 1,
-        "套餐高迁": 2
-      },
       "rank": 118
     },
     {
@@ -40331,9 +42780,9 @@
       "bigGroup": "待确认班组",
       "smallGroup": "待确认小组",
       "matched": false,
-      "score": 14,
+      "score": 16,
       "detail": {
-        "19元30GB国内提速流量包-24个月": 4,
+        "19元30GB国内提速流量包-24个月": 5,
         "9元10G通用流量权益-202206版": 3
       },
       "rank": 119
@@ -40343,13 +42792,26 @@
       "bigGroup": "待确认班组",
       "smallGroup": "待确认小组",
       "matched": false,
-      "score": 13,
+      "score": 15,
       "detail": {
-        "19元30GB国内提速流量包-24个月": 4,
+        "19元30GB国内提速流量包-24个月": 5,
         "9.9元权益包": 1,
         "9元10G通用流量权益-202206版": 2
       },
       "rank": 120
+    },
+    {
+      "name": "郭夏苗",
+      "bigGroup": "待确认班组",
+      "smallGroup": "待确认小组",
+      "matched": false,
+      "score": 15,
+      "detail": {
+        "20元20G流量包提速月包（3个月）": 1,
+        "9元10G通用流量权益-202206版": 6,
+        "天翼智铃基础版": 1
+      },
+      "rank": 121
     },
     {
       "name": "王吉业",
@@ -40363,7 +42825,7 @@
         "30元40G流量包提速月包（3个月）": 1,
         "9元10G通用流量权益-202206版": 2
       },
-      "rank": 121
+      "rank": 122
     },
     {
       "name": "姚晓颖",
@@ -40376,7 +42838,7 @@
         "9.9元权益包": 2,
         "9元10G通用流量权益-202206版": 2
       },
-      "rank": 122
+      "rank": 123
     },
     {
       "name": "范娟",
@@ -40388,7 +42850,7 @@
         "19元30GB国内提速流量包-24个月": 2,
         "套餐高迁": 2
       },
-      "rank": 123
+      "rank": 124
     },
     {
       "name": "高艳",
@@ -40400,19 +42862,6 @@
         "19元30GB国内提速流量包-24个月": 1,
         "30元40G流量包提速月包（3个月）": 1,
         "9元10G通用流量权益-202206版": 4
-      },
-      "rank": 124
-    },
-    {
-      "name": "郭夏苗",
-      "bigGroup": "待确认班组",
-      "smallGroup": "待确认小组",
-      "matched": false,
-      "score": 11,
-      "detail": {
-        "20元20G流量包提速月包（3个月）": 1,
-        "9元10G通用流量权益-202206版": 4,
-        "天翼智铃基础版": 1
       },
       "rank": 125
     },
@@ -40429,6 +42878,19 @@
       "rank": 126
     },
     {
+      "name": "云燕茹",
+      "bigGroup": "待确认班组",
+      "smallGroup": "待确认小组",
+      "matched": false,
+      "score": 8,
+      "detail": {
+        "19元30GB国内提速流量包-24个月": 3,
+        "20元20G-7天提速流量包": 1,
+        "9.9元权益包": 1
+      },
+      "rank": 127
+    },
+    {
       "name": "王文亮",
       "bigGroup": "待确认班组",
       "smallGroup": "待确认小组",
@@ -40438,7 +42900,7 @@
         "19元30GB国内提速流量包-24个月": 3,
         "20元20G-7天提速流量包": 2
       },
-      "rank": 127
+      "rank": 128
     },
     {
       "name": "彭钰",
@@ -40451,20 +42913,31 @@
         "9.9元权益包": 1,
         "9元10G通用流量权益-202206版": 2
       },
-      "rank": 128
+      "rank": 129
     },
     {
-      "name": "云燕茹",
+      "name": "包晓荣",
+      "bigGroup": "待确认班组",
+      "smallGroup": "待确认小组",
+      "matched": false,
+      "score": 6,
+      "detail": {
+        "9.9元权益包": 2,
+        "9元10G通用流量权益-202206版": 2
+      },
+      "rank": 130
+    },
+    {
+      "name": "贾鹏",
       "bigGroup": "待确认班组",
       "smallGroup": "待确认小组",
       "matched": false,
       "score": 6,
       "detail": {
         "19元30GB国内提速流量包-24个月": 2,
-        "20元20G-7天提速流量包": 1,
-        "9.9元权益包": 1
+        "9元10G通用流量权益-202206版": 1
       },
-      "rank": 129
+      "rank": 131
     },
     {
       "name": "马慧",
@@ -40477,7 +42950,7 @@
         "9.9元权益包": 2,
         "9元10G通用流量权益-202206版": 1
       },
-      "rank": 130
+      "rank": 132
     },
     {
       "name": "张晓丽",
@@ -40490,7 +42963,7 @@
         "20元20G-7天提速流量包": 1,
         "30元30G-7天提速流量包": 2
       },
-      "rank": 131
+      "rank": 133
     },
     {
       "name": "刘维华",
@@ -40501,19 +42974,7 @@
       "detail": {
         "19元30GB国内提速流量包-24个月": 2
       },
-      "rank": 132
-    },
-    {
-      "name": "包晓荣",
-      "bigGroup": "待确认班组",
-      "smallGroup": "待确认小组",
-      "matched": false,
-      "score": 4,
-      "detail": {
-        "9.9元权益包": 2,
-        "9元10G通用流量权益-202206版": 1
-      },
-      "rank": 133
+      "rank": 134
     },
     {
       "name": "柴金梅",
@@ -40524,21 +42985,10 @@
       "detail": {
         "19元30GB国内提速流量包-24个月": 2
       },
-      "rank": 134
-    },
-    {
-      "name": "石彩",
-      "bigGroup": "待确认班组",
-      "smallGroup": "待确认小组",
-      "matched": false,
-      "score": 4,
-      "detail": {
-        "19元30GB国内提速流量包-24个月": 2
-      },
       "rank": 135
     },
     {
-      "name": "贾鹏",
+      "name": "石彩",
       "bigGroup": "待确认班组",
       "smallGroup": "待确认小组",
       "matched": false,
