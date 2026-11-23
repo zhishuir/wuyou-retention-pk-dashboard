@@ -120,12 +120,12 @@ def read_records(workbook) -> tuple[dict, dict, set[str]]:
             continue
         if not project:
             continue
-        # 每一行代表一件营销办理，件数按记录条数统计（含尚未配置分值的项目）。
-        pieces[name] += 1
         project = PROJECT_ALIASES.get(project, project)
         if project not in PROJECT_SCORES:
             unknown_projects.add(project)
             continue
+        # 件数与积分口径一致：只统计分值表内的有效加分记录，未配置分值的项目（如积分兑换）不计件。
+        pieces[name] += 1
         counts[name][project] += 1
     return dict(counts), dict(pieces), unknown_projects
 
