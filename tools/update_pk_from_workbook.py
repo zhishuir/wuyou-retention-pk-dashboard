@@ -43,6 +43,8 @@ PROJECT_ALIASES: dict[str, str] = {
 }
 
 MEMBERSHIP_OVERRIDES: dict[str, dict[str, str]] = {
+    "赵丽鸿": {"bigGroup": "虎翼组", "smallGroup": "虎翼组2组"},
+    "刘永乐": {"bigGroup": "先锋组", "smallGroup": "先锋组2组"},
     "高冬雪": {"bigGroup": "左娜组", "smallGroup": "扬帆组"},
     "张洁": {"bigGroup": "左娜组", "smallGroup": "扬帆组"},
     "刘洋": {"bigGroup": "左娜组", "smallGroup": "扬帆组"},
@@ -92,7 +94,7 @@ def parse_date_from_filename(path: Path) -> str:
     )
 
 
-def read_records(workbook) -> tuple[dict, set[str]]:
+def read_records(workbook) -> tuple[dict, dict, set[str]]:
     if "加分记录" not in workbook.sheetnames:
         raise ValueError("模板中缺少「加分记录」工作表。")
     sheet = workbook["加分记录"]
@@ -109,6 +111,7 @@ def read_records(workbook) -> tuple[dict, set[str]]:
         raise ValueError("表头需包含「姓名」和「项目」两列。")
 
     counts: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+    pieces: dict[str, int] = defaultdict(int)
     unknown_projects: set[str] = set()
     for row in sheet.iter_rows(min_row=2, max_col=max(index.values()) + 1, values_only=True):
         name = canonical_name(row[index["name"]])
@@ -117,12 +120,14 @@ def read_records(workbook) -> tuple[dict, set[str]]:
             continue
         if not project:
             continue
+        # 每一行代表一件营销办理，件数按记录条数统计（含尚未配置分值的项目）。
+        pieces[name] += 1
         project = PROJECT_ALIASES.get(project, project)
         if project not in PROJECT_SCORES:
             unknown_projects.add(project)
             continue
         counts[name][project] += 1
-    return dict(counts), unknown_projects
+    return dict(counts), dict(pieces), unknown_projects
 
 
 def roster_from_marketing(payload: dict) -> dict[str, dict]:
@@ -161,7 +166,14 @@ def excluded_names(payload: dict) -> set[str]:
     return {text(name) for name in payload.get("excluded", []) if text(name)}
 
 
-def build_personal(counts: dict, roster: dict) -> list[dict]:
+def piece_count(person: dict) -> int:
+    value = person.get("count")
+    if value is None:
+        value = sum(int(count) for count in (person.get("detail") or {}).values())
+    return int(value)
+
+
+def build_personal(counts: dict, roster: dict, pieces: dict | None = None) -> list[dict]:
     people: list[dict] = []
     for name, detail in counts.items():
         total = sum(count * PROJECT_SCORES[project] for project, count in detail.items())
@@ -173,6 +185,7 @@ def build_personal(counts: dict, roster: dict) -> list[dict]:
                 "smallGroup": membership["smallGroup"] if membership else "待确认小组",
                 "matched": membership is not None,
                 "score": total,
+                "count": int(pieces.get(name, 0)) if pieces is not None else sum(detail.values()),
                 "detail": dict(sorted(detail.items())),
             }
         )
@@ -191,20 +204,22 @@ def build_project_scores() -> list[dict]:
 
 def aggregate_personal(days: list[dict], roster: dict[str, dict]) -> list[dict]:
     counts: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+    pieces: dict[str, int] = defaultdict(int)
     for day in days:
         for person in day.get("personal", []):
             name = text(person.get("name"))
             if not name:
                 continue
+            pieces[name] += piece_count(person)
             for project, count in (person.get("detail") or {}).items():
                 if project in PROJECT_SCORES:
                     counts[name][project] += int(count)
-    return build_personal(dict(counts), roster)
+    return build_personal(dict(counts), roster, dict(pieces))
 
 
 def update_data(workbook_path: Path, data_file: Path = PK_DATA_FILE) -> dict:
     workbook = load_workbook(workbook_path, data_only=True, read_only=True)
-    counts, unknown_projects = read_records(workbook)
+    counts, pieces, unknown_projects = read_records(workbook)
     if data_file.exists():
         existing = json.loads(data_file.read_text(encoding="utf-8"))
     else:
@@ -214,12 +229,19 @@ def update_data(workbook_path: Path, data_file: Path = PK_DATA_FILE) -> dict:
         raise ValueError("营销赛名单尚未配置，请先同步营销赛分组表。")
     excluded = excluded_names(existing)
     counts = {name: detail for name, detail in counts.items() if name not in excluded}
-    if not counts:
+    pieces = {name: value for name, value in pieces.items() if name not in excluded}
+    if not counts and not pieces:
         raise ValueError("「加分记录」表中没有有效数据。")
     report_date = parse_date_from_filename(workbook_path)
-    day_personal = build_personal(counts, roster)
+    day_personal = build_personal(counts, roster, pieces)
     days = [item for item in existing.get("days", []) if item.get("date") != report_date]
-    days.append({"date": report_date, "personal": day_personal})
+    days.append(
+        {
+            "date": report_date,
+            "personal": day_personal,
+            "totalCount": sum(person["count"] for person in day_personal),
+        }
+    )
     days.sort(key=lambda item: item["date"])
     days = apply_membership_overrides(days, roster)
     personal = aggregate_personal(days, roster)
@@ -239,6 +261,7 @@ def update_data(workbook_path: Path, data_file: Path = PK_DATA_FILE) -> dict:
         "date": report_date,
         "people": len(day_personal),
         "total": sum(person["score"] for person in day_personal),
+        "count": sum(person["count"] for person in day_personal),
         "unmatched": unmatched,
         "unknown_projects": sorted(unknown_projects),
     }
@@ -278,7 +301,7 @@ def main() -> int:
             processed_paths.append(workbook_path)
             print(
                 f"已更新营销PK赛（{summary['date']}）：{summary['people']} 人参赛，"
-                f"当日加分 {summary['total']} 分。"
+                f"营销 {summary['count']} 件，当日加分 {summary['total']} 分。"
             )
             if summary["unknown_projects"]:
                 print(

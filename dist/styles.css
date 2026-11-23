@@ -168,6 +168,7 @@ button, select { cursor: pointer; }
 .table-toolbar input { width: min(340px, 45vw); min-height: 38px; padding: 0 12px; color: var(--ink); border: 1px solid #cbd5df; border-radius: 7px; background: #fbfcfd; }
 .table-scroll { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; min-width: 820px; }
+table.product-table { min-width: 640px; }
 th, td { padding: 12px 16px; border-bottom: 1px solid #e6ebf0; text-align: left; vertical-align: middle; }
 th { color: #dce7f1; background: var(--navy-2); font-size: 13px; letter-spacing: .02em; white-space: nowrap; }
 td { font-size: 14px; }

@@ -41,10 +41,12 @@ def group_rows(matched: list[dict], field: str) -> list[dict]:
                 "bigGroup": row.get("bigGroup", ""),
                 "members": set(),
                 "score": 0,
+                "count": 0,
             }
         group = groups[name]
         group["members"].add(row["name"])
         group["score"] += int(row.get("score", 0))
+        group["count"] += int(row.get("count", 0))
     result = []
     for group in groups.values():
         headcount = len(group.pop("members"))
@@ -73,7 +75,10 @@ def build_report(payload: dict, report_date: str) -> dict:
 
 
 def report_from_personal(personal_source: list[dict]) -> dict:
-    personal = rank_rows(list(personal_source), "score")
+    personal = rank_rows([dict(row) for row in personal_source], "score")
+    for row in personal:
+        if row.get("count") is None:
+            row["count"] = sum(int(count) for count in (row.get("detail") or {}).values())
     matched = [row for row in personal if row.get("matched") and row.get("bigGroup") != "待确认班组"]
     projects: set[str] = set()
     for row in personal:
@@ -83,6 +88,7 @@ def report_from_personal(personal_source: list[dict]) -> dict:
         "small": group_rows(matched, "smallGroup"),
         "big": group_rows(matched, "bigGroup"),
         "total": sum(int(row.get("score", 0)) for row in personal),
+        "count": sum(int(row.get("count", 0)) for row in personal),
         "people": len(personal),
         "projects": len(projects),
         "top": personal[0]["score"] if personal else 0,
@@ -104,12 +110,17 @@ def build_month_report(payload: dict, month: str) -> dict:
                 "smallGroup": row.get("smallGroup") or "待确认小组",
                 "matched": row.get("matched") is not False,
                 "score": 0,
+                "count": 0,
                 "detail": {},
             })
             person["bigGroup"] = row.get("bigGroup") or person["bigGroup"]
             person["smallGroup"] = row.get("smallGroup") or person["smallGroup"]
             person["matched"] = row.get("matched") is not False and person["bigGroup"] != "待确认班组"
             person["score"] += int(row.get("score") or 0)
+            row_count = row.get("count")
+            if row_count is None:
+                row_count = sum(int(count) for count in (row.get("detail") or {}).values())
+            person["count"] += int(row_count)
             for project, count in (row.get("detail") or {}).items():
                 person["detail"][project] = person["detail"].get(project, 0) + int(count)
     if not people:
@@ -133,8 +144,8 @@ def generate(report: dict, report_date: str, *, kind: str = "日报") -> Image.I
 
     kpis = [
         ("本月总加分" if kind == "月报" else "当日总加分", report["total"], COLORS["teal"], "分"),
+        ("本月营销件数" if kind == "月报" else "当日营销件数", report["count"], COLORS["amber"], "件"),
         ("参赛人数", report["people"], COLORS["navy2"], "人"),
-        ("加分项目", report["projects"], COLORS["amber"], "个"),
         ("最高个人积分", report["top"], COLORS["navy2"], "分"),
     ]
     card_width, gap, y = 270, 16, 208
@@ -146,7 +157,7 @@ def generate(report: dict, report_date: str, *, kind: str = "日报") -> Image.I
         draw.text((x + 24, y + 55), str(value), font=font(45, True), fill=COLORS["ink"])
         draw.text((x + 24, y + 119), unit, font=font(15), fill=COLORS["muted"])
 
-    draw.text((56, 396), "计分口径：只加分不扣分，不同项目分值固定。", font=font(18), fill=COLORS["muted"])
+    draw.text((56, 396), "计分口径：只加分不扣分，不同项目分值固定；件数按营销办理记录统计。", font=font(18), fill=COLORS["muted"])
     draw_rank_section(draw, 452, "个人积分排名", report["personal"], "personal")
     draw_rank_section(draw, 856, "小组人均积分排名", report["small"], "small")
     draw_rank_section(draw, 1260, "大组人均积分排名", report["big"], "big")
@@ -154,7 +165,7 @@ def generate(report: dict, report_date: str, *, kind: str = "日报") -> Image.I
     draw.line((56, 1714, 1186, 1714), fill=COLORS["line"], width=2)
     draw.text((56, 1744), "说明", font=font(22, True), fill=COLORS["ink"])
     draw.text((56, 1786), "小组、大组按参赛人数计算人均分；待确认人员不计入班组均分。", font=font(18), fill=COLORS["muted"])
-    draw.text((56, 1822), "完整排名请查看网页报表。", font=font(18), fill=COLORS["muted"])
+    draw.text((56, 1822), "件数为当日营销办理记录数；完整排名请查看网页报表。", font=font(18), fill=COLORS["muted"])
     rounded(draw, (56, 1874, 1186, 1940), COLORS["navy"], 14)
     draw.text((82, 1892), "营销PK赛排名通报", font=font(20, True), fill="#ffffff")
     draw.text((1160, 1892), SITE_URL, font=font(16), fill="#c9d6e2", anchor="ra")

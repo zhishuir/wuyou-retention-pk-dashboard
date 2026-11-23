@@ -8,16 +8,26 @@ from __future__ import annotations
 
 import os
 import shutil
+import socket
 import subprocess
 import sys
 import time
 from pathlib import Path
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 BRANCH = "main"
 BATCH_BYTES = 350_000
 PUSH_ATTEMPTS = 3
 PUSH_TIMEOUT = 300
+
+# 常见本地代理端口，按使用频率排列；用于自动跳过已失效的端口。
+PROXY_CANDIDATES = (
+    "127.0.0.1:7890",
+    "127.0.0.1:7897",
+    "127.0.0.1:10809",
+    "127.0.0.1:1080",
+)
 
 TRANSIENT_MARKERS = (
     "408",
@@ -27,6 +37,9 @@ TRANSIENT_MARKERS = (
     "timed out",
     "Connection was reset",
     "Could not resolve",
+    "Could not connect to server",
+    "Failed to connect",
+    "Connection refused",
 )
 
 
@@ -74,9 +87,46 @@ def has_ref(ref: str) -> bool:
     return git("rev-parse", "--verify", "--quiet", ref, check=False).returncode == 0
 
 
-def try_push() -> tuple[bool, str]:
+def port_open(host: str, port: int, timeout: float = 0.3) -> bool:
     try:
-        proc = git("push", "origin", BRANCH, check=False, timeout=PUSH_TIMEOUT)
+        with socket.create_connection((host, port), timeout):
+            return True
+    except OSError:
+        return False
+
+
+def proxy_alive(url: str) -> bool:
+    parts = urlsplit(url if "://" in url else f"http://{url}")
+    if not parts.hostname:
+        return False
+    return port_open(parts.hostname, parts.port or 80)
+
+
+def working_proxy() -> str | None:
+    """返回可用的本地代理；若 git 已配置的端口已失效，则自动改用仍在监听的端口。"""
+    configured = git("config", "--get", "http.proxy", check=False).stdout.strip()
+    if configured and proxy_alive(configured):
+        return configured
+    for candidate in PROXY_CANDIDATES:
+        url = f"http://{candidate}"
+        if proxy_alive(url):
+            if configured:
+                print(f"git 代理 {configured} 已失效，自动改用 {url}。")
+            return url
+    if configured:
+        print(f"警告：git 代理 {configured} 无法连接，且未发现其他可用本地代理，将尝试直连。")
+    return None
+
+
+def proxy_args(proxy: str | None) -> list[str]:
+    if not proxy:
+        return []
+    return ["-c", f"http.proxy={proxy}", "-c", f"https.proxy={proxy}"]
+
+
+def try_push(proxy: str | None = None) -> tuple[bool, str]:
+    try:
+        proc = git(*proxy_args(proxy), "push", "origin", BRANCH, check=False, timeout=PUSH_TIMEOUT)
     except subprocess.TimeoutExpired:
         return False, "推送超时"
     output = f"{proc.stderr or ''}{proc.stdout or ''}".strip()
@@ -122,9 +172,9 @@ def make_batches(paths: list[str]) -> list[list[str]]:
     return batches
 
 
-def push_with_retries(label: str) -> bool:
+def push_with_retries(label: str, proxy: str | None = None) -> bool:
     for attempt in range(1, PUSH_ATTEMPTS + 1):
-        ok, output = try_push()
+        ok, output = try_push(proxy)
         if ok:
             print(f"{label} 推送成功。")
             return True
@@ -137,7 +187,7 @@ def push_with_retries(label: str) -> bool:
     return False
 
 
-def squash_batches(base: str, tree: str, message: str) -> bool:
+def squash_batches(base: str, tree: str, message: str, proxy: str | None = None) -> bool:
     """分批推送完成后，把多条提交合并成一条（对象都已在远端，这次推送只有几 KB）。"""
     tip = git("rev-parse", "HEAD").stdout.strip()
     git("reset", "--soft", base)
@@ -147,7 +197,15 @@ def squash_batches(base: str, tree: str, message: str) -> bool:
         git("reset", "--soft", tip)
         return False
     try:
-        proc = git("push", "--force-with-lease", "origin", BRANCH, check=False, timeout=PUSH_TIMEOUT)
+        proc = git(
+            *proxy_args(proxy),
+            "push",
+            "--force-with-lease",
+            "origin",
+            BRANCH,
+            check=False,
+            timeout=PUSH_TIMEOUT,
+        )
         failed = proc.returncode != 0
     except subprocess.TimeoutExpired:
         failed = True
@@ -159,7 +217,7 @@ def squash_batches(base: str, tree: str, message: str) -> bool:
     return True
 
 
-def split_and_push() -> int:
+def split_and_push(proxy: str | None = None) -> int:
     upstream = f"origin/{BRANCH}"
     base = git("rev-parse", upstream).stdout.strip()
     head_tree = git("rev-parse", "HEAD^{tree}").stdout.strip()
@@ -190,7 +248,7 @@ def split_and_push() -> int:
             print(f"{label} 没有新增内容，跳过。")
             continue
         git("commit", "-m", f"{message} ({index}/{total})")
-        if not push_with_retries(label):
+        if not push_with_retries(label, proxy):
             print("分批推送中断，重新运行本脚本会从断点继续。")
             return 1
 
@@ -200,17 +258,18 @@ def split_and_push() -> int:
         return 1
 
     print(f"分批推送完成，共 {total} 批。")
-    squash_batches(base, head_tree, message)
+    squash_batches(base, head_tree, message, proxy)
     return 0
 
 
 def main() -> int:
     try:
+        proxy = working_proxy()
         upstream = f"origin/{BRANCH}"
         if not has_ref(upstream):
-            git("fetch", "origin", check=False)
+            git(*proxy_args(proxy), "fetch", "origin", check=False)
         if not has_ref(upstream):
-            ok, output = try_push()
+            ok, output = try_push(proxy)
             if ok:
                 print("推送成功。")
                 return 0
@@ -224,7 +283,7 @@ def main() -> int:
 
         if os.environ.get("PUSH_SAFELY_FORCE_SPLIT") != "1":
             for attempt in range(1, PUSH_ATTEMPTS + 1):
-                ok, output = try_push()
+                ok, output = try_push(proxy)
                 if ok:
                     print("推送成功。")
                     return 0
@@ -236,7 +295,7 @@ def main() -> int:
                     time.sleep(3)
             print("直连推送多次超时，改为分批推送。")
 
-        return split_and_push()
+        return split_and_push(proxy)
     except GitError as exc:
         print(f"推送失败：{exc}")
         return 1

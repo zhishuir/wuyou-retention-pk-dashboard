@@ -145,6 +145,8 @@ def draw_rank_section(draw: ImageDraw.ImageDraw, y: int, title: str, rows: list[
                 if kind == "small"
                 else f'{row.get("headcount", 0)}人'
             )
+            if "count" in row:
+                context += f'  ·  {row.get("count", 0)}件'
             draw.text((x1 + 64, row_y - 2), str(row["name"]), font=font(23, True), fill=COLORS["ink"])
             draw.text((x1 + 64, row_y + 30), context, font=font(16), fill=COLORS["muted"])
             value = row["score"] if kind == "personal" else row["average"]

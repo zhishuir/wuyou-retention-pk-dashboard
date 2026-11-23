@@ -28,7 +28,7 @@ const RETENTION_KPI_HTML = `
 const PK_KPI_HTML = `
   <article class="kpi-card positive"><span>累计总加分</span><strong id="pk-kpi-plus">—</strong><small>累计积分</small></article>
   <article class="kpi-card warning"><span>参赛人数</span><strong id="pk-kpi-people">—</strong><small>人</small></article>
-  <article class="kpi-card negative"><span>加分项目</span><strong id="pk-kpi-projects">—</strong><small>个</small></article>
+  <article class="kpi-card negative"><span>营销件数</span><strong id="pk-kpi-count">—</strong><small>件</small></article>
   <article class="kpi-card total"><span>最高个人积分</span><strong id="pk-kpi-top">—</strong><small id="pk-kpi-days">赛季累计</small></article>`;
 
 const RETENTION_METHOD_HTML = `<span>计分口径</span><strong>挽留成功 +1</strong><strong>挽留失败 −1</strong><strong>质检考核 −1</strong>`;
@@ -41,9 +41,9 @@ const RETENTION_THEADS = {
 };
 
 const PK_THEADS = {
-  personal: `<tr><th>位次</th><th>姓名</th><th>大组</th><th>小组</th><th>总积分</th></tr>`,
-  small: `<tr><th>位次</th><th>大组</th><th>小组</th><th>人数</th><th>总积分</th><th>人均积分</th></tr>`,
-  big: `<tr><th>位次</th><th>大组</th><th>人数</th><th>总积分</th><th>人均积分</th></tr>`,
+  personal: `<tr><th>位次</th><th>姓名</th><th>大组</th><th>小组</th><th>件数</th><th>总积分</th></tr>`,
+  small: `<tr><th>位次</th><th>大组</th><th>小组</th><th>人数</th><th>件数</th><th>总积分</th><th>人均积分</th></tr>`,
+  big: `<tr><th>位次</th><th>大组</th><th>人数</th><th>件数</th><th>总积分</th><th>人均积分</th></tr>`,
 };
 
 function dateParts(dateString) {
@@ -166,11 +166,12 @@ function aggregatePkGroups(rows, field) {
   for (const row of matched) {
     const name = row[field];
     if (!groups.has(name)) {
-      groups.set(name, { name, bigGroup: row.bigGroup, members: new Set(), score: 0 });
+      groups.set(name, { name, bigGroup: row.bigGroup, members: new Set(), score: 0, count: 0 });
     }
     const target = groups.get(name);
     target.members.add(row.name);
     target.score += Number(row.score || 0);
+    target.count += Number(row.count || 0);
   }
   return [...groups.values()]
     .map((row) => ({ ...row, headcount: row.members.size, average: row.members.size ? row.score / row.members.size : 0 }))
@@ -224,9 +225,32 @@ function renderPkPersonalTable(rows, query = "") {
       <td>${row.rank}</td><td><strong>${escapeHtml(row.name)}</strong></td>
       <td>${row.matched ? escapeHtml(row.bigGroup) : '<span class="pending-label">待确认</span>'}</td>
       <td>${row.matched ? escapeHtml(row.smallGroup) : '<span class="pending-label">待确认</span>'}</td>
+      <td class="numeric">${formatNumber(row.count, 0)}</td>
       <td class="numeric"><span class="score-pill ${scoreClass(row.score)}">${row.score}</span></td>
     </tr>`;
   }).join("");
+}
+
+function renderPkProductTable(rows, projectScores) {
+  const counts = new Map();
+  for (const project of projectScores || []) {
+    if (project && project.name) counts.set(project.name, 0);
+  }
+  for (const person of rows) {
+    for (const [project, count] of Object.entries(person.detail || {})) {
+      counts.set(project, (counts.get(project) || 0) + Number(count || 0));
+    }
+  }
+  const products = [...counts.entries()]
+    .map(([name, count]) => ({ name, count }))
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, "zh-CN"));
+  const total = products.reduce((sum, product) => sum + product.count, 0);
+  byId("pk-products-total").textContent = `合计 ${total} 件 · ${products.length} 个销售品`;
+  byId("pk-products-table").innerHTML = products.map((product, index) => `<tr class="${rowClass(index, products.length)}">
+    <td>${index + 1}</td><td><strong>${escapeHtml(product.name)}</strong></td>
+    <td class="numeric"><span class="score-pill positive">${formatNumber(product.count, 0)}</span></td>
+    <td class="numeric">${total ? `${formatNumber(product.count / total * 100, 1)}%` : "0.0%"}</td>
+  </tr>`).join("");
 }
 
 function renderGroupTable(elementId, rows, kind) {
@@ -242,7 +266,9 @@ function renderPkGroupTable(elementId, rows, kind) {
   byId(elementId).innerHTML = rows.map((row, index) => `<tr class="${rowClass(index, rows.length)}">
     <td>${row.rank}</td>
     ${kind === "small" ? `<td>${escapeHtml(row.bigGroup)}</td><td><strong>${escapeHtml(row.name)}</strong></td>` : `<td><strong>${escapeHtml(row.name)}</strong></td>`}
-    <td class="numeric">${row.headcount}</td><td class="numeric">${row.score}</td>
+    <td class="numeric">${row.headcount}</td>
+    <td class="numeric">${formatNumber(row.count, 0)}</td>
+    <td class="numeric">${row.score}</td>
     <td class="numeric"><span class="score-pill ${scoreClass(row.average)}">${formatNumber(row.average, 2)}</span></td>
   </tr>`).join("");
 }
@@ -260,6 +286,7 @@ function renderRetention() {
   byId("period-select").hidden = false;
   byId("image-button").hidden = false;
   byId("pk-legend").hidden = true;
+  byId("pk-products-section").hidden = true;
   byId("vs-headtohead").hidden = true;
   byId("scope-tab-all").hidden = true;
   if (state.scope === "all") state.scope = "day";
@@ -278,6 +305,7 @@ function renderRetention() {
   const days = matchingDays();
   const hasData = days.length > 0;
   document.querySelectorAll(".rank-section, .kpi-grid, .report-heading").forEach((element) => { element.hidden = !hasData; });
+  byId("pk-products-section").hidden = true;
   byId("empty-state").hidden = hasData;
   byId("unmatched-panel").hidden = true;
   if (!hasData) {
@@ -332,6 +360,7 @@ function pkAggregatePersonal(days) {
           smallGroup: row.smallGroup || "待确认小组",
           matched: row.matched !== false && (row.bigGroup || "待确认班组") !== "待确认班组",
           score: 0,
+          count: 0,
           detail: {},
         });
       }
@@ -340,6 +369,7 @@ function pkAggregatePersonal(days) {
       target.smallGroup = row.smallGroup || target.smallGroup;
       target.matched = row.matched !== false && target.bigGroup !== "待确认班组";
       target.score += Number(row.score || 0);
+      target.count += Number(row.count ?? Object.values(row.detail || {}).reduce((sum, count) => sum + Number(count || 0), 0));
       for (const [project, count] of Object.entries(row.detail || {})) {
         target.detail[project] = (target.detail[project] || 0) + Number(count || 0);
       }
@@ -371,7 +401,11 @@ function renderPk() {
   const days = state.pk && Array.isArray(state.pk.days) ? state.pk.days : [];
   let personal;
   if (state.scope === "all") {
-    personal = (state.pk && Array.isArray(state.pk.personal) ? state.pk.personal : []).map((row, index) => ({ ...row, rank: index + 1 }));
+    personal = (state.pk && Array.isArray(state.pk.personal) ? state.pk.personal : []).map((row, index) => ({
+      ...row,
+      count: Number(row.count ?? Object.values(row.detail || {}).reduce((sum, count) => sum + Number(count || 0), 0)),
+      rank: index + 1,
+    }));
   } else {
     const periods = pkAvailablePeriods(state.scope);
     if (!periods.includes(state.period)) state.period = periods[0] || "";
@@ -420,11 +454,10 @@ function renderPk() {
   byId("image-button").title = canDownload ? `下载${state.period}的营销PK赛PNG图片` : "周报和累计暂无PNG图片";
 
   const total = personal.reduce((sum, row) => sum + Number(row.score || 0), 0);
-  const activeProjects = new Set();
-  personal.forEach((row) => Object.keys(row.detail || {}).forEach((project) => activeProjects.add(project)));
+  const totalCount = personal.reduce((sum, row) => sum + Number(row.count || 0), 0);
   byId("pk-kpi-plus").textContent = total;
   byId("pk-kpi-people").textContent = personal.length;
-  byId("pk-kpi-projects").textContent = activeProjects.size;
+  byId("pk-kpi-count").textContent = totalCount;
   byId("pk-kpi-top").textContent = personal[0] ? personal[0].score : 0;
 
   const smallGroups = aggregatePkGroups(personal, "smallGroup");
@@ -446,6 +479,10 @@ function renderPk() {
   byId("unmatched-names").textContent = unmatched.map((row) => row.name).join("、");
 
   byId("pk-legend-grid").innerHTML = (state.pk.projectScores || []).map((project) => `<span class="legend-item"><strong>${escapeHtml(project.name)}</strong><em>+${Number(project.score)}分</em></span>`).join("");
+  byId("pk-products-desc").textContent = state.scope === "all"
+    ? "按赛季累计数据汇总各销售品办理数量"
+    : `按${periodLabel(state.scope, state.period)}汇总各销售品办理数量`;
+  renderPkProductTable(personal, state.pk.projectScores || []);
 }
 
 function aggregateRetentionGroups(rows, field) {
@@ -596,8 +633,8 @@ function exportCsv() {
   const mode = state.mode;
   let header, body, filename;
   if (mode === "pk") {
-    header = ["位次", "姓名", "大组", "小组", "总积分"];
-    body = state.personalRows.map((row) => [row.rank, row.name, row.bigGroup, row.smallGroup, row.score]);
+    header = ["位次", "姓名", "大组", "小组", "件数", "总积分"];
+    body = state.personalRows.map((row) => [row.rank, row.name, row.bigGroup, row.smallGroup, row.count ?? 0, row.score]);
     filename = "营销PK赛-赛季排名.csv";
   } else if (mode === "vs") {
     header = ["位次", "姓名", "大组", "小组", "成功", "失败", "质检", "积分"];
