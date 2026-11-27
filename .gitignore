@@ -7,6 +7,7 @@ private/
 .last-report-files.json
 .last-pk-date
 .last-pk-files.json
+邮箱附件/
 *.log
 __pycache__/
 *.pyc

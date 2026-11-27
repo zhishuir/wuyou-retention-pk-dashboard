@@ -25,6 +25,7 @@ NAME_ALIASES: dict[str, str] = {
 
 # 挽留赛两中心的小组归属修正。仅覆盖已确认人员，避免影响其他名单。
 MEMBERSHIP_OVERRIDES: dict[str, dict[str, str]] = {
+    "赵丽鸿": {"bigGroup": "虎翼组", "smallGroup": "虎翼组2组"},
     "高冬雪": {"bigGroup": "左娜组", "smallGroup": "扬帆组"},
     "张洁": {"bigGroup": "左娜组", "smallGroup": "扬帆组"},
     "刘洋": {"bigGroup": "左娜组", "smallGroup": "扬帆组"},
